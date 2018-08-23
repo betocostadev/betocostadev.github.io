@@ -1,0 +1,71 @@
+/* BASE */
+
+/* @import url(http://weloveiconfonts.com/api/?family=fontawesome); */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700');
+
+/* VARIABLES */
+:root {
+    --myred: #ec5c57;
+    --mydarkgray: #303030;
+    --mylightfont: #b9b9b9;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* MEDIA CATCH ALL */
+img, embed, object, video {
+    max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 1rem;
+}
+
+h1 {
+  font-size: 2.2rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+body {
+    margin: 0;
+    background-color: var(--mydarkgray);
+    /* background: linear-gradient(to bottom, #ffffe0 0%,#ffffc4 100%); */
+    /* background-image: url("../img/simplehtml/background_large.jpg");
+    background-size: cover;
+    background-repeat: no-repeat; */
+}
+
+footer {
+    color: var(--mylightfont);
+}
+
+
+/* TEXT BASE */
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+/* TITLE */
+
