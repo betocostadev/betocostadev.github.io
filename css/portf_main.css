@@ -6,7 +6,7 @@
 /* VARIABLES */
 :root {
     --myred: #ec5c57;
-    --mydarkgray: #303030;
+    --mydarkgray: #2c2c2c;
     --mylightfont: #b9b9b9;
 }
 
@@ -42,11 +42,8 @@ h2 {
 
 body {
     margin: 0;
+    color: var(--mylightfont);
     background-color: var(--mydarkgray);
-    /* background: linear-gradient(to bottom, #ffffe0 0%,#ffffc4 100%); */
-    /* background-image: url("../img/simplehtml/background_large.jpg");
-    background-size: cover;
-    background-repeat: no-repeat; */
 }
 
 footer {
@@ -69,3 +66,14 @@ footer {
 
 /* TITLE */
 
+.header-title {
+  font-size: 2rem;
+}
+
+.header-name {
+  font-size: 6rem;
+}
+
+.sub-title {
+  font-size: 2rem;
+}
