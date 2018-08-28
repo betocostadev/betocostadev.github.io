@@ -1,20 +1,22 @@
 /* BASE */
 
 /* @import url(http://weloveiconfonts.com/api/?family=fontawesome); */
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700');
+/* @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700'); */
 
 /* VARIABLES */
 :root {
     --myred: #ec5c57;
     --mydarkgray: #2c2c2c;
     --mylightfont: #b9b9b9;
+    --mydarkgreyfont: #222222;
+
 }
 
 html {
     box-sizing: border-box;
     font-size: 62.5%;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
+    /* font-family: 'Open Sans', sans-serif; */
+    /* font-weight: 400; */
 }
 
 *,
@@ -40,10 +42,18 @@ h2 {
   font-size: 2rem;
 }
 
+p {
+    font-size: 1.6rem;
+}
+
 body {
     margin: 0;
     color: var(--mylightfont);
     background-color: var(--mydarkgray);
+}
+
+header {
+    height: 100vh;
 }
 
 footer {
@@ -66,14 +76,50 @@ footer {
 
 /* TITLE */
 
-.header-title {
-  font-size: 2rem;
+.head-title {
+  font-size: 1.8rem;
 }
 
-.header-name {
-  font-size: 6rem;
+.head-name {
+  font-size: 3.2rem;
 }
 
 .sub-title {
   font-size: 2rem;
+}
+
+.down-btn {
+    transition: border 0.5s ease;
+    border: 0.2rem solid #d8d8d8d0;
+    padding: 1rem;
+    color: var(--mylightfont);
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.down-btn:hover {
+    border: 0.2rem solid var(--myred);
+}
+
+.about-me {
+    height: 100vh;
+    background-color: snow;
+    color: var(--mydarkgreyfont);
+}
+
+.prof-picture {
+    float: left;
+    width: 40vw;
+    margin-right: 1rem;
+    clip-path: circle(40.0% at 50% 50%);
+    shape-outside: circle();
+}
+
+.about-text {
+    word-wrap: break-word;
+}
+
+.base-info {
+    clear: both;
 }
