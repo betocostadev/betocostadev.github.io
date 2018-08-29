@@ -88,6 +88,35 @@ footer {
   font-size: 2rem;
 }
 
+.build {
+    font-size: 3rem;
+    display: block;
+}
+
+.hello {
+    position: absolute;
+    background: white;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    /* transition: 0.4s ease; */
+    animation-name: getOut;
+    animation-duration: 4s;
+}
+@keyframes getOut {
+    from {height: 100vh}
+    to {height: 0vh}
+}
+
+.disabled {
+    display: none;
+}
+
+/* .hello:hover {
+    top: -1500px;
+
+} */
+
 .down-btn {
     background: transparent;
     transition: border 0.5s ease;
@@ -124,7 +153,7 @@ footer {
 
 .prof-picture {
     float: left;
-    width: 40vw;
+    max-width: 35vw;
     margin-right: 1rem;
     clip-path: circle(40.0% at 50% 50%);
     shape-outside: circle();
