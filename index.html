@@ -13,63 +13,118 @@
       <h1 class="head-title">Hello, World!</h1>
       <h2 class="head-name">I'm Roberto Costa</h2>
       <h3 class="text-uppercase" class="sub-title">Front-End Developer</h3>
-      <i class="material-icons build">
-        build
-        </i>
-      <button class="down-btn" id="down-btn">
-        <a href="#about">Know More</a>
+      <i class="material-icons build">build</i>
+
+      <a class="block-link" href="#about">
+        <button class="down-btn" id="down-btn">Know More
         <i class="material-icons">expand_more</i>
-      </button>
-      <!-- <a class="down-btn" href="#about">Know More <i class="material-icons">
-        expand_more
-        </i></a> -->
+        </button>
+      </a>
+
         <div class="hello" id="helloDiv"></div>
   </header>
 
   <main>
     <article>
       <section id="about" class="about-me">
-        <h2>Why would you hire me?</h2>
+        <h2 class="text-center sect-heading">About me</h2>
         <img class="prof-picture" src="img/prof_img.jpg" alt="Roberto Costa Profile Picture">
         <p class="about-text">I am a highly dedicated person, who sees problems as challenges that must be overcome.
         I enjoy being part of teams that work together to deliver the best possible experience for customers.
-        Through my desire to learn more everyday, I have been developing my skills in Front-End Development and responsive design with a mobile-first thinking, considering that today there is a multitude of different display devices and every customer needs a good experience regardless of the device used.</p>
-        <div class="base-info">
-          <h2>Basic Information</h2>
-          <p>NAME:</p>
-          <p>Roberto Marques Costa</p>
-          <p>DATE OF BIRTH:</p>
-          <p>01/04/1986</p>
-          <p>BIRTHPLACE:</p>
-          <p>São Paulo, Brazil</p>
-          <p>EMAIL:</p>
-          <p>robertomarx@gmail.com</p>
-        </div>
+        Through my desire to learn more everyday, I have been developing my skills in Front-End Development and <a class="external-link" title="Google's Responsive Web Design Basics" href="https://developers.google.com/web/fundamentals/design-and-ux/responsive/">responsive design</a> with a mobile-first thinking, considering that today there is a multitude of different display devices and every customer needs a good experience regardless of the device used.</p>
 
-        <div class="skills">
-          <h2>Skills</h2>
-          <p>HTML5</p>
-          <p>CSS3</p>
-          <p>JAVASCRIPT</p>
-          <p>JQUERY</p>
-          <p>BOOTSTRAP</p>
-          <p>MATERIALIZE</p>
-          <p>GULP</p>
-          <p>GIT</p>
-        </div>
+        <section class="baseinfo-container">
+          <div class="base-info">
+            <h2 class="sect-heading">Basic Information</h2>
+            <p>NAME:</p>
+            <p>Roberto Marques Costa</p>
+            <p>DATE OF BIRTH:</p>
+            <p>01/04/1986</p>
+            <p>BIRTHPLACE:</p>
+            <p>São Paulo, Brazil</p>
+            <p>EMAIL:</p>
+            <p>robertomarx@gmail.com</p>
+          </div>
+
+          <div class="skills">
+            <h2 class="sect-heading">Skills</h2>
+
+            <img class="html-img" src="img/icons/icons8-html-5.svg" alt="HTML5 Logo">
+            <p class="html-txt">HTML5</p>
+            <img class="js-img" src="img/icons/javascript-logo.svg" alt="Javascript Logo">
+            <p class="js-txt">JAVASCRIPT</p>
+            <img class="css-img" src="img/icons/icons8-css3.svg" alt="CSS3 Logo">
+            <p class="css-txt">CSS3</p>
+            <img class="jquery-img" src="img/icons/icons8-jquery-filled.svg" alt="jQuery Logo">
+            <p class="jquery-txt">JQUERY</p>
+            <img class="bootstrap-img" src="img/icons/icons8-bootstrap.svg" alt="Bootstrap Logo">
+            <p class="bootstrap-txt">BOOTSTRAP</p>
+            <img class="materialize-img" src="img/icons/materialize.svg" alt="Materialize Logo">
+            <p class="materialize-txt" >MATERIALIZE</p>
+            <img class="gulp-img" src="img/icons/gulp.svg" alt="Gulp Logo">
+            <p class="gulp-txt">GULP</p>
+            <img class="git-img" src="img/icons/icons8-git.svg" alt="Git Logo">
+            <p class="git-txt">GIT</p>
+          </div>
+        </section>
 
         <a href="">Contact Me</a>
         <a href="http://">Download CV</a>
 
       </section>
 
-      <section>
-        <h2>Projects</h2>
+      <section class="projects">
+        <h2 class="text-center sect-heading" >Projects</h2>
+        <section class="cards">
+          <h3>Web Pages</h3>
+          <div>
+            <p>Mad Max</p>
+          </div>
+          <div>
+            <p>Formula 1</p>
+          </div>
+          <div>
+            <p>Product</p>
+          </div>
+          <div>
+            <p>Project 4</p>
+          </div>
 
+          <h3>Javascript Apps</h3>
+          <div>
+            <p>Project 4</p>
+          </div>
+          <div>
+            <p>Mandragora</p>
+          </div>
+
+        </section>
+
+      </section>
+
+      <section class="more">
+        <h2 class="text-center sect-heading">Know More</h2>
+        <h3>Systems</h3>
+        <p>Icone</p>
+        <h3>Languages</h3>
+        <p>icone</p>
+
+      </section>
+
+      <section class="contact">
+        <h2 class="text-center sect-heading">Contact</h2>
+        <p>form</p>
+        <p>Location</p>
+        <p>Email</p>
+        <p>Phone</p>
       </section>
 
     </article>
   </main>
+
+  <footer>
+    <p>Links</p>
+  </footer>
 
 <script src="js/landing_script.js"></script>
 </body>
