@@ -21,6 +21,7 @@ html {
     /* font-family: 'Open Sans', sans-serif; */
     /* font-weight: 400; */
     scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
 }
 
 *,
@@ -198,7 +199,9 @@ footer {
     max-width: 35vw;
     margin-right: 1rem;
     clip-path: circle(40.0% at 50% 50%);
+    -webkit-clip-path: circle(40.0% at 50% 50%);
     shape-outside: circle();
+    -webkit-shape-outside: circle();
 }
 
 .about-text {
