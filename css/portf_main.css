@@ -1,7 +1,7 @@
 /* BASE */
 
 /* @import url(http://weloveiconfonts.com/api/?family=fontawesome); */
-/* @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700'); */
+@import url('https://fonts.googleapis.com/css?family=Rubik:400,700');
 
 /* VARIABLES */
 :root {
@@ -18,8 +18,8 @@
 html {
     box-sizing: border-box;
     font-size: 62.5%;
-    /* font-family: 'Open Sans', sans-serif; */
-    /* font-weight: 400; */
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
     scroll-behavior: smooth;
     -webkit-scroll-behavior: smooth;
 }
@@ -50,7 +50,7 @@ h2 {
 }
 
 p {
-    font-size: 1.6rem;
+  font-size: 1.6rem;
 }
 
 body {
@@ -60,13 +60,16 @@ body {
 }
 
 header {
-    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    /* height: 100vh; */
     text-align: center;
-    background-image: url(../img/code_image600.jpg);
-    background-size: cover;
+    /* background-image: url(../img/code_image600.jpg);
+    background-size: cover; */
 }
 
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+/* @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
 	only screen and (-o-min-device-pixel-ratio: 3/2),
 	only screen and (min--moz-device-pixel-ratio: 1.5),
 	only screen and (min-device-pixel-ratio: 1.5) {
@@ -74,6 +77,19 @@ header {
             background-image: url(../img/code_image1200.jpg);
             background-size: cover;
         }
+} */
+
+.head-container {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    justify-self: center;
+    align-self: center;
+}
+
+.head-background {
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+    height: 100vh;
 }
 
 .about-me {
@@ -122,15 +138,22 @@ footer {
 /* TITLE */
 
 .head-title {
-  font-size: 1.8rem;
+  font-size: 2.2rem;
+  font-weight: 400;
 }
 
 .head-name {
-  font-size: 3.2rem;
+  font-size: 2.8rem;
+  word-spacing: 0.2rem;
+  letter-spacing: 0.1rem;
+  font-weight: 700;
 }
 
 .sub-title {
   font-size: 2rem;
+  word-spacing: 0.5rem;
+  letter-spacing: 0.2rem;
+  font-weight: 400;
 }
 
 .sect-heading {
@@ -138,12 +161,14 @@ footer {
     color: var(--cred400);
     padding-top: 1rem;
     margin-top: 0;
+    text-align: center;
     grid-column: 1 / -1;
     justify-self: center;
 
 }
 
 .build {
+    margin: 0.5rem;
     font-size: 2.5rem;
     display: block;
 }
@@ -162,11 +187,43 @@ footer {
     width: 100vw;
     /* transition: 0.4s ease; */
     animation-name: getOut;
-    animation-duration: 4s;
+    animation-duration: 3.5s;
 }
 @keyframes getOut {
     from {height: 100vh}
     to {height: 0vh}
+}
+
+.hello-txt {
+    margin-top: 30%;
+    color: var(--cgrey900);
+    font-size: 4.2rem;
+    animation-name: rollOut;
+    animation-duration: 3s;
+    animation-delay: 0.7s;
+}
+@-webkit-keyframes rollOut {
+    from {
+      opacity: 1;
+    }
+
+    to {
+      opacity: 0;
+      -webkit-transform: translate3d(100%, 0, 0) rotate3d(0, 0, 1, 120deg);
+      transform: translate3d(100%, 0, 0) rotate3d(0, 0, 1, 120deg);
+    }
+  }
+
+@keyframes rollOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        -webkit-transform: translate3d(100%, 0, 0) rotate3d(0, 0, 1, 120deg);
+        transform: translate3d(100%, 0, 0) rotate3d(0, 0, 1, 120deg);
+    }
 }
 
 .disabled {
@@ -208,8 +265,8 @@ footer {
 
 .prof-picture {
     float: left;
-    max-width: 35vw;
-    margin-right: 1rem;
+    max-width: 40vw;
+    margin-right: 1.2rem;
     clip-path: circle(40.0% at 50% 50%);
     -ms-clip-path: circle(40.0% at 50% 50%);
     -webkit-clip-path: circle(40.0% at 50% 50%);
@@ -219,6 +276,7 @@ footer {
 }
 
 .about-text {
+    margin: 1.5rem 1rem 1rem 1rem;
     word-wrap: break-word;
 }
 
@@ -230,7 +288,14 @@ footer {
 .base-info {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* align-items: center; */
+}
+.base-info p {
+    margin: 0.4rem 1rem;
+}
+.base-info i {
+    margin-left: 1rem;
+    vertical-align: middle;
 }
 
 /* SKILLS GRID */

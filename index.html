@@ -10,18 +10,27 @@
 </head>
 <body>
   <header>
-      <h1 class="head-title">Hello, World!</h1>
+    <img class="head-background"
+      src="img/code_image600.jpg" alt="Computer codes"
+      srcset="img/code_image600.jpg 600w,
+              img/code_image1200.jpg 1200w,
+              img/code_image1920.jpg 1920w">
+    <div class="head-container">
+      <h1 class="head-title">Hello!</h1>
       <h2 class="head-name">I'm Roberto Costa</h2>
-      <h3 class="text-uppercase" class="sub-title">Front-End Developer</h3>
+      <h3 class="text-uppercase sub-title">Front-End Developer</h3>
       <i class="material-icons build">build</i>
 
       <a class="block-link" href="#about">
         <button class="down-btn" id="down-btn">Know More
-        <i class="material-icons">expand_more</i>
+          <i class="material-icons">expand_more</i>
         </button>
       </a>
+    </div>
 
-        <div class="hello" id="helloDiv"></div>
+      <div class="hello" id="helloDiv">
+        <p class="hello-txt">Hello World!</p>
+      </div>
   </header>
 
   <main>
@@ -31,18 +40,19 @@
         <img class="prof-picture" src="img/prof_img.jpg" alt="Roberto Costa Profile Picture">
         <p class="about-text">I am a highly dedicated person, who sees problems as challenges that must be overcome.
         I enjoy being part of teams that work together to deliver the best possible experience for customers.
+        <br>
         Through my desire to learn more everyday, I have been developing my skills in Front-End Development and <a class="external-link" title="Google's Responsive Web Design Basics" href="https://developers.google.com/web/fundamentals/design-and-ux/responsive/">responsive design</a> with a mobile-first thinking, considering that today there is a multitude of different display devices and every customer needs a good experience regardless of the device used.</p>
 
         <section class="baseinfo-container">
           <div class="base-info">
             <h2 class="sect-heading">Basic Information</h2>
-            <p>NAME:</p>
+            <p>NAME<i class="material-icons">perm_identity</i></p>
             <p>Roberto Marques Costa</p>
-            <p>DATE OF BIRTH:</p>
+            <p>DATE OF BIRTH<i class="material-icons">verified_user</i></p>
             <p>01/04/1986</p>
-            <p>BIRTHPLACE:</p>
+            <p>BIRTHPLACE<i class="material-icons">location_on</i></p>
             <p>São Paulo, Brazil</p>
-            <p>EMAIL:</p>
+            <p>EMAIL<i class="material-icons">contact_mail</i></p>
             <p>robertomarx@gmail.com</p>
           </div>
 
