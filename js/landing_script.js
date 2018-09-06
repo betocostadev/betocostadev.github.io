@@ -13,6 +13,6 @@
   const hello = document.getElementById('helloDiv');
   hello.addEventListener("animationend", function() {
     hello.classList.add('disabled');
-  }, 3000);
+  }, 3500);
 
 }());
