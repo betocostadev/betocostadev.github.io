@@ -15,4 +15,44 @@
     hello.classList.add('disabled');
   }, 3500);
 
+  // Hamburger Menu
+  const menuBtn = document.getElementsByClassName('hamburger')[0];
+  const menu = document.getElementsByClassName('menu-object')[0];
+
+  menuBtn.onclick = function () {
+    menuBtn.classList.toggle('is-active');
+    menu.classList.toggle('open');
+  }
+  // Hamb Menu display on scroll
+  const menuContainer = document.getElementById('menu');
+  window.onscroll = function() {myFunction()};
+
+  function myFunction() {
+    if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+      menuContainer.classList.remove('disabled');
+    } else {
+      menuContainer.classList.add('disabled');
+    }
+}
+
+  // Sources - Modal
+  const modal = document.getElementById('object-modal');
+  const modalBtn = document.getElementById('res-modal');
+  const closeBtn = document.getElementById('close-btn');
+
+  modalBtn.onclick = function () {
+    modal.style.display = 'block';
+  }
+
+  closeBtn.onclick = function () {
+    modal.style.display = 'none';
+  }
+
+  window.onclick = function (ev) {
+    if (ev.target == modal) {
+      modal.style.display = 'none';
+    }
+  }
+
+
 }());
