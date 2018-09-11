@@ -116,6 +116,7 @@ header {
 
 .md-36 {
     font-size: 36px;
+    margin: 2rem;
     color: var(--cred400);
 }
 
@@ -148,13 +149,15 @@ footer {
 
 .head-title {
   font-size: 2.8rem;
+  color: var(--cred400);
   font-weight: 400;
 }
 
 .head-name {
-  font-size: 3rem;
+  font-size: 3.5rem;
+  margin: 2rem 2.2rem;
   word-spacing: 0.2rem;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.2rem;
   font-weight: 700;
 }
 
@@ -168,7 +171,7 @@ footer {
 .sect-heading {
     font-size: 2.2rem;
     color: var(--cred400);
-    padding-top: 1rem;
+    padding-top: 1.4rem;
     margin-top: 0;
     text-align: center;
     grid-column: 1 / -1;
@@ -279,14 +282,14 @@ footer {
 .menu-container {
     position: fixed;
     top: 0;
-    width: 200px;
-    height: 50px;
+    width: 160px;
+    height: 48px;
     left: 1rem;
     z-index: 1;
     background-color: #525252c2;
 }
 .menu-container button {
-    margin-left: 1rem;
+    margin-left: 0.8rem;
 }
 .menu-object {
     position: relative;
@@ -296,13 +299,20 @@ footer {
     transition: all 0.3s ease-in-out;
     margin: 0.3rem 0;
 }
+.menu-object ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.menu-object>ul>li {
+    margin: 1rem 2rem;
+}
 .menu-object a {
     font-size: 1.8rem;
     text-transform: uppercase;
     text-decoration: none;
     transition: color 0.3s ease-in-out;
     color: var(--cgrey050);
-    margin: 1rem ;
 }
 .menu-object a:hover {
     color: var(--cred600);
@@ -323,7 +333,7 @@ footer {
     width: 100vw;
     /* transition: 0.4s ease; */
     animation-name: getOut;
-    animation-duration: 3.5s;
+    animation-duration: 3.2s;
 }
 @keyframes getOut {
     from {height: 100vh}
@@ -335,8 +345,8 @@ footer {
     color: var(--cgrey900);
     font-size: 4.2rem;
     animation-name: rollOut;
-    animation-duration: 3s;
-    animation-delay: 0.7s;
+    animation-duration: 2.8s;
+    animation-delay: 0.5s;
 }
 @-webkit-keyframes rollOut {
     from {

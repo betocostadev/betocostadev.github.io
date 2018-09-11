@@ -19,38 +19,22 @@
   const menuBtn = document.getElementsByClassName('hamburger')[0];
   const menu = document.getElementsByClassName('menu-object')[0];
   const menuLink = document.getElementsByClassName('menu-link');
-  // Descobrir como fazer um array dos links acima
-  // Para poder fazer com que um clique em qualquer um desative o menu
+  const menuLinks = Array.from(menuLink);
+
+  // Array to close the menu when any link is clicked.
+  menuLinks.forEach(menuLink => {
+    menuLink.onclick = function () {
+      menuBtn.classList.toggle('is-active');
+      menu.classList.toggle('open');
+    }
+  });
 
   menuBtn.onclick = function () {
     menuBtn.classList.toggle('is-active');
     menu.classList.toggle('open');
   }
-  // Fazendo da maneira besta, arrumar depois:
-  menuLink[0].onclick = function () {
-    menuBtn.classList.toggle('is-active');
-    menu.classList.toggle('open');
-  }
-  menuLink[1].onclick = function () {
-    menuBtn.classList.toggle('is-active');
-    menu.classList.toggle('open');
-  }
-  menuLink[2].onclick = function () {
-    menuBtn.classList.toggle('is-active');
-    menu.classList.toggle('open');
-  }
-  menuLink[3].onclick = function () {
-    menuBtn.classList.toggle('is-active');
-    menu.classList.toggle('open');
-  }
-  // menuLink.forEach(menuLink => {
-  //   menuBtn.classList.toggle('is-active');
-  //   menu.classList.toggle('open')
-  // });
-  // menuLink[0].onclick = function () {
-  //   menuBtn.classList.toggle('is-active');
-  //   menu.classList.toggle('open');
-  // }
+
+
   // Hamb Menu display on scroll
   const menuContainer = document.getElementById('menu');
   window.onscroll = function() {myFunction()};
@@ -62,6 +46,11 @@
       menuContainer.classList.add('disabled');
     }
 }
+  // Close the menu when focus is lost
+  menuContainer.addEventListener("blur", function() {
+    menuBtn.classList.toggle('is-active');
+    menu.classList.toggle('open');
+  }, true);
 
   // Sources - Modal
   const modal = document.getElementById('object-modal');
