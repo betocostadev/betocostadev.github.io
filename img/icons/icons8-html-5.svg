@@ -1,9 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 48" version="1.1" width="48px" height="48px">
-<g id="surface1">
-<path style=" fill:#E65100;" d="M 41 5 L 7 5 L 10 39 L 24 43 L 38 39 Z "/>
-<path style=" fill:#FF6D00;" d="M 24 8 L 24 39.898438 L 35.199219 36.699219 L 37.699219 8 Z "/>
-<path style=" fill:#FFFFFF;" d="M 24 25 L 24 21 L 32.601563 21 L 31.898438 32.5 L 24 35.101563 L 24 30.898438 L 28.101563 29.5 L 28.398438 25 Z M 32.898438 17 L 33.199219 13 L 24 13 L 24 17 Z "/>
-<path style=" fill:#EEEEEE;" d="M 24 30.898438 L 24 35.101563 L 16.101563 32.5 L 15.699219 27 L 19.699219 27 L 19.898438 29.5 Z M 19.101563 17 L 24 17 L 24 13 L 14.898438 13 L 15.601563 25 L 24 25 L 24 21 L 19.398438 21 Z "/>
-</g>
+<svg width="36" height="38" version="1.1" viewBox="0 0 36 38" xmlns="http://www.w3.org/2000/svg">
+ <g transform="matrix(1.0588 0 0 1 -7.4118 -5)">
+  <path d="m41 5h-34l3 34 14 4 14-4z" fill="#e65100"/>
+  <path d="m24 8v31.898l11.199-3.1992 2.5-28.699z" fill="#ff6d00"/>
+  <path d="m24 25v-4h8.6016l-0.70312 11.5-7.8984 2.6016v-4.2031l4.1016-1.3984 0.29688-4.5zm8.8984-8 0.30078-4h-9.1992v4z" fill="#fff"/>
+  <path d="m24 30.898v4.2031l-7.8984-2.6016-0.40234-5.5h4l0.19922 2.5zm-4.8984-13.898h4.8984v-4h-9.1016l0.70312 12h8.3984v-4h-4.6016z" fill="#eee"/>
+ </g>
 </svg>
