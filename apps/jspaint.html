@@ -4,16 +4,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+  <link rel="stylesheet" href="../css/app_jspaint.css">
   <title>JS Paint</title>
 </head>
 <body>
   <main>
-    <h1>JS Paint!</h1>
+    <h1 class="title">JS Paint!</h1>
+    <section class="tools-menu">
+      <h2>Tools Menu</h2>
+      <p>Line Width:</p>
+      <i class="material-icons" id="increaseLineWidth">add_circle_outline</i>
+      <i class="material-icons" id="decreaseLineWidth">remove_circle_outline</i>
+      <!-- <input type="color" name="strokeColor" id="strokeColor">
+      <i class="material-icons" id="applyColor">create</i> -->
+    </section>
     <article>
-      <section>Canvas</section>
+      <section>
+          <canvas class="board" id="draw" width="500" height="500"></canvas>
+      </section>
     </article>
     <article></article>
     <aside>Menu</aside>
   </main>
+  <script src="../js/jspaint.js"></script>
 </body>
 </html>
