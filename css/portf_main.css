@@ -61,7 +61,7 @@ p {
 body {
     margin: 0;
     color: var(--cgrey100);
-    background-color: var(--cgrey800);
+    background-color: var(--cbluegrey900);
 }
 
 header {
@@ -524,7 +524,7 @@ footer {
 /* SKILLS GRID */
 .skills {
     display: grid;
-    grid-gap: 0.2rem;
+    grid-gap: 0.4rem;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto repeat(3, minmax(40px, 100px));
     justify-items: center;
@@ -536,13 +536,16 @@ footer {
     font-weight: bold;
 }
 
+.skills img {
+    object-fit: contain;
+    width: 100%;
+    max-height: 100%;
+}
+
 .html-img {
     grid-column: 1 / 1;
     grid-row: 2 / 2;
-    min-width: 20vw;
-    max-width: 30vw;
 }
-
 .html-txt {
     grid-column: 1 / 1;
     grid-row: 2 / 2;
@@ -560,10 +563,7 @@ footer {
 .js-img {
     grid-column: 2 / 2;
     grid-row: 2 / 2;
-    min-width: 20vw;
-    max-width: 30vw;
 }
-
 .js-txt {
     grid-column: 2 / 2;
     grid-row: 2 / 2;
@@ -581,10 +581,7 @@ footer {
 .css-img {
     grid-column: 3 / 3;
     grid-row: 2 / 2;
-    min-width: 20vw;
-    max-width: 30vw;
 }
-
 .css-txt {
     grid-column: 3 / 3;
     grid-row: 2 / 2;
@@ -599,14 +596,10 @@ footer {
     -o-transform: rotate(-30deg);
 }
 
-
 .jquery-img {
     grid-column: 1 / 1;
     grid-row: 3 / 3;
-    min-width: 20vw;
-    max-width: 28vw;
 }
-
 .jquery-txt {
     grid-column: 1 / 1;
     grid-row: 3 / 3;
@@ -624,10 +617,7 @@ footer {
 .bootstrap-img {
     grid-column: 2 / 2;
     grid-row: 3 / 3;
-    min-width: 20vw;
-    max-width: 30vw;
 }
-
 .bootstrap-txt {
     grid-column: 2 / 2;
     grid-row: 3 / 3;
@@ -645,10 +635,7 @@ footer {
 .materialize-img {
     grid-column: 3 / 3;
     grid-row: 3 / 3;
-    min-width: 20vw;
-    max-width: 28vw;
 }
-
 .materialize-txt {
     grid-column: 3 / 3;
     grid-row: 3 / 3;
@@ -666,10 +653,7 @@ footer {
 .sass-img {
     grid-column: 1 / 1;
     grid-row: 4 / 4;
-    min-width: 22vw;
-    max-width: 32vw;
 }
-
 .sass-txt {
     grid-column: 1 / 1;
     grid-row: 4 / 4;
@@ -687,9 +671,7 @@ footer {
 .gulp-img {
     grid-column: 2 / 2;
     grid-row: 4 / 4;
-    width: 10vw;
 }
-
 .gulp-txt {
     grid-column: 2 / 2;
     grid-row: 4 / 4;
@@ -707,10 +689,7 @@ footer {
 .git-img {
     grid-column: 3 / 3;
     grid-row: 4 / 4;
-    min-width: 20vw;
-    max-width: 30vw;
 }
-
 .git-txt {
     grid-column: 3 / 3;
     grid-row: 4 / 4;
@@ -723,6 +702,34 @@ footer {
     -moz-transform: rotate(-30deg);
     -ms-transform: rotate(-30deg);
     -o-transform: rotate(-30deg);
+}
+
+/* PROJECTS GRID */
+
+.projects h3 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.container-cards {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, 100px);
+}
+
+/* PROJECT CARDS */
+
+.object-card__link {
+    display: block;
+    background: #d3d3d3;
+    border: 0px solid #f5f5f5;
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    box-shadow: 0px 0px 6px 1px rgb(255, 255, 255);
+    -moz-box-shadow: 0px 0px 6px 1px rgb(255, 255, 255);
+    -webkit-box-shadow: 0px 0px 6px 1px rgb(255, 255, 255);
 }
 
 /* CONTACT FORM */
@@ -850,12 +857,29 @@ footer {
     cursor: pointer;
 }
 
-@media only screen and (min-width: 900px) {
+/* MEDIA QUERIES
+Following Bootstrap rules:
+// Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+*/
+@media only screen and (min-width: 992px) {
     .baseinfo-container {
         clear: both;
         grid-template-columns: 1fr 1fr;
     }
     .skills img {
-        width: 10vw;
+        /* width: 10vw; */
     }
 }
