@@ -10,14 +10,15 @@
   let newBoardHeight = boardHeight * 0.6;
   canvas.width = newBoardWidth;
   canvas.height = newBoardHeight;
-  /* Find a way to make the user be able to select the color! */
-  // let strokeColor = toString(document.getElementById('strokeColor').value);
-  ctx.strokeStyle = '#bada55';
+
+  /* MAYBE I CAN REMOVE THE LINE BELOW....
+  Try it... since it's getting a value inside the function, probably it works without this line. */
+  ctx.strokeStyle = strokeColor;
   ctx.lineJoin = 'round'; // Try turning off to see the difference
   ctx.lineCap = 'round'; // Try turning off to see the difference
   ctx.lineWidth = 10;
 
-  /* TESTING! */
+  /* INC/DEC Line Width */
   const increase = document.getElementById('increaseLineWidth').value;
   const decrease = document.getElementById('decreaseLineWidth').value;
 
@@ -28,7 +29,6 @@
   ctx.lineWidth -= 10;
   });
 
-
   function decreaseLineWD() {
     ctx.lineWidth -= 10;
   }
@@ -38,6 +38,9 @@
   let lastY = 0;
   function draw(e) {
     if (!isDrawing) return; // Stop the FN from running when mouse is not down
+    // Get the color from user:
+    let strokeColor = document.getElementById('strokeColor').value;
+    ctx.strokeStyle = strokeColor;
     // Begin the Drawing:
     ctx.beginPath();
     // Start from
