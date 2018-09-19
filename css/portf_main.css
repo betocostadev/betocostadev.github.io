@@ -329,23 +329,29 @@ footer {
 /* UP BUTTON */
 
 .button-up {
+    background: rgba(235, 208, 208, 0.541);
     position: fixed;
     bottom: 0rem;
-    right: 0rem;
+    right: 0.5rem;
     transition: all 0.35s ease-in-out;
     width: 4rem;
     height: 4rem;
     margin: 0.2rem;
 }
 
+.button-up a {
+    text-decoration: none;
+}
+
 .button-up i {
-    background: rgba(235, 208, 208, 0.541);
+    font-size: 36px;
     margin: 0.2rem;
     padding: 0.2rem;
+    color: var(--cgrey900);
 }
 
 .button-up i:hover {
-    color: var(--cgrey800);
+    color: var(--cred400);
 }
 
 .hidden-right-down {
@@ -434,7 +440,7 @@ footer {
 .send-btn {
     display: block;
     cursor: pointer;
-    margin-left: 70%;
+    margin-left: 80%;
     transition: all 0.3s ease-in-out;
     color: var(--cgrey100);
     border: none;
@@ -957,6 +963,21 @@ Following Bootstrap rules:
     .hello-txt {
         margin-top: 15%;
     }
+    .button-up {
+        bottom: 2rem;
+        right: 2rem;
+        width: 5.5rem;
+        height: 5.5rem;
+        margin: 0.5rem;
+    }
+    .button-up i {
+        font-size: 48px;
+    }
+    .hidden-right-down {
+        position: fixed;
+        bottom: -150px;
+        right: -150px;
+    }
     .head-title {
         font-size: 3.2rem;
     }
@@ -1047,6 +1068,9 @@ Following Bootstrap rules:
     .contact {
         padding: 1.8rem 12.5%;
     }
+    .send-btn {
+        margin-left: 84%;
+    }
     footer {
         padding: 1rem 7.5%;
     }
@@ -1096,9 +1120,6 @@ Following Bootstrap rules:
     }
     .contact {
         padding: 1.8rem 16%;
-    }
-    .send-btn {
-        margin-left: 80%;
     }
     footer {
         padding: 1rem 15%;
