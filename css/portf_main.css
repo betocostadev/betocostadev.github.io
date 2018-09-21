@@ -16,7 +16,6 @@
     --cbluegrey900:#263238;
     --cred600: #e53935;
     --cred400: #ef5350;
-    --cred300: #e57373;
     --skFontBGC: rgba(230, 230, 230, 0.8);
 }
 
@@ -182,7 +181,7 @@ footer {
 
 .external-link {
     font-weight: bold;
-    color: var(--cred300);
+    color: var(--cred400);
     text-decoration: none;
 }
 
@@ -330,13 +329,17 @@ footer {
 
 .button-up {
     background: rgba(235, 208, 208, 0.541);
+    border-radius: 50%;
     position: fixed;
-    bottom: 0rem;
-    right: 0.5rem;
+    bottom: 0.1rem;
+    right: 0.6rem;
     transition: all 0.35s ease-in-out;
-    width: 4rem;
-    height: 4rem;
+    width: 3.5rem;
+    height: 3.5rem;
     margin: 0.2rem;
+    -webkit-box-shadow: 1px 2px 4px 0px rgba(20, 20, 20, 0.55);
+    -moz-box-shadow: 1px 2px 4px 0px rgba(20, 20, 20, 0.55);
+    box-shadow: 1px 2px 4px 0px rgba(20, 20, 20, 0.55);
 }
 
 .button-up a {
@@ -345,13 +348,16 @@ footer {
 
 .button-up i {
     font-size: 36px;
-    margin: 0.2rem;
-    padding: 0.2rem;
     color: var(--cgrey900);
 }
 
 .button-up i:hover {
     color: var(--cred400);
+}
+.button-up:hover {
+    -webkit-box-shadow: 1px 2px 5px 1px rgba(20, 20, 20, 0.8);
+    -moz-box-shadow: 1px 2px 5px 1px rgba(20, 20, 20, 0.8);
+    box-shadow: 1px 2px 5px 1px rgba(20, 20, 20, 0.8);
 }
 
 .hidden-right-down {
@@ -493,8 +499,8 @@ footer {
 
 .prof-picture {
     float: left;
-    max-width: 42vw;
-    margin: 0.5rem 0.6rem 0.8rem 0;
+    max-width: 32vw;
+    margin: 0.5rem 0.75rem 0.8rem 0;
     clip-path: circle(40.0% at 50% 50%);
     -ms-clip-path: circle(40.0% at 50% 50%);
     -webkit-clip-path: circle(40.0% at 50% 50%);
@@ -716,7 +722,7 @@ footer {
 .projects h3 {
     font-size: 2rem;
     text-align: center;
-    margin: 1.5rem;
+    margin: 2rem;
 }
 
 .container-cards {
@@ -806,7 +812,7 @@ footer {
 
 .contact-container div :nth-child(2) {
     text-transform: uppercase;
-    color: var(--cred300);
+    color: var(--cred400);
 }
 
 .social-container {
@@ -890,7 +896,7 @@ footer {
 }
 .modal-content a {
     text-decoration: none;
-    color: var(--cred300);
+    color: var(--cred400);
 }
 
 /* The Close Button */
@@ -937,7 +943,7 @@ Following Bootstrap rules:
         max-width: 30vw;
     }
     .projects {
-        padding: 2.5rem 3%;
+        padding: 3rem 3%;
     }
     .baseinfo-container {
         clear: both;
@@ -964,11 +970,9 @@ Following Bootstrap rules:
         margin-top: 15%;
     }
     .button-up {
-        bottom: 2rem;
-        right: 2rem;
-        width: 5.5rem;
-        height: 5.5rem;
-        margin: 0.5rem;
+        width: 4.8rem;
+        height: 4.8rem;
+        margin: 0.3rem;
     }
     .button-up i {
         font-size: 48px;
@@ -990,14 +994,26 @@ Following Bootstrap rules:
     .about-me {
         padding: 1rem 10%;
     }
+    .about-text {
+        padding-top: 1.5rem;
+        font-size: 1.8rem;
+    }
+    .object-button__link {
+        border: 0.4rem solid rgba(78, 78, 78, 0.678);
+        padding: 0.3rem;
+        font-size: 1.7rem;
+    }
+    .object-button__link:hover {
+        border: 0.4rem solid var(--cred400);
+    }
     .projects {
-        padding: 3rem 5%;
+        padding: 3.5rem 5%;
     }
     .projects h3 {
         margin: 2.5rem;
     }
     .skills p {
-        font-size: 1.8em;
+        font-size: 1.7rem;
     }
     .more {
         padding: 3rem 5%;
@@ -1025,6 +1041,9 @@ Following Bootstrap rules:
     .hello-txt {
         margin-top: 12%;
     }
+    .button-up {
+        margin: 1rem;
+    }
     .head-title {
         font-size: 3.8rem;
     }
@@ -1043,24 +1062,36 @@ Following Bootstrap rules:
     .sect-heading {
         font-size: 2.4rem;
     }
-    .about-text {
-        font-size: 1.8rem;
-    }
     .prof-picture {
-        max-width: 26vw;
+        max-width: 25vw;
+        margin: 0.75rem 1rem 1rem 0;
     }
     .about-me {
         padding: 1rem 12%;
     }
     .about-text {
-        padding-top: 3rem;
+        padding-top: 2.5rem;
+        font-size: 1.9rem;
+    }
+    .skills p {
+        font-size: 1.8rem;
     }
     .projects {
-        padding: 3rem 7.5%;
+        padding: 4rem 7.5%;
     }
     .projects h3 {
         font-size: 2.2rem;
         margin: 3rem;
+    }
+    .object-card__text {
+        margin: 0.5rem;
+    }
+    .object-card__title {
+        font-size: 1.9rem;
+    }
+    .object-card__body {
+        font-size: 1.6rem;
+        margin: 0.4rem;
     }
     .more {
         padding: 3rem 7.5%;
@@ -1081,6 +1112,9 @@ Following Bootstrap rules:
         margin-top: 6%;
         font-size: 6rem;
     }
+    .button-up {
+        margin: 2rem;
+    }
     .head-background {
         width: 100vw;
     }
@@ -1092,6 +1126,9 @@ Following Bootstrap rules:
     }
     .sub-title {
         font-size: 4.4rem;
+    }
+    .prof-picture {
+        max-width: 22vw;
     }
     .about-me {
         padding: 1rem 15%;
@@ -1113,7 +1150,7 @@ Following Bootstrap rules:
         margin: 0.5rem;
     }
     .object_card--label {
-        margin: 0.2rem 0.5rem;
+        margin: 0.5rem 0.5rem;
     }
     .more {
         padding: 3rem 15%;
@@ -1123,5 +1160,67 @@ Following Bootstrap rules:
     }
     footer {
         padding: 1rem 15%;
+    }
+}
+
+@media only screen and (min-width: 1441px) {
+    .hello-txt {
+        margin-top: 6%;
+        font-size: 6rem;
+    }
+    .menu-container {
+        left: 6rem;
+    }
+    .button-up {
+        margin: 3rem;
+    }
+    .head-background {
+        width: 100vw;
+    }
+    .head-title {
+        font-size: 4.6rem;
+    }
+    .head-name {
+        font-size: 6.6rem;
+    }
+    .sub-title {
+        font-size: 4.4rem;
+    }
+    .prof-picture {
+        max-width: 20vw;
+    }
+    .about-me {
+        padding: 1.5rem 22.5%;
+        font-size: 1.6rem;
+    }
+    .about-text {
+        padding-top: 3rem;
+        font-size: 2rem;
+    }
+    .projects {
+        padding: 3rem 18%;
+    }
+    .object_card--label {
+        margin: 0.6rem;
+    }
+    .object-card__text {
+        margin: 0.6rem;
+    }
+    .object-card__title {
+        font-size: 2rem;
+        /* margin: 1rem 0.5rem 0.5rem 1rem; */
+    }
+    .object-card__body {
+        font-size: 1.7rem;
+        margin: 0.5rem;
+    }
+    .more {
+        padding: 3rem 20%;
+    }
+    .contact {
+        padding: 1.8rem 22.5%;
+    }
+    footer {
+        padding: 1rem 22.5%;
     }
 }
