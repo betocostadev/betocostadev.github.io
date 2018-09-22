@@ -1,37 +1,31 @@
 /* eslint-disable */
 /* Javascript Paint */
 (function () {
-  console.log('Im Working!');
   const canvas = document.querySelector('#draw');
   const ctx = canvas.getContext('2d');
   const boardWidth = window.innerWidth;
   const boardHeight = window.innerHeight;
-  let newBoardWidth = boardWidth * 0.6;
-  let newBoardHeight = boardHeight * 0.6;
+  let newBoardWidth = boardWidth * 0.5;
+  let newBoardHeight = boardHeight * 0.5;
   canvas.width = newBoardWidth;
   canvas.height = newBoardHeight;
 
-  /* MAYBE I CAN REMOVE THE LINE BELOW....
-  Try it... since it's getting a value inside the function, probably it works without this line. */
-  ctx.strokeStyle = strokeColor;
+
   ctx.lineJoin = 'round'; // Try turning off to see the difference
   ctx.lineCap = 'round'; // Try turning off to see the difference
-  ctx.lineWidth = 10;
+  ctx.lineWidth = 1;
 
   /* INC/DEC Line Width */
-  const increase = document.getElementById('increaseLineWidth').value;
-  const decrease = document.getElementById('decreaseLineWidth').value;
+  const increaseLW = document.getElementById('increaseLineWidth');
+  const decreaseLW = document.getElementById('decreaseLineWidth');
 
-  increaseLineWidth.addEventListener('click', function increaseLineW() {
-  ctx.lineWidth += 10;
+  increaseLW.addEventListener('click', function increaseLineW() {
+  ctx.lineWidth += 2;
   });
-  decreaseLineWidth.addEventListener('click', function decreaseLineW() {
-  ctx.lineWidth -= 10;
+  decreaseLW.addEventListener('click', function decreaseLineW() {
+  ctx.lineWidth -= 2;
   });
 
-  function decreaseLineWD() {
-    ctx.lineWidth -= 10;
-  }
 
   let isDrawing = false; // To avoid drawing when you let go of the click
   let lastX = 0;
@@ -62,6 +56,7 @@
     isDrawing = true;
     [lastX, lastY] = [e.offsetX, e.offsetY];
   });
+
   canvas.addEventListener('mousemove', draw);
   canvas.addEventListener('mouseup', () => isDrawing = false);
   canvas.addEventListener('mouseout', () => isDrawing = false);
