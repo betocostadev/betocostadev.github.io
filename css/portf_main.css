@@ -331,11 +331,12 @@ footer {
     background: rgba(235, 208, 208, 0.541);
     border-radius: 50%;
     position: fixed;
+    z-index: 1;
     bottom: 0.4rem;
     right: 0.8rem;
     transition: all 0.35s ease-in-out;
-    width: 3.8rem;
-    height: 3.8rem;
+    width: 4rem;
+    height: 4rem;
     margin: 1rem;
     -webkit-box-shadow: 1px 2px 4px 0px rgba(20, 20, 20, 0.55);
     -moz-box-shadow: 1px 2px 4px 0px rgba(20, 20, 20, 0.55);
@@ -977,8 +978,8 @@ Following Bootstrap rules:
         margin-top: 15%;
     }
     .button-up {
-        width: 4.8rem;
-        height: 4.8rem;
+        width: 4.85rem;
+        height: 4.85rem;
     }
     .button-up i {
         font-size: 48px;
