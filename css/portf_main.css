@@ -331,12 +331,12 @@ footer {
     background: rgba(235, 208, 208, 0.541);
     border-radius: 50%;
     position: fixed;
-    bottom: 0.1rem;
-    right: 0.6rem;
+    bottom: 0.4rem;
+    right: 0.8rem;
     transition: all 0.35s ease-in-out;
-    width: 3.5rem;
-    height: 3.5rem;
-    margin: 0.2rem;
+    width: 3.8rem;
+    height: 3.8rem;
+    margin: 1rem;
     -webkit-box-shadow: 1px 2px 4px 0px rgba(20, 20, 20, 0.55);
     -moz-box-shadow: 1px 2px 4px 0px rgba(20, 20, 20, 0.55);
     box-shadow: 1px 2px 4px 0px rgba(20, 20, 20, 0.55);
@@ -347,7 +347,7 @@ footer {
 }
 
 .button-up i {
-    font-size: 36px;
+    font-size: 40px;
     color: var(--cgrey900);
 }
 
@@ -512,6 +512,7 @@ footer {
 .about-text {
     margin: 2rem 1rem 2.5rem 1rem;
     word-wrap: break-word;
+    font-size: 1.6rem;
 }
 
 .baseinfo-container {
@@ -736,7 +737,6 @@ footer {
 
 .object-card__link {
     text-decoration: none;
-    font-size: 2rem;
     margin: 1rem;
     padding: 0;
     display: block;
@@ -810,9 +810,16 @@ footer {
     text-align: center;
 }
 
+.contact-container a {
+    color: var(--cgrey050);
+}
+
 .contact-container div :nth-child(2) {
     text-transform: uppercase;
     color: var(--cred400);
+}
+.contact-container div :nth-child(3) {
+    color: var(--cgrey050);
 }
 
 .social-container {
@@ -972,7 +979,6 @@ Following Bootstrap rules:
     .button-up {
         width: 4.8rem;
         height: 4.8rem;
-        margin: 0.3rem;
     }
     .button-up i {
         font-size: 48px;
@@ -995,8 +1001,7 @@ Following Bootstrap rules:
         padding: 1rem 10%;
     }
     .about-text {
-        padding-top: 1.5rem;
-        font-size: 1.8rem;
+        padding-top: 1.3rem;
     }
     .object-button__link {
         border: 0.4rem solid rgba(78, 78, 78, 0.678);
@@ -1041,9 +1046,6 @@ Following Bootstrap rules:
     .hello-txt {
         margin-top: 12%;
     }
-    .button-up {
-        margin: 1rem;
-    }
     .head-title {
         font-size: 3.8rem;
     }
@@ -1064,14 +1066,14 @@ Following Bootstrap rules:
     }
     .prof-picture {
         max-width: 25vw;
-        margin: 0.75rem 1rem 1rem 0;
+        margin: 1rem 1rem 0.5rem 0;
     }
     .about-me {
         padding: 1rem 12%;
     }
     .about-text {
-        padding-top: 2.5rem;
-        font-size: 1.9rem;
+        padding-top: 1.6rem;
+        font-size: 1.8rem;
     }
     .skills p {
         font-size: 1.8rem;
@@ -1085,9 +1087,6 @@ Following Bootstrap rules:
     }
     .object-card__text {
         margin: 0.5rem;
-    }
-    .object-card__title {
-        font-size: 1.9rem;
     }
     .object-card__body {
         font-size: 1.6rem;
@@ -1190,12 +1189,7 @@ Following Bootstrap rules:
         max-width: 20vw;
     }
     .about-me {
-        padding: 1.5rem 22.5%;
-        font-size: 1.6rem;
-    }
-    .about-text {
-        padding-top: 3rem;
-        font-size: 2rem;
+        padding: 1.25rem 22.5%;
     }
     .projects {
         padding: 3rem 16%;
@@ -1206,12 +1200,8 @@ Following Bootstrap rules:
     .object-card__text {
         margin: 0.6rem;
     }
-    .object-card__title {
-        font-size: 2rem;
-        /* margin: 1rem 0.5rem 0.5rem 1rem; */
-    }
     .object-card__body {
-        font-size: 1.7rem;
+        font-size: 1.6rem;
         margin: 0.5rem;
     }
     .more {
