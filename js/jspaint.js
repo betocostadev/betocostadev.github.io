@@ -61,27 +61,28 @@
   canvas.addEventListener('mouseup', () => isDrawing = false);
   canvas.addEventListener('mouseout', () => isDrawing = false);
 
-  // Touch Events
+  // Touch Events - Based on http://bencentra.com/code/2014/12/05/html5-canvas-touch-events.html
   // Set up touch events for mobile, etc
   canvas.addEventListener("touchstart", function (e) {
       mousePos = getTouchPos(canvas, e);
-    var touch = e.touches[0];
-    var mouseEvent = new MouseEvent("mousedown", {
+    let touch = e.touches[0];
+    let mouseEvent = new MouseEvent("mousedown", {
     clientX: touch.clientX,
     clientY: touch.clientY
   });
   canvas.dispatchEvent(mouseEvent);
   }, false);
   canvas.addEventListener("touchend", function (e) {
-  var mouseEvent = new MouseEvent("mouseup", {});
+  let mouseEvent = new MouseEvent("mouseup", {});
   canvas.dispatchEvent(mouseEvent);
   }, false);
   canvas.addEventListener("touchmove", function (e) {
-  var touch = e.touches[0];
-  var mouseEvent = new MouseEvent("mousemove", {
+  let touch = e.touches[0];
+  console.log(e);
+  let mouseEvent = new MouseEvent("mousemove", {
     clientX: touch.clientX,
     clientY: touch.clientY
-  });
+    });
   canvas.dispatchEvent(mouseEvent);
   }, false);
   // Get touch canvas position
@@ -93,17 +94,17 @@
     };
   }
   // Prevent scrolling when touching the canvas
-  document.body.addEventListener("touchstart", function (e) {
+  canvas.addEventListener("touchstart", function (e) {
     if (e.target == canvas) {
       e.preventDefault();
     }
   }, false);
-  document.body.addEventListener("touchend", function (e) {
+  canvas.addEventListener("touchend", function (e) {
     if (e.target == canvas) {
       e.preventDefault();
     }
   }, false);
-  document.body.addEventListener("touchmove", function (e) {
+  canvas.addEventListener("touchmove", function (e) {
     if (e.target == canvas) {
       e.preventDefault();
     }
