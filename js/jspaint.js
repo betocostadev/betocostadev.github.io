@@ -10,7 +10,6 @@
   canvas.width = newBoardWidth;
   canvas.height = newBoardHeight;
 
-
   ctx.lineJoin = 'round'; // Try turning off to see the difference
   ctx.lineCap = 'round'; // Try turning off to see the difference
   ctx.lineWidth = 1;
@@ -68,7 +67,7 @@
     let touch = e.touches[0];
     let mouseEvent = new MouseEvent("mousedown", {
     clientX: touch.clientX,
-    clientY: touch.clientY
+    clientY: touch.clientY + 55
   });
   canvas.dispatchEvent(mouseEvent);
   }, false);
@@ -81,7 +80,7 @@
   console.log(e);
   let mouseEvent = new MouseEvent("mousemove", {
     clientX: touch.clientX,
-    clientY: touch.clientY
+    clientY: touch.clientY + 55
     });
   canvas.dispatchEvent(mouseEvent);
   }, false);
