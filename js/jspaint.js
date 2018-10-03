@@ -66,8 +66,8 @@
       mousePos = getTouchPos(canvas, e);
     let touch = e.touches[0];
     let mouseEvent = new MouseEvent("mousedown", {
-    clientX: touch.clientX + 10,
-    clientY: touch.clientY + 55
+    clientX: touch.clientX,
+    clientY: touch.clientY
   });
   canvas.dispatchEvent(mouseEvent);
   }, false);
@@ -77,10 +77,9 @@
   }, false);
   canvas.addEventListener("touchmove", function (e) {
   let touch = e.touches[0];
-  console.log(e);
   let mouseEvent = new MouseEvent("mousemove", {
-    clientX: touch.clientX + 10,
-    clientY: touch.clientY + 55
+    clientX: touch.clientX,
+    clientY: touch.clientY
     });
   canvas.dispatchEvent(mouseEvent);
   }, false);
