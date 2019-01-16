@@ -1,4 +1,6 @@
 # Roberto Costa | Front End Developer
-## Simple Portfolio Page
+## This repo was made to create my portfolio, using Github pages.
 ***
 Portfolio page is available [here](https://betocostadev.github.io/)
+
+## Projects
