@@ -760,12 +760,16 @@ footer {
 
 .object-card__img {
     background-size: cover;
-    border-radius: 50%;
     float: left;
     height: 70px;
     width: 70px;
     margin: 0.5rem;
 }
+
+.object-card__img img {
+    border-radius: 10px;
+}
+
 .object-card__text {
     color: var(--cgrey900);
     margin: 0;
