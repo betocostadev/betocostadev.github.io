@@ -738,7 +738,7 @@ footer {
 
 .object-card__link {
     text-decoration: none;
-    margin: 1rem;
+    margin: 0.5rem;
     padding: 0;
     display: block;
     background: #f8f8f8;
@@ -768,12 +768,14 @@ footer {
 
 .object-card__img img {
     border-radius: 10px;
+    margin: 2px;
 }
 
 .object-card__text {
     color: var(--cgrey900);
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 .object-card__title {
     font-size: 1.8rem;
@@ -783,13 +785,13 @@ footer {
     font-size: 1.5rem;
     margin: 0.2rem;
 }
-.object_card--label {
+.object-card__label {
     clear: left;
-    margin: 0.5rem 1rem 0.5rem 2.5rem;
+    margin: 0.4rem 1rem 0.5rem 2rem;
     padding: 0.5rem 0;
     color: var(--cgrey800);
 }
-.object_card--label i {
+.object-card__label i {
     vertical-align: middle;
     margin-left: 0.5rem;
 }
