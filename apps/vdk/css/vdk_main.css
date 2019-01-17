@@ -1,0 +1,74 @@
+/* BASE */
+
+/* VARIABLES */
+:root {
+    --red: #ff6f69;
+    --mydarkgray: #333;
+}
+
+html {
+    box-sizing: border-box;
+    /* font-size: 62.5%; */
+    font-family: 'Risque', cursive;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* MEDIA CATCH ALL */
+img, embed, object, video {
+    max-width: 100%;
+}
+
+body {
+  background-image: url(../img/backa.jpg);
+  background-size: cover;
+  height: 100vh;
+}
+
+/* TEXT BASE */
+
+body {
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  padding: 2px;
+  background: rgba(120, 119, 119, 0.6);
+}
+
+.header img {
+  width: 24px;
+  height: 24px;
+  flex: 0.2;
+  justify-self: flex-start;
+}
+
+.header > a:first-of-type{
+  color: white;
+  text-decoration: none;
+  flex: 1;
+  justify-self: flex-start;
+}
+
+.button-link {
+  color: red;
+  text-decoration: none;
+  flex: 1;
+  justify-self: center;
+  margin: 10px;
+}
+
+.header h1 {
+  font-size: 1.375rem;
+  justify-self: flex-end;
+  margin: 0.1rem;
+}
+
+a:visited {
+  color: white;
+}
