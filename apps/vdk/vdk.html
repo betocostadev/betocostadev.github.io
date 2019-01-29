@@ -4,11 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Have fun with the Javascript Virtual Drum Kit">
   <link href="https://fonts.googleapis.com/css?family=Risque" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
   <link rel="stylesheet" href="css/vdk_main.css">
   <title>Virtual Drum Kit | Beto Costa</title>
 </head>
 <body>
+
+  <div id="screenPos">
+    <p>Virtual Drum Kit | Beto Costa</p>
+    <p>Please, change your device orientation:</p>
+    <div class="material-icons-container">
+      <i class="material-icons">stay_primary_portrait</i>
+      <i class="material-icons flashing">arrow_forward</i>
+      <i class="material-icons">stay_primary_landscape</i>
+    </div>
+  </div>
+
   <div class="header">
     <a href="https://betocostadev.github.io/">
       <img src="img/arrow_back.svg" alt="Go back">Beto Costa Dev
@@ -29,10 +43,10 @@
 
       </div>
       <div class="social">
-        <a href="" class="social__logo"><img src="img/facebook-logo-button.svg" alt="Share on Facebook"></a>
-        <a href="" class="social__logo"><img src="img/twitter-logo-button.svg" alt="Share on Twitter"></a>
-        <a href="" class="social__logo"><img src="img/google-plus-logo-button.svg" alt="Share on Google+"></a>
-        <a href="" class="social__logo"><img src="img/linkedin-logo-button.svg" alt="Share on LinkedIn"></a>
+        <a href="https://www.linkedin.com/in/robertomcosta/" target="_blank" class="social__logo"><img src="img/linkedin-logo-button.svg" alt="Beto Costa's LinkedIn Profile"></a>
+        <a href="https://github.com/betocostadev" target="_blank" class="social__logo"><img src="img/github-logo.svg" alt="Beto Costa's Github Profile"></a>
+        <a href="https://twitter.com/Betifler" target="_blank" class="social__logo"><img src="img/twitter-logo-button.svg" alt="Beto Costa's Twitter Profile"></a>
+        <a href="https://plus.google.com/+BobBack86" target="_blank" class="social__logo"><img src="img/google-plus-logo-button.svg" alt="Beto Costa's Google+ Profile"></a>
       </div>
 
       <img src="img/open_hat.svg" class="key" alt="Drum Kit part OpenHat" id="openHat" data-key="74">
@@ -62,5 +76,13 @@
   <audio data-key="89" src="sounds/ride.wav"></audio>
 
   <script src="js/vdk.js"></script>
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
 </body>
 </html>

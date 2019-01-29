@@ -4,6 +4,16 @@
 const shareBtn = document.getElementById('shareBtn');
 const social = document.getElementsByClassName('social')[0];
 const shareBack = document.getElementById('shareBack');
+const screenPos = document.getElementById('screenPos');
+
+/* Screen detection Portrait x Landscape */
+function detectScreenPos() {
+  if ((window.innerWidth < 800) && (window.innerHeight > window.innerWidth)) {
+    screenPos.style.display = 'block';
+  } else {
+    screenPos.style.display = 'none';
+  }
+}
 
 /* Share Menu */
 shareBtn.addEventListener('click', () => {
@@ -52,3 +62,5 @@ keys.forEach(key => key.addEventListener('transitionend', removeTransition));
 
 window.addEventListener('keydown', playSound);
 window.addEventListener('click', playSoundClick);
+window.addEventListener('load', detectScreenPos);
+window.addEventListener('resize', detectScreenPos);

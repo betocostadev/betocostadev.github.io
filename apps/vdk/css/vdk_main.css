@@ -33,6 +33,62 @@ body {
   margin: 0;
 }
 
+#screenPos {
+  display: block;
+  position: relative;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  min-height: 110vh;
+  min-width: 100vw;
+  background-color: #fff;
+  color: #000000;
+  text-align: center;
+  font-size: 2.5rem;
+  padding: 5px;
+}
+
+#screenPos p:first-of-type {
+  font-size: 1.5rem;
+}
+
+.material-icons-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 1rem 2rem;
+}
+
+.material-icons-container i:nth-child(1) {
+  color: #ca0505;
+}
+
+.material-icons-container i:nth-child(3) {
+  color: #0c860c;
+}
+
+.material-icons {
+  display: block;
+  font-size: 48px;
+  margin: 15px;
+  flex: 1;
+  align-self: flex-end;
+}
+.flashing {
+  animation: flash 2s ease-in-out infinite;
+}
+
+@keyframes flash {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 .header {
   display: flex;
   height: 50px;
@@ -178,6 +234,10 @@ top: 55px;
 .social__logo img {
   width: 36px;
   height: 36px;
+}
+.social__logo img:hover {
+  border: 2px solid yellow;
+  border-radius: 10px;
 }
 
 .open {
