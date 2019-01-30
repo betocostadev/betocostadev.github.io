@@ -8,7 +8,7 @@ const screenPos = document.getElementById('screenPos');
 
 /* Screen detection Portrait x Landscape */
 function detectScreenPos() {
-  if ((window.innerWidth < 800) && (window.innerHeight > window.innerWidth)) {
+  if ((window.innerWidth < 650) && (window.innerHeight > window.innerWidth)) {
     screenPos.style.display = 'block';
   } else {
     screenPos.style.display = 'none';
