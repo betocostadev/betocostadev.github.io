@@ -1,0 +1,172 @@
+/* BASE */
+
+/* @import url(http://weloveiconfonts.com/api/?family=fontawesome); */
+
+/* VARIABLES */
+:root {
+    --fontPurple: #5A05A1;
+    --red: #ff6f69;
+    --mydarkgray: #333;
+}
+
+html {
+    box-sizing: border-box;
+    /* font-size: 62.5%; */
+    font-family: 'Roboto Condensed', sans-serif;
+    /* font-weight: 400; */
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* MEDIA CATCH ALL */
+img, embed, object, video {
+    max-width: 100%;
+}
+
+p   {
+    margin: 0.5rem;
+}
+
+body {
+    /* margin: 0 10%; */
+    min-height: 100vh;
+    background: linear-gradient(150.6deg, #76CE94 0%, #B979EB 100%);
+}
+
+/* TEXT BASE */
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+#headingOne {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  text-align: center;
+  color: var(--fontPurple);
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
+  letter-spacing: 0.2em;
+}
+
+#headingTwo {
+  font-size: 1.125rem;
+  text-align: center;
+  color: var(--fontPurple);
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
+  margin-bottom: 2rem;
+}
+
+#headingTwo a {
+  color: #E9FFFB;
+  text-decoration: none;
+}
+#headingTwo a:hover {
+  text-decoration: underline;
+}
+
+#navigation {
+  min-height: 50vh;
+  max-width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  background: #5F5F5F;
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+}
+
+#navigation button {
+  flex: 1;
+  margin: 1.5rem;
+  background: rgba(172, 85, 213, 0.32);
+  border: 1px outset rgba(172, 85, 213, 0.32);
+  border-radius: 20px;
+  color: #A9FF94;
+  font-size: 1.2rem;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  padding: 4px 6px 2px 6px;
+  text-align: center;
+}
+
+#navigation a {
+  flex: 1;
+  margin: 1.5rem;
+  background: rgba(172, 85, 213, 0.32);
+  border: 1px outset rgba(172, 85, 213, 0.32);
+  border-radius: 20px;
+  color: #A9FF94;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  padding: 8px 6px 0px 6px;
+  text-align: center;
+  text-decoration: none;
+}
+
+#navigation button:hover {
+  cursor: pointer;
+  background: #71348D;
+  border: 2px outset rgba(172, 85, 213, 0.32);
+}
+
+#navigation a:hover {
+  cursor: pointer;
+  background: #71348D;
+  border: 2px outset rgba(172, 85, 213, 0.32);
+}
+
+#modal-about {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  background: rgba(96, 62, 124, 0.55);
+}
+
+.modal {
+  display: flex;
+  background: #FFFFFF;
+  border-radius: 25px;
+  flex-direction: column;
+  margin: 3.5rem 2rem;
+  padding: 1rem;
+}
+
+.modal i {
+  text-align: right;
+  font-size: 36px;
+  color: var(--fontPurple);
+}
+.modal i:hover {
+  color: #000;
+  cursor: pointer;
+}
+
+.modal p {
+  font-size: 1.125rem;
+}
+
+.modal a {
+  color: var(--fontPurple);
+  text-decoration: none;
+}
+
+.modal a:hover {
+  text-decoration: underline;
+}
+
+.modal-display {
+  display: none;
+}
