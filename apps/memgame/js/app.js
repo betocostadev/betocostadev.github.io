@@ -6,11 +6,17 @@ const gameSection = document.getElementById('game');
 const gameGrid = document.getElementById('game-grid');
 const body = document.getElementsByTagName('body');
 const startCounter = document.getElementById('startCounter');
-console.log(startCounter.textContent);
+const status = document.getElementById('status');
+const movesDisplay = document.getElementById('movesDisplay');
 
 const landing = document.getElementById('landing');
 const closeAbout = document.getElementById('closeAboutModal');
 const modalAbout = document.getElementById('modal-about');
+const memHeading = document.getElementById('memHeading');
+
+let moves = 0;
+let cards = [];
+let cardsrc = [];
 
 aboutBtn.addEventListener('click', () => {
   modalAbout.classList.toggle('modal-display');
@@ -27,21 +33,22 @@ closeAbout.addEventListener('click', () => {
 });
 
 function startGame() {
-  const cards = Array.from(document.getElementsByClassName('card'));
-  cards.forEach((card) => {
+  memHeading.classList.toggle('hide');
+  status.classList.remove('hide');
+  status.classList.add('status');
+  const startcards = Array.from(document.getElementsByClassName('card'));
+  startcards.forEach((card) => {
     card.classList.add('card-hide');
     card.firstChild.classList.add('img-hide');
   });
   setTimeout(() => {
-    cards.forEach((card) => {
+    startcards.forEach((card) => {
       card.classList.remove('correct');
       card.classList.add('hidden-card');
     });
-  }, 1000);
+  }, 450);
 }
 
-let cards = [];
-let cardsrc = [];
 function compareCards() {
   console.log(cards);
   console.log(cardsrc);
@@ -55,11 +62,26 @@ function compareCards() {
         card.classList.add('correct');
       });
       cardsrc = [];
-    }, 600);
+    }, 800);
     console.log(cardsrc[0]);
     console.log(cardsrc[1]);
   } else {
     console.log('errado!');
+    setTimeout(() => {
+      cardsrc.forEach((card) => {
+        card.classList.remove('card-show');
+        card.classList.add('card-incorrect');
+        // card.classList.add('correct');
+      });
+    }, 800);
+    setTimeout(() => {
+      cardsrc.forEach((card) => {
+        card.classList.add('card-hide', 'hidden-card');
+        card.classList.remove('card-incorrect');
+        card.firstChild.classList.add('img-hide');
+      });
+      cardsrc = [];
+    }, 1200);
   }
   cards = [];
   // cardsrc = [];
@@ -74,6 +96,9 @@ function checker(e) {
   card.classList.add('card-show');
   cards.push(firstCard);
   cardsrc.push(card);
+  moves += 1;
+  movesDisplay.textContent = moves;
+  console.log(moves);
   if (cards.length === 2) {
     compareCards();
   }
@@ -177,7 +202,6 @@ function renderGame() {
     gameGrid.appendChild(card);
     card.appendChild(cardImg);
   }
-  // gameGrid.addEventListener('click', checker);
   startTimer();
 }
 
