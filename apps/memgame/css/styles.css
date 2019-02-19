@@ -217,6 +217,10 @@ body {
   font-weight: 700;
   text-align: center;
 }
+#startCounter {
+  color: rgb(204, 18, 18);
+  font-size: 2rem;
+}
 
 #game-grid {
   min-height: 80vh;
@@ -250,4 +254,118 @@ body {
   background: #1CA674;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
   border-radius: 15px;
+}
+
+.card-hide {
+  animation: hideCardAnim 1s 1 ease-in-out;
+}
+
+.img-hide {
+  animation: hideCardImg 1s 1 ease-out;
+  opacity: 0;
+}
+
+.hidden-card {
+  background: #CBF6F1;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25), 0px -2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+}
+
+.card-show {
+  animation: cardShow 0.5s 1 ease-in-out;
+  background: rgb(22, 115, 143);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25), 0px -2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+}
+
+.img-show {
+  animation: showCardImg 0.5s 1 ease-in-out;
+}
+
+.card-correct {
+  animation: cardCorrect 1s 1 ease-in-out;
+}
+
+@keyframes hideCardAnim {
+  0% {
+    transform: rotateY(20deg) scale(1);
+  }
+  50% {
+    transform: rotateY(90deg) scale(1.05);
+  }
+  100% {
+    transform: rotateY(180deg) scale(1);
+    background: #CBF6F1;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25), 0px -2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+  }
+}
+
+@keyframes hideCardImg {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes cardShow {
+  0% {
+    transform: rotateY(180deg) scale(1);
+    background: #CBF6F1;
+  }
+  50% {
+    transform: rotateY(90deg) scale(1.05);
+  }
+  100% {
+    transform: rotateY(20deg) scale(1);
+    background: rgb(22, 115, 143);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25), 0px -2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+  }
+}
+
+@keyframes showCardImg {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes cardCorrect {
+  0% {
+    transform: rotateX(0deg) scale(1);
+  }
+  15% {
+    transform: rotateX(30deg) scale(1.1);
+  }
+  30% {
+    transform: rotateX(0deg) scale(1.1);
+  }
+  45% {
+    transform: rotateX(-30deg) scale(1.1);
+  }
+  60% {
+    transform: rotateX(0deg) scale(1.1);
+  }
+  75% {
+    transform: rotateX(30deg) scale(1.1);
+  }
+  90% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: scale(1);
+    background: #1CA674;
+  }
+
 }
