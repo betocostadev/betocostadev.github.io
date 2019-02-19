@@ -1,19 +1,14 @@
 /* BASE */
 
-/* @import url(http://weloveiconfonts.com/api/?family=fontawesome); */
-
 /* VARIABLES */
 :root {
-    --fontPurple: #5A05A1;
-    --red: #ff6f69;
+    --fontPurple: #5a05a1;
     --mydarkgray: #333;
 }
 
 html {
     box-sizing: border-box;
-    /* font-size: 62.5%; */
     font-family: 'Roboto Condensed', sans-serif;
-    /* font-weight: 400; */
 }
 
 *,
@@ -32,28 +27,15 @@ p   {
 }
 
 body {
-    /* margin: 0 10%; */
+    margin: 0;
     min-height: 100vh;
-    background: linear-gradient(150.6deg, #76CE94 0%, #B979EB 100%);
-}
-
-/* TEXT BASE */
-
-.text-right {
-    text-align: right;
-}
-
-.text-center {
-    text-align: center;
-}
-
-.text-uppercase {
-    text-transform: uppercase;
+    background: linear-gradient(150.6deg, #76ce94 0%, #b979eb 100%);
 }
 
 #headingOne {
   text-transform: uppercase;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
+  margin: 0.4rem;
   text-align: center;
   color: var(--fontPurple);
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
@@ -61,7 +43,8 @@ body {
 }
 
 #headingTwo {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
+  margin: 1.4rem 0.4rem 1rem 0.4rem;
   text-align: center;
   color: var(--fontPurple);
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
@@ -72,6 +55,7 @@ body {
   color: #E9FFFB;
   text-decoration: none;
 }
+
 #headingTwo a:hover {
   text-decoration: underline;
 }
@@ -127,7 +111,7 @@ body {
   border: 2px outset rgba(172, 85, 213, 0.32);
 }
 
-#modal-about {
+#modal-about, #modal-winner, #modal-loser {
   position: absolute;
   top: 0;
   left: 0;
@@ -142,6 +126,7 @@ body {
   flex-direction: column;
   margin: 3.5rem 2rem;
   padding: 1rem;
+  min-height: 70vh;
 }
 
 .modal i {
@@ -168,16 +153,51 @@ body {
   text-decoration: underline;
 }
 
+#modal-winner, #modal-loser {
+  min-width: 100vw;
+}
+
+#modal-winner .modal, #modal-loser .modal {
+  min-height: 95vw;
+}
+
+#modal-winner i, #modal-loser i {
+  display: block;
+  margin: 0.5rem;
+  font-size: 36px;
+  text-align: center;
+}
+
+#modal-winner h2, #modal-loser h2{
+  text-align: center;
+  font-size: 2rem;
+}
+
+#modal-winner p, #modal-loser p {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+#modal-winner a, #modal-loser a {
+  display: block;
+  font-size: 1.2rem;
+  margin: 1.2rem auto;
+  background: #5a05a1;
+  color: #cbf6f1;
+  border-radius: 20px;
+  padding: 1rem;
+}
+
 .modal-display {
   display: none;
 }
 
 .displayAnim {
-  animation: show 1s linear;
+  animation: show 0.8s linear;
 }
 
 .hideAnim {
-  animation: hide 1s linear;
+  animation: hide 0.8s linear;
 }
 
 @keyframes show {
@@ -207,23 +227,43 @@ body {
   background: #fff;
 }
 
-.status {
-  display: flex;
-  margin: 0.1rem 0.5rem 1rem 0.5rem;
-  justify-content: space-between;
-  font-size: 1.1rem;
+#doom p {
+  font-size: 1.25rem;
+  text-align: center;
+  margin: 0.8rem 1rem 1rem 1rem;
   color: var(--fontPurple);
   font-weight: 700;
 }
+
+.good {
+  color: #1ca674;
+}
+
+.danger {
+  color: #a61c1c;;
+}
+
+.status {
+  display: flex;
+  margin: 0.1rem 0.5rem 0.5rem 0.5rem;
+  justify-content: space-between;
+  font-size: 1.3rem;
+  color: var(--fontPurple);
+  font-weight: 700;
+}
+
 #status a {
-  align-self: center;
   text-decoration: none;
 }
+
+#status p {
+  padding: 0.4rem 0.2rem 0.2rem 0.2rem;
+}
+
 #restart {
   cursor: pointer;
-}
-#restart p {
-  display: inline;
+  align-self: center;
+  padding: 0.2rem 0.1rem 0.5rem 0.1rem;
 }
 
 #game {
@@ -233,11 +273,13 @@ body {
 #memHeading {
   color: var(--fontPurple);
   font-size: 1.2rem;
+  margin: 0 1rem 0.5rem 1rem;
   font-weight: 700;
   text-align: center;
 }
+
 #startCounter {
-  color: rgb(204, 18, 18);
+  color: #cc1212;
   font-size: 2rem;
 }
 
@@ -246,7 +288,7 @@ body {
   width: 94%;
   margin: 0 auto;
   padding: 10px;
-  background: linear-gradient(152.88deg, #94FFD2 0%, #71348D 100%);
+  background: linear-gradient(152.88deg, #94ffd2 0%, #71348d 100%);
   box-shadow: 5px 8px 6px rgba(0, 0, 0, 0.25);
   border-radius: 15px;
   display: grid;
@@ -270,13 +312,13 @@ body {
 }
 
 .correct {
-  background: #1CA674;
+  background: #1ca674;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
   border-radius: 15px;
 }
 
 .card-hide {
-  animation: hideCardAnim 0.8s 1 ease-in-out;
+  animation: hideCardAnim 0.6s 1 ease-in-out;
 }
 
 .img-hide {
@@ -291,22 +333,22 @@ body {
 }
 
 .card-show {
-  animation: cardShow 0.5s 1 ease-in-out;
+  animation: cardShow 0.4s 1 ease-in-out;
   background: #16738f;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25), 0px -2px 4px rgba(0, 0, 0, 0.25);
   border-radius: 15px;
 }
 
 .img-show {
-  animation: showCardImg 0.5s 1 ease-in-out;
+  animation: showCardImg 0.4s 1 ease-in-out;
 }
 
 .card-correct {
-  animation: cardCorrect 0.8s 1 ease-in-out;
+  animation: cardCorrect 0.6s 1 ease-in-out;
 }
 
 .card-incorrect {
-  animation: cardIncorrect 0.5s 1 ease-in-out;
+  animation: cardIncorrect 0.4s 1 ease-in-out;
 }
 
 @keyframes hideCardAnim {

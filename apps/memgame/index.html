@@ -12,14 +12,17 @@
 </head>
 <body>
   <main>
+
     <section id="landing">
       <h1 id="headingOne">material icons memory game</h1>
       <h2 id="headingTwo">Based on <a href="https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001" target="_blank">Udacity's Front End Web Developer Nanodegree</a> Memory Game Project</h2>
+
       <nav id="navigation">
         <button id="startGame">START GAME</button>
         <a href="../../index.html">PORTFOLIO</a>
         <button id="about">ABOUT</button>
       </nav>
+
       <div id="modal-about" class="modal-display">
         <div class="modal">
           <i class="material-icons" id="closeAboutModal">close</i>
@@ -30,68 +33,51 @@
         </div>
       </div>
     </section>
+
     <section id="game" class="hide">
       <div id="status" class="hide">
         <p id="moves">Moves: <span id="movesDisplay">0</span></p>
         <div id="restart">
-          <p>Restart</p>
+          <a href="index.html">Restart</a>
           <i class="material-icons">refresh</i>
         </div>
-        <a href="index.html">Back to Start</a>
       </div>
-      <h2 id="memHeading">Memorize Now! <span id="startCounter">00</span></h2>
-      <div id="game-grid">
-        <!-- <div class="card correct">
-          <img src="img/img_1.svg" alt="card">
-        </div>
-        <div class="card correct">
-          <img src="img/img_2.svg" alt="card">
-        </div>
-        <div class="card correct">
-          <img src="img/img_3.svg" alt="card">
-        </div>
-        <div class="card correct">
-          <img src="img/img_4.svg" alt="card">
-        </div>
-        <div class="card correct">
-          <img src="img/img_5.svg" alt="card">
-        </div>
-        <div class="card correct">
-          <img src="img/img_6.svg" alt="card">
-        </div>
-        <div class="card correct">
-          <img src="img/img_7.svg" alt="card">
-        </div>
-        <div class="card correct">
-          <img src="img/img_8.svg" alt="card">
-        </div>
-        <div class="card correct">
-          <img src="img/img_1.svg" alt="card">
-        </div>
-        <div class="card correct">
-          <img src="img/img_2.svg" alt="card">
-        </div>
-        <div class="card correct">
-          <img src="img/img_3.svg" alt="card">
-        </div>
-        <div class="card correct">
-          <img src="img/img_4.svg" alt="card">
-        </div>
-        <div class="card correct">
-          <img src="img/img_5.svg" alt="card">
-        </div>
-        <div class="card correct">
-          <img src="img/img_6.svg" alt="card">
-        </div>
-        <div class="card correct">
-          <img src="img/img_7.svg" alt="card">
-        </div>
-        <div class="card correct">
-          <img src="img/img_8.svg" alt="card">
-        </div> -->
+      <h2 id="memHeading">Starting in: <span id="startCounter">00</span></h2>
 
+      <div id="game-grid">
       </div>
+
+      <div id="doom" class="hide">
+        <p>Time remaining: <span id="doomDisplay"></span></p>
+      </div>
+
+      <div id="modal-winner" class="modal-display">
+        <div class="modal">
+          <h2 class="good">You Win!</h2>
+          <i class="material-icons good">sentiment_very_satisfied</i>
+          <p>Total moves: <span id="totalMoves"></span></p>
+          <a href="index.html">Play Again!</a>
+          <a href="../../index.html">Back to Portfolio</a>
+        </div>
+      </div>
+
+      <div id="modal-loser" class="modal-display">
+        <div class="modal">
+          <h2 class="danger">You Lose!</h2>
+          <i class="material-icons danger">sentiment_dissatisfied</i>
+          <p>Total moves: <span id="totalMovesLoser"></span></p>
+          <p>Elapsed time: <span>01:20</span></p>
+          <a href="index.html">Play Again!</a>
+          <a href="../../index.html">Back to Portfolio</a>
+        </div>
+      </div>
+
+      <audio id="flipCardSnd" src="sounds/flip_card.wav"></audio>
+      <audio id="flipBackSnd" src="sounds/flip_back.wav"></audio>
+      <audio id="sucessSnd" src="sounds/success.wav"></audio>
+
     </section>
+
   </main>
   <script src="js/app.js"></script>
 </body>
