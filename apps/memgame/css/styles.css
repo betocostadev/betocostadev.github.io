@@ -258,12 +258,14 @@ body {
 
 #status p {
   padding: 0.4rem 0.2rem 0.2rem 0.2rem;
+  margin: 0.1rem 1rem 0.2rem 2rem;
 }
 
 #restart {
   cursor: pointer;
   align-self: center;
   padding: 0.2rem 0.1rem 0.5rem 0.1rem;
+  margin: 0.1rem 2rem 0.2rem 1rem;
 }
 
 #game {
@@ -308,7 +310,7 @@ body {
 }
 
 .card img {
-  width: 45px;
+  min-width: 16vw;
 }
 
 .correct {
@@ -464,3 +466,10 @@ body {
     background: #a61c1c;
   }
 }
+
+/* MEDIA QUERIES */
+/* @media only screen and (min-width: 700px) {
+  .card img {
+    min-width: 14vw;
+  }
+} */

@@ -135,7 +135,8 @@ function loser() {
     if (timeIsUp === '00:15') {
       doomDisplay.classList.remove('good');
       doomDisplay.classList.add('danger');
-    } else if ((timeIsUp === '00:00') && (!win)) {
+    }
+    if ((timeIsUp === '00:00') && (!win)) {
       endGame();
     }
   }, 1000);
@@ -148,7 +149,7 @@ function displayTimeLeft(seconds) {
   // console.log(display);
   startCounter.textContent = display;
   doomDisplay.textContent = display;
-  if (display === '01:30') {
+  if (display === '01:15') {
     loser(display);
   }
 }
@@ -175,7 +176,7 @@ function doomTime(time) {
 }
 
 function startGame() {
-  doomTime(80);
+  doomTime(75);
   doomContainer.classList.remove('hide');
   const cardImages = Array.from(gameGrid.querySelectorAll('div.card > img'));
   cardImages.forEach((cardImg) => {
