@@ -8,10 +8,11 @@ const body = document.getElementsByTagName('body');
 const startCounter = document.getElementById('startCounter');
 const status = document.getElementById('status');
 const movesDisplay = document.getElementById('movesDisplay');
-const endMovesDisplay = document.getElementById('totalMoves');
-const endMovesLoser = document.getElementById('totalMovesLoser');
+const winnerRatingDisplay = document.getElementById('winnerRating');
+const loserRatingDisplay = document.getElementById('loserRating');
 const doomContainer = document.getElementById('doom');
 const doomDisplay = document.getElementById('doomDisplay');
+const timeElapsedWinnerDisplay = document.getElementById('timeElapsedWinnerDisplay');
 
 const landing = document.getElementById('landing');
 const closeAbout = document.getElementById('closeAboutModal');
@@ -24,12 +25,16 @@ const flipCardSound = document.getElementById('flipCardSnd');
 const flipBackSound = document.getElementById('flipBackSnd');
 const successSound = document.getElementById('sucessSnd');
 
+
 let moves = 0;
 let correct = 0;
 let cards = [];
 let cardsrc = [];
 let imgsrcCheck = [];
 let win = false;
+let elapsed = 0; // Elapsed time starter
+let stopElapsed; // Used to stop the countdown in the elapsed time function
+let countdown; // Used to reset the countdown in the timer function
 
 aboutBtn.addEventListener('click', () => {
   modalAbout.classList.toggle('modal-display');
@@ -51,11 +56,18 @@ function winner() {
     setTimeout(() => {
       modalWinner.classList.toggle('modal-display');
       modalWinner.classList.add('displayAnim');
-      endMovesDisplay.textContent = moves;
       doomContainer.classList.add('hide');
       win = true;
-      if (moves < 25) {
-        endMovesDisplay.classList.add('good');
+      if (moves < 12) {
+        winnerRatingDisplay.textContent = `Rating: ★★★ ${moves} moves`;
+        winnerRatingDisplay.classList.add('good');
+      } else if (moves <= 16) {
+        winnerRatingDisplay.textContent = `Rating: ★★☆ ${moves} moves`;
+        winnerRatingDisplay.classList.add('good');
+      } else if (moves <= 22) {
+        winnerRatingDisplay.textContent = `Rating: ★☆☆ ${moves} moves`;
+      } else {
+        winnerRatingDisplay.textContent = `Rating: ☆☆☆ ${moves} moves`;
       }
       // console.log('nothing');
     }, 400);
@@ -63,9 +75,19 @@ function winner() {
 }
 
 function compareCards() {
+  moves += 1;
+  if (moves < 12) {
+    movesDisplay.textContent = `Rating: ★★★ ${moves} moves`;
+  } else if (moves <= 16) {
+    movesDisplay.textContent = `Rating: ★★☆ ${moves} moves`;
+  } else if (moves <= 22) {
+    movesDisplay.textContent = `Rating: ★☆☆ ${moves} moves`;
+  } else {
+    movesDisplay.textContent = `Rating: ☆☆☆ ${moves} moves`;
+  }
   cards.sort();
   if (cards[0] === cards[1] && (imgsrcCheck[0] !== imgsrcCheck[1])) {
-    // console.log('Certo, yes!');
+    // console.log('Certo!');
     setTimeout(() => {
       cardsrc.forEach((card) => {
         card.classList.remove('card-show');
@@ -77,7 +99,7 @@ function compareCards() {
         imgsrcCheck = [];
       });
       cardsrc = [];
-    }, 500);
+    }, 600);
     // console.log(cardsrc[0]);
     // console.log(cardsrc[1]);
   } else {
@@ -88,7 +110,7 @@ function compareCards() {
         card.classList.add('card-incorrect');
         flipBackSound.play();
       });
-    }, 500);
+    }, 600);
     setTimeout(() => {
       cardsrc.forEach((card) => {
         card.classList.add('card-hide', 'hidden-card');
@@ -96,7 +118,7 @@ function compareCards() {
         card.firstChild.classList.add('img-hide');
       });
       cardsrc = [];
-    }, 900);
+    }, 1000);
   }
   cards = [];
   imgsrcCheck = [];
@@ -110,12 +132,19 @@ function checker(e) {
   e.target.classList.add('img-show');
   card.classList.remove('card-hide', 'hidden-card');
   card.classList.add('card-show');
-  imgsrcCheck.push(imgCheck);
-  cards.push(firstCard);
-  cardsrc.push(card);
-  moves += 1;
-  movesDisplay.textContent = moves;
-  // console.log(moves);
+  imgsrcCheck.unshift(imgCheck);
+  cards.unshift(firstCard);
+  cardsrc.unshift(card);
+  console.log(moves);
+  if (imgsrcCheck[0] === imgsrcCheck[1]) {
+    cards.pop();
+    cardsrc.pop();
+    imgsrcCheck.pop();
+  }
+  console.log('cards:');
+  console.log(cards);
+  console.log('cardsrc:');
+  console.log(cardsrc);
   flipCardSound.play();
   if (cards.length === 2) {
     compareCards();
@@ -125,7 +154,7 @@ function checker(e) {
 function endGame() {
   modalLoser.classList.remove('modal-display');
   modalLoser.classList.add('displayAnim');
-  endMovesLoser.textContent = moves;
+  loserRatingDisplay.textContent = `Rating: ☆☆☆ ${moves} moves`;
 }
 
 function loser() {
@@ -154,7 +183,6 @@ function displayTimeLeft(seconds) {
   }
 }
 
-let countdown;
 function timer(seconds) {
   clearInterval(countdown);
   const now = Date.now();
@@ -175,8 +203,30 @@ function doomTime(time) {
   timer(seconds);
 }
 
+function elapsedTime() {
+  stopElapsed = setInterval(() => {
+    elapsed += 1;
+    console.log(elapsed);
+    if (elapsed > 74 || correct === 16) {
+      if (elapsed < 35) {
+        timeElapsedWinnerDisplay.textContent = `Time elapsed: ${elapsed} seconds`;
+        timeElapsedWinnerDisplay.classList.add('good');
+        clearInterval(stopElapsed);
+      } else if (elapsed < 55) {
+        timeElapsedWinnerDisplay.textContent = `Time elapsed: ${elapsed} seconds`;
+        clearInterval(stopElapsed);
+      } else {
+        timeElapsedWinnerDisplay.textContent = `Time elapsed: ${elapsed} seconds`;
+        timeElapsedWinnerDisplay.classList.add('danger');
+        clearInterval(stopElapsed);
+      }
+    }
+  }, 1000);
+}
+
 function startGame() {
   doomTime(75);
+  elapsedTime();
   doomContainer.classList.remove('hide');
   const cardImages = Array.from(gameGrid.querySelectorAll('div.card > img'));
   cardImages.forEach((cardImg) => {
@@ -195,7 +245,7 @@ function startGame() {
       card.classList.remove('correct');
       card.classList.add('hidden-card');
     });
-  }, 450);
+  }, 400);
 }
 
 function startTimer() {

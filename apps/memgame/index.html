@@ -36,7 +36,7 @@
 
     <section id="game" class="hide">
       <div id="status" class="hide">
-        <p id="moves">Moves: <span id="movesDisplay">0</span></p>
+        <p id="movesDisplay">Rating: ★★★ 0 moves</p>
         <div id="restart">
           <a href="index.html">Restart</a>
           <i class="material-icons">refresh</i>
@@ -53,9 +53,10 @@
 
       <div id="modal-winner" class="modal-display">
         <div class="modal">
-          <h2 class="good">You Win!</h2>
+          <h2 class="good">You Won!</h2>
           <i class="material-icons good">sentiment_very_satisfied</i>
-          <p>Total moves: <span id="totalMoves"></span></p>
+          <p id="winnerRating"></p>
+          <p id="timeElapsedWinnerDisplay"></p>
           <a href="index.html">Play Again!</a>
           <a href="../../index.html">Back to Portfolio</a>
         </div>
@@ -65,8 +66,8 @@
         <div class="modal">
           <h2 class="danger">You Lose!</h2>
           <i class="material-icons danger">sentiment_dissatisfied</i>
-          <p>Total moves: <span id="totalMovesLoser"></span></p>
-          <p>Elapsed time: <span>01:15</span></p>
+          <p id="loserRating"></p>
+          <p>Time elapsed: 75 seconds</p>
           <a href="index.html">Play Again!</a>
           <a href="../../index.html">Back to Portfolio</a>
         </div>
