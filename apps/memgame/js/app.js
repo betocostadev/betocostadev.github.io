@@ -1,4 +1,4 @@
-/* global document: true */
+/* global document: true */ /* eslint no-use-before-define: 0 */
 
 const startBtn = document.getElementById('startGame');
 const aboutBtn = document.getElementById('about');
@@ -135,16 +135,12 @@ function checker(e) {
   imgsrcCheck.unshift(imgCheck);
   cards.unshift(firstCard);
   cardsrc.unshift(card);
-  console.log(moves);
+  // console.log(moves);
   if (imgsrcCheck[0] === imgsrcCheck[1]) {
     cards.pop();
     cardsrc.pop();
     imgsrcCheck.pop();
   }
-  console.log('cards:');
-  console.log(cards);
-  console.log('cardsrc:');
-  console.log(cardsrc);
   flipCardSound.play();
   if (cards.length === 2) {
     compareCards();
@@ -206,7 +202,7 @@ function doomTime(time) {
 function elapsedTime() {
   stopElapsed = setInterval(() => {
     elapsed += 1;
-    console.log(elapsed);
+    // console.log(elapsed);
     if (elapsed > 74 || correct === 16) {
       if (elapsed < 35) {
         timeElapsedWinnerDisplay.textContent = `Time elapsed: ${elapsed} seconds`;

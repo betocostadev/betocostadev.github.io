@@ -280,7 +280,7 @@ body {
 #memHeading {
   color: var(--fontPurple);
   font-size: 1.25rem;
-  margin: 0 1rem 0.5rem 1rem;
+  margin: 0.2rem 1rem 0.5rem 1rem;
   font-weight: 700;
   text-align: center;
 }
@@ -473,8 +473,69 @@ body {
 }
 
 /* MEDIA QUERIES */
-/* @media only screen and (min-width: 700px) {
-  .card img {
-    min-width: 14vw;
+@media only screen and (min-width: 600px) {
+  #headingOne {
+    font-size: 2rem;
+    margin: 1.2rem;
   }
-} */
+  #headingTwo {
+    font-size: 1.8rem;
+    margin: 1.2rem;
+  }
+  #navigation {
+    max-width: 60%;
+  }
+  #game {
+    min-height: 70vh;
+  }
+  #game-grid {
+    min-height: 65vh;
+    width: 85%;
+  }
+  .card img {
+    min-width: 13vw;
+  }
+  .status {
+    margin: 0.4rem 1rem 0.5rem 1rem;
+    font-size: 1.2rem;
+  }
+  #doom p {
+    font-size: 1.25rem;
+    margin: 1rem;
+    font-weight: 700;
+  }
+  #modal-winner .modal, #modal-loser .modal {
+    margin: 5% 20%;
+    min-height: 65vh;
+  }
+}
+@media only screen and (min-width: 760px) {
+  #navigation {
+    max-width: 40%;
+  }
+  #memHeading {
+    font-size: 1.8rem;
+    margin: 1rem;
+  }
+  #game-grid {
+    min-height: 65vh;
+    width: 80%;
+  }
+  .card img {
+    min-width: 11vw;
+  }
+  .status {
+    justify-content: space-around;
+    margin: 0.8rem 2rem 0.8rem 2rem;
+    font-size: 1.5rem;
+  }
+  #doom p {
+    font-size: 1.5rem;
+    margin: 1rem;
+    font-weight: 700;
+  }
+  #modal-winner .modal, #modal-loser .modal {
+    margin: 8% 30%;
+    min-height: 50vh;
+  }
+}
