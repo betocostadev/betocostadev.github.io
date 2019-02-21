@@ -101,13 +101,15 @@ body {
 
 #navigation button:hover {
   cursor: pointer;
-  background: #71348D;
+  color: #62f3ab;
+  background: #71348d;
   border: 1px outset rgba(154, 42, 206, 0.32);
 }
 
 #navigation a:hover {
   cursor: pointer;
-  background: #71348D;
+  color: #62f3ab;
+  background: #71348d;
   border: 1px outset rgba(154, 42, 206, 0.32);
 }
 
@@ -515,7 +517,7 @@ body {
 /* MEDIA QUERIES */
 @media only screen and (min-width: 370px) {
   .status {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
   }
 }
 
@@ -533,27 +535,27 @@ body {
     margin: 4rem auto;
   }
   #memHeading {
-    font-size: 1.8rem;
-    margin: 1rem;
+    font-size: 1.6rem;
+    margin: 0.65rem;
   }
   #game {
-    min-height: 70vh;
+    min-height: 55vh;
   }
   #game-grid {
-    min-height: 65vh;
+    min-height: 45vh;
     width: 85%;
   }
   .status {
-    margin: 1rem;
+    margin: 0.65rem;
     font-size: 1.25rem;
   }
   #doom p {
     font-size: 1.25rem;
-    margin: 1rem;
+    margin: 0.8rem;
   }
   .modal {
     margin: 5% 20%;
-    min-height: 50vh;
+    min-height: 40vh;
   }
   .modal p {
     font-size: 1.25rem;
@@ -565,7 +567,7 @@ body {
   }
   #modal-winner .modal, #modal-loser .modal {
     margin: 5% 20%;
-    min-height: 45vh;
+    min-height: 40vh;
   }
 }
 
@@ -577,25 +579,22 @@ body {
     max-width: 35%;
   }
   #game-grid {
-    min-height: 60vh;
+    min-height: 40vh;
     width: 80%;
   }
   .card img {
-    min-width: 13vw;
+    min-width: 12.5vw;
   }
   .status {
     justify-content: space-around;
-    margin: 0.8rem 2rem 0.8rem 2rem;
-    font-size: 1.5rem;
+    margin: 0.7rem 2rem 0.7rem 2rem;
+    font-size: 1.4rem;
   }
   #doom p {
-    font-size: 1.5rem;
-    margin: 1rem;
-    font-weight: 700;
+    font-size: 1.4rem;
   }
   .modal {
-    margin: 8% 24%;
-    min-height: 50vh;
+    margin: 8% 25%;
   }
   .modal p {
     font-size: 1.4rem;
@@ -607,25 +606,35 @@ body {
     text-align: center;
   }
   #modal-winner .modal, #modal-loser .modal {
-    margin: 15% 30%;
+    margin: 5% 36%;
   }
 }
 
 @media only screen and (min-width: 900px) {
   body {
-    margin: 1% 10%;;
+    margin: 0.25% 10%;;
+  }
+  .status {
+    justify-content: space-around;
+    margin: 0.25rem 2rem;
+    font-size: 1.45rem;
+  }
+  #doom p {
+    font-size: 1.5rem;
   }
   .card img {
-    min-width: 10vw;
+    min-width: 8vw;
   }
   #game-grid {
-    grid-gap: 10px;
+    grid-gap: 12px;
+    min-height: 38vh;
+    width: 74%;
   }
 }
 
 @media only screen and (min-width: 1200px) {
   body {
-    margin: 1% 15%;
+    margin: 0.5% 16%;
   }
   #headingOne {
     font-size: 2.5rem;
@@ -661,24 +670,23 @@ body {
 
 @media only screen and (min-width: 2000px) {
   body {
-    margin: 1.5% 25%;
+    margin: 1% 25%;
   }
   .modal {
     margin: 6% 40%;
     min-height: 40vh;
   }
   .card img {
-    min-width: 6.2vw;
+    min-width: 5.5vw;
   }
   #memHeading {
     font-size: 2rem;
-    margin: 1rem;
+    margin: 0.8rem;
   }
   #startCounter {
     font-size: 2.2rem;
   }
   .status {
-    margin: 0.5rem 2rem 0.5rem 2rem;
     font-size: 2rem;
   }
   #game-grid {
@@ -688,9 +696,8 @@ body {
   #doom p {
     font-size: 1.85rem;
     margin: 1rem;
-    font-weight: 700;
   }
   #modal-winner .modal, #modal-loser .modal {
-    margin: 8% 36%;
+    margin: 5.5% 42%;
   }
 }
