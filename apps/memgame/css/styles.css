@@ -34,8 +34,8 @@ body {
 
 #headingOne {
   text-transform: uppercase;
-  font-size: 1.6rem;
-  margin: 0.4rem;
+  font-size: 1.75rem;
+  margin: 1rem;
   text-align: center;
   color: var(--fontPurple);
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
@@ -44,7 +44,7 @@ body {
 
 #headingTwo {
   font-size: 1.25rem;
-  margin: 1.4rem 0.4rem 1rem 0.4rem;
+  margin: 1.4rem 0.6rem 1rem 0.6rem;
   text-align: center;
   color: var(--fontPurple);
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
@@ -60,25 +60,25 @@ body {
   text-decoration: underline;
 }
 
+/* Start Menu */
 #navigation {
-  min-height: 45vh;
-  max-width: 80%;
-  margin: 3rem auto;
+  min-height: 20vh;
+  max-width: 76%;
+  margin: 3.5rem auto;
   display: flex;
   flex-direction: column;
-  background: #5F5F5F;
+  background: #353535;
   box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.25);
-  border-radius: 30px;
+  border-radius: 26px;
 }
 
 #navigation button {
   flex: 1;
-  margin: 1.5rem;
-  background: rgba(172, 85, 213, 0.32);
-  border: 1px outset rgba(172, 85, 213, 0.32);
-  border-radius: 20px;
-  color: #A9FF94;
-  font-size: 1.2rem;
+  margin: 0.8rem 1.5rem;
+  background: #65ff96;
+  border: 1px outset #65ff96;
+  border-radius: 16px;
+  color: #630e72;
   font-size: 1.2rem;
   line-height: 2rem;
   padding: 4px 6px 2px 6px;
@@ -87,14 +87,14 @@ body {
 
 #navigation a {
   flex: 1;
-  margin: 1.5rem;
-  background: rgba(172, 85, 213, 0.32);
-  border: 1px outset rgba(172, 85, 213, 0.32);
-  border-radius: 20px;
-  color: #A9FF94;
+  margin: 0.8rem 1.5rem;
+  background: #65ff96;
+  border: 1px outset #65ff96;
+  border-radius: 16px;
+  color: #630e72;
   font-size: 1.2rem;
   line-height: 2rem;
-  padding: 8px 6px 0px 6px;
+  padding: 5px 6px 4px 6px;
   text-align: center;
   text-decoration: none;
 }
@@ -102,20 +102,22 @@ body {
 #navigation button:hover {
   cursor: pointer;
   background: #71348D;
-  border: 2px outset rgba(172, 85, 213, 0.32);
+  border: 1px outset rgba(154, 42, 206, 0.32);
 }
 
 #navigation a:hover {
   cursor: pointer;
   background: #71348D;
-  border: 2px outset rgba(172, 85, 213, 0.32);
+  border: 1px outset rgba(154, 42, 206, 0.32);
 }
 
+/* Modals */
 #modal-about, #modal-winner, #modal-loser {
   position: absolute;
   top: 0;
   left: 0;
   min-height: 100vh;
+  min-width: 100vw;
   background: rgba(96, 62, 124, 0.65);
 }
 
@@ -127,6 +129,11 @@ body {
   margin: 3.5rem 2rem;
   padding: 1rem;
   min-height: 70vh;
+}
+
+.modal h2 {
+  margin: 0.5rem 0.8rem;
+  text-align: center;
 }
 
 .modal i {
@@ -142,6 +149,7 @@ body {
 
 .modal p {
   font-size: 1.125rem;
+  margin: 0.65rem;
 }
 
 .modal a {
@@ -183,22 +191,40 @@ body {
   display: block;
   font-size: 1.2rem;
   margin: 1.2rem auto;
-  background: #5a05a1;
-  color: #cbf6f1;
+  background: #65ff96;
+  color: #000;
   border-radius: 20px;
   padding: 1rem;
 }
 
+.good {
+  color: #1ca674;
+}
+
+.danger {
+  color: #a61c1c;;
+}
+
+/* Hide modal at start */
 .modal-display {
   display: none;
 }
 
+/* Display / Hide - Modal animation */
 .displayAnim {
-  animation: show 0.8s linear;
+  animation: show 0.6s ease;
 }
 
 .hideAnim {
-  animation: hide 0.8s linear;
+  animation: hide 0.6s ease;
+}
+
+.modal-body-display {
+  animation: modalBodyDisplay 0.6s ease-in;
+}
+
+.modal-body-hide {
+  animation: modalBodyHide 0.6s ease-in;
 }
 
 @keyframes show {
@@ -218,6 +244,24 @@ body {
   }
 }
 
+@keyframes modalBodyDisplay {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes modalBodyHide {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 .hide {
   display: none;
 }
@@ -228,6 +272,7 @@ body {
   background: #fff;
 }
 
+/* Countdown timer */
 #doom p {
   font-size: 1.2rem;
   text-align: center;
@@ -236,19 +281,12 @@ body {
   font-weight: 700;
 }
 
-.good {
-  color: #1ca674;
-}
-
-.danger {
-  color: #a61c1c;;
-}
-
+/* Game heading */
 .status {
   display: flex;
-  margin: 0.1rem 0.5rem 0.5rem 0.5rem;
+  margin: 0.5rem;
   justify-content: space-between;
-  font-size: 1.125rem;
+  font-size: 1rem;
   color: var(--fontPurple);
   font-weight: 700;
 }
@@ -273,10 +311,6 @@ body {
   vertical-align: super;
 }
 
-#game {
-  min-height: 75vh;
-}
-
 #memHeading {
   color: var(--fontPurple);
   font-size: 1.25rem;
@@ -290,18 +324,23 @@ body {
   font-size: 1.6rem;
 }
 
+/* Game container */
+#game {
+  min-height: 75vh;
+}
+
 #game-grid {
   min-height: 70vh;
   width: 92%;
   margin: 0 auto;
-  padding: 8px;
+  padding: 7px;
   background: linear-gradient(152.88deg, #94ffd2 0%, #71348d 100%);
-  box-shadow: 5px 8px 6px rgba(0, 0, 0, 0.25);
-  border-radius: 15px;
+  box-shadow: 3px 3px 4px 2px rgba(18, 4, 17, 0.3);
+  border-radius: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
-  grid-gap: 6px;
+  grid-gap: 5px;
 }
 
 .card {
@@ -324,6 +363,7 @@ body {
   border-radius: 15px;
 }
 
+/* Game - Card animations */
 .card-hide {
   animation: hideCardAnim 0.4s 1 ease-in-out;
 }
@@ -473,17 +513,28 @@ body {
 }
 
 /* MEDIA QUERIES */
+@media only screen and (min-width: 370px) {
+  .status {
+    font-size: 1.2rem;
+  }
+}
+
 @media only screen and (min-width: 600px) {
   #headingOne {
     font-size: 2rem;
-    margin: 1.2rem;
+    margin: 1.3rem;
   }
   #headingTwo {
     font-size: 1.8rem;
-    margin: 1.2rem;
+    margin: 1.3rem;
   }
   #navigation {
-    max-width: 60%;
+    max-width: 45%;
+    margin: 4rem auto;
+  }
+  #memHeading {
+    font-size: 1.8rem;
+    margin: 1rem;
   }
   #game {
     min-height: 70vh;
@@ -492,37 +543,45 @@ body {
     min-height: 65vh;
     width: 85%;
   }
-  .card img {
-    min-width: 13vw;
-  }
   .status {
-    margin: 0.4rem 1rem 0.5rem 1rem;
-    font-size: 1.2rem;
+    margin: 1rem;
+    font-size: 1.25rem;
   }
   #doom p {
     font-size: 1.25rem;
     margin: 1rem;
-    font-weight: 700;
+  }
+  .modal {
+    margin: 5% 20%;
+    min-height: 50vh;
+  }
+  .modal p {
+    font-size: 1.25rem;
+    margin: 0.65rem;
+  }
+  .modal h2 {
+    margin: 1rem 0.8rem;
+    text-align: center;
   }
   #modal-winner .modal, #modal-loser .modal {
     margin: 5% 20%;
-    min-height: 65vh;
+    min-height: 45vh;
   }
 }
+
 @media only screen and (min-width: 760px) {
-  #navigation {
-    max-width: 40%;
+  #headingOne, #headingTwo {
+    margin: 1.5rem;
   }
-  #memHeading {
-    font-size: 1.8rem;
-    margin: 1rem;
+  #navigation {
+    max-width: 35%;
   }
   #game-grid {
-    min-height: 65vh;
+    min-height: 60vh;
     width: 80%;
   }
   .card img {
-    min-width: 11vw;
+    min-width: 13vw;
   }
   .status {
     justify-content: space-around;
@@ -534,8 +593,104 @@ body {
     margin: 1rem;
     font-weight: 700;
   }
-  #modal-winner .modal, #modal-loser .modal {
-    margin: 8% 30%;
+  .modal {
+    margin: 8% 24%;
     min-height: 50vh;
+  }
+  .modal p {
+    font-size: 1.4rem;
+    margin: 1rem;
+  }
+  .modal h2 {
+    font-size: 2.1rem;
+    margin: 1rem 0.8rem;
+    text-align: center;
+  }
+  #modal-winner .modal, #modal-loser .modal {
+    margin: 15% 30%;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  body {
+    margin: 1% 10%;;
+  }
+  .card img {
+    min-width: 10vw;
+  }
+  #game-grid {
+    grid-gap: 10px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  body {
+    margin: 1% 15%;
+  }
+  #headingOne {
+    font-size: 2.5rem;
+  }
+  #headingTwo {
+  font-size: 2.2rem;
+  }
+  #navigation button, #navigation a {
+    font-size: 1.5rem;
+  }
+  .modal {
+    margin: 8% 30%;
+    min-height: 45vh;
+  }
+  .modal p {
+    margin: 1.2rem;
+  }
+  #modal-winner h2, #modal-loser h2 {
+    margin: 12% 30%;
+    font-size: 2rem;
+    margin: 1.2rem;
+  }
+  #modal-winner i, #modal-loser i {
+    font-size: 40px;
+  }
+  #modal-winner p, #modal-loser p {
+    font-size: 1.5rem;
+  }
+  #modal-winner a, #modal-loser a {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  body {
+    margin: 1.5% 25%;
+  }
+  .modal {
+    margin: 6% 40%;
+    min-height: 40vh;
+  }
+  .card img {
+    min-width: 6.2vw;
+  }
+  #memHeading {
+    font-size: 2rem;
+    margin: 1rem;
+  }
+  #startCounter {
+    font-size: 2.2rem;
+  }
+  .status {
+    margin: 0.5rem 2rem 0.5rem 2rem;
+    font-size: 2rem;
+  }
+  #game-grid {
+    grid-gap: 22px;
+    padding: 1.2%;
+  }
+  #doom p {
+    font-size: 1.85rem;
+    margin: 1rem;
+    font-weight: 700;
+  }
+  #modal-winner .modal, #modal-loser .modal {
+    margin: 8% 36%;
   }
 }

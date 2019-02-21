@@ -1,5 +1,6 @@
 /* global document: true */ /* eslint no-use-before-define: 0 */
 
+// DOM variables
 const startBtn = document.getElementById('startGame');
 const aboutBtn = document.getElementById('about');
 const gameSection = document.getElementById('game');
@@ -21,17 +22,18 @@ const modalWinner = document.getElementById('modal-winner');
 const modalLoser = document.getElementById('modal-loser');
 const memHeading = document.getElementById('memHeading');
 
+// Sound Variables
 const flipCardSound = document.getElementById('flipCardSnd');
 const flipBackSound = document.getElementById('flipBackSnd');
 const successSound = document.getElementById('sucessSnd');
 
-
+// Game logic variables
 let moves = 0;
 let correct = 0;
 let cards = [];
 let cardsrc = [];
 let imgsrcCheck = [];
-let win = false;
+let win = false; // Check for winner boolean
 let elapsed = 0; // Elapsed time starter
 let stopElapsed; // Used to stop the countdown in the elapsed time function
 let countdown; // Used to reset the countdown in the timer function
@@ -39,15 +41,19 @@ let countdown; // Used to reset the countdown in the timer function
 aboutBtn.addEventListener('click', () => {
   modalAbout.classList.toggle('modal-display');
   modalAbout.classList.add('displayAnim');
+  modalAbout.firstElementChild.classList.add('modal-body-display');
 });
 
 closeAbout.addEventListener('click', () => {
   modalAbout.classList.remove('displayAnim');
   modalAbout.classList.add('hideAnim');
+  modalAbout.firstElementChild.classList.remove('modal-body-display');
+  modalAbout.firstElementChild.classList.add('modal-body-hide');
   setTimeout(() => {
     modalAbout.classList.toggle('modal-display');
     modalAbout.classList.remove('hideAnim');
-  }, 900);
+    modalAbout.firstElementChild.classList.remove('modal-body-hide');
+  }, 580);
 });
 
 function winner() {
@@ -59,15 +65,15 @@ function winner() {
       doomContainer.classList.add('hide');
       win = true;
       if (moves < 12) {
-        winnerRatingDisplay.textContent = `Rating: ★★★ ${moves} moves`;
+        winnerRatingDisplay.textContent = `Rating: ★★★ | ${moves} moves`;
         winnerRatingDisplay.classList.add('good');
       } else if (moves <= 16) {
-        winnerRatingDisplay.textContent = `Rating: ★★☆ ${moves} moves`;
+        winnerRatingDisplay.textContent = `Rating: ★★☆ | ${moves} moves`;
         winnerRatingDisplay.classList.add('good');
       } else if (moves <= 22) {
-        winnerRatingDisplay.textContent = `Rating: ★☆☆ ${moves} moves`;
+        winnerRatingDisplay.textContent = `Rating: ★☆☆ | ${moves} moves`;
       } else {
-        winnerRatingDisplay.textContent = `Rating: ☆☆☆ ${moves} moves`;
+        winnerRatingDisplay.textContent = `Rating: ☆☆☆ | ${moves} moves`;
       }
       // console.log('nothing');
     }, 400);
@@ -77,22 +83,25 @@ function winner() {
 function compareCards() {
   moves += 1;
   if (moves < 12) {
-    movesDisplay.textContent = `Rating: ★★★ ${moves} moves`;
-  } else if (moves <= 16) {
-    movesDisplay.textContent = `Rating: ★★☆ ${moves} moves`;
-  } else if (moves <= 22) {
-    movesDisplay.textContent = `Rating: ★☆☆ ${moves} moves`;
+    movesDisplay.textContent = `Rating: ★★★ | ${moves} moves`;
+  } else if (moves <= 17) {
+    movesDisplay.textContent = `Rating: ★★☆ | ${moves} moves`;
+  } else if (moves <= 23) {
+    movesDisplay.textContent = `Rating: ★☆☆ | ${moves} moves`;
   } else {
-    movesDisplay.textContent = `Rating: ☆☆☆ ${moves} moves`;
+    movesDisplay.textContent = `Rating: ☆☆☆ | ${moves} moves`;
   }
+  // Sort the cards array to avoid more checkings.
   cards.sort();
   if (cards[0] === cards[1] && (imgsrcCheck[0] !== imgsrcCheck[1])) {
-    // console.log('Certo!');
+    // card === card
     setTimeout(() => {
       cardsrc.forEach((card) => {
         card.classList.remove('card-show');
         card.classList.add('card-correct');
         card.classList.add('correct');
+        /* For card matches the event listener is removed to avoid the user to click again
+        on the card and break the function */
         card.firstChild.removeEventListener('click', checker);
         successSound.play();
         winner();
@@ -103,7 +112,7 @@ function compareCards() {
     // console.log(cardsrc[0]);
     // console.log(cardsrc[1]);
   } else {
-    // console.log('errado!');
+    // card !== card
     setTimeout(() => {
       cardsrc.forEach((card) => {
         card.classList.remove('card-show');
@@ -124,35 +133,47 @@ function compareCards() {
   imgsrcCheck = [];
 }
 
+// Gets the clicked elements and places them on arrays before checking for the right cards.
 function checker(e) {
+  // Returns an e.target.parent = card.div
   const card = e.target.parentNode;
+  // Returns an element name created previously to check the cards.
   const firstCard = e.target.attributes.name.nodeValue;
+  /* Since some cards have differente names (img_1.svg === img9.svg) and yet they represent
+  the same image, the line below get's their source to avoid breaking the game
+  when it compares the images. Ex: Without it, the user could click on the same target
+  and get a correct card. */
   const imgCheck = e.target.attributes.src.nodeValue;
   e.target.classList.remove('img-hide');
   e.target.classList.add('img-show');
   card.classList.remove('card-hide', 'hidden-card');
   card.classList.add('card-show');
+  // Adds the elements to their respective arrays.
   imgsrcCheck.unshift(imgCheck);
   cards.unshift(firstCard);
   cardsrc.unshift(card);
   // console.log(moves);
+  // Avoid for a correct card when the users click twice on the same image.
   if (imgsrcCheck[0] === imgsrcCheck[1]) {
     cards.pop();
     cardsrc.pop();
     imgsrcCheck.pop();
   }
+  // Starts the compare function
   flipCardSound.play();
   if (cards.length === 2) {
     compareCards();
   }
 }
 
+// player lost ? run the function : '';
 function endGame() {
   modalLoser.classList.remove('modal-display');
   modalLoser.classList.add('displayAnim');
-  loserRatingDisplay.textContent = `Rating: ☆☆☆ ${moves} moves`;
+  loserRatingDisplay.textContent = `Rating: ☆☆☆ | ${moves} moves`;
 }
 
+// Uses the timeIsUp to set a lose state:
 function loser() {
   setInterval(() => {
     const timeIsUp = doomDisplay.textContent;
@@ -167,6 +188,7 @@ function loser() {
   }, 1000);
 }
 
+/* Gets the time from the timer functions and fix the display on the DOM */
 function displayTimeLeft(seconds) {
   const minutes = Math.floor(seconds / 60);
   const remainderSeconds = seconds % 60;
@@ -199,6 +221,8 @@ function doomTime(time) {
   timer(seconds);
 }
 
+/* Counts the time Elapsed. Clear interval used to stop the function if the player wins
+ or the game time ends. */
 function elapsedTime() {
   stopElapsed = setInterval(() => {
     elapsed += 1;
@@ -220,8 +244,11 @@ function elapsedTime() {
   }, 1000);
 }
 
+// Starts the game:
 function startGame() {
+  // Runs the game time '75'
   doomTime(75);
+  // Starts the elapsed time function - Check it if you change the game time!
   elapsedTime();
   doomContainer.classList.remove('hide');
   const cardImages = Array.from(gameGrid.querySelectorAll('div.card > img'));
@@ -244,16 +271,19 @@ function startGame() {
   }, 400);
 }
 
+// Uses the timer function to apply the 5 seconds delay at the start:
 function startTimer() {
   const seconds = parseInt(5, 10);
   timer(seconds);
   setTimeout(() => { startGame(); }, 5000);
 }
 
+// Adds cards to the game Grid and sets the proper classes to elements:
 function renderGame() {
   body[0].classList.toggle('bodyChange');
   landing.classList.add('hide');
   gameSection.classList.toggle('hide');
+  // Randomize the cards placement:
   const images = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
   images.sort(() => Math.random() - 0.5);
   for (let i = 0; i < 16; i += 1) {
@@ -261,6 +291,7 @@ function renderGame() {
     const card = document.createElement('div');
     card.classList.add('card', 'correct');
     const cardImg = document.createElement('img');
+    // Adds 'name' 'something', easier to make the compare function using it.
     cardImg.setAttribute('src', `img/img_${num}.svg`);
     switch (num) {
       case 1:
@@ -319,4 +350,5 @@ function renderGame() {
   startTimer();
 }
 
+// Start Game => Render game.
 startBtn.addEventListener('click', renderGame);
