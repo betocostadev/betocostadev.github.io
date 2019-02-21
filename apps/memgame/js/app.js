@@ -1,4 +1,6 @@
-/* global document: true */ /* eslint no-use-before-define: 0 */
+/* global document: true */ /* eslint no-use-before-define: 0 */ /* eslint strict: 0 */
+
+'use strict';
 
 // DOM variables
 const startBtn = document.getElementById('startGame');

@@ -1,5 +1,5 @@
 # Material Icons Memory Game
-![alt text](img/cover.jpg) "Material Icon Memory Game"
+![alt text](img/cover.jpg)"Material Icon Memory Game"
 
 ## About this project
 This project was created based on [Udacity](https://www.udacity.com/)'s **Front End Developer Nanodegree** Memory Game project.
@@ -7,9 +7,9 @@ Course [here](https://www.udacity.com/course/front-end-web-developer-nanodegree-
 Course Syllabus [here](https://d20vrrgs8k4bvw.cloudfront.net/documents/en-US/fend-syllabus-9.0.0.pdf).
 
 This version was made from scratch, using HTML, CSS and Vanilla Javascript only. No frameworks and/or build tools were used.
-The project was done with no Graceful degradation in mind. Test only on newer browsers.
+The project was done with no *Graceful degradation* in mind. Test only on newer browsers.
 
----
+***
 
 ### How to play
 *Playable Version Available* [here](https://betocostadev.github.io/apps/memgame/index.html).
@@ -27,29 +27,35 @@ Game starts as soons as you click play:
 - By clicking on all the correct pairs will finish the game and show a user score.
 - If the player takes 1m 15s to complete the game, the time is up and the game is lost.
 
----
+***
 
 ### Usage
 **Feel Free** to fork this project and change it.
 The code definitely needs some refactoring😥. Mainly for the *time, check and compare cards* functions.
 
+The code is full of relevant comments, it will help new developers.
+
 #### Dependencies
 **None:** This project was created using HTML5, CSS3 and ES6 only.
 
 #### Tasks
-✅ Base HTML
-✅ Base CSS
-✅ Base JS Functions
-✅ Responsiveness
-🔲 Social Media Sharing
+- ✅ Base HTML
+- ✅ Base CSS
+- ✅ Base JS Functions
+- ✅ Responsiveness
+- 🔲 Social Media Sharing
+
+***
 
 #### Browser Testing
-✅ Chrome for Desktop
-✅ Chrome for Android
-✅ Firefox Quantum Developer Edition
-✅ Microsoft Edge
-🔲 Safari for iOS 👵
-🔲 Safari for Mac 👴
+- ✅ Chrome for Desktop
+- ✅ Chrome for Android
+- ✅ Firefox Quantum Developer Edition
+- ✅ Microsoft Edge
+- 🔲 Safari for iOS 👵
+- 🔲 Safari for Mac 👴
+
+***
 
 ### Resources
 ##### To build the project
