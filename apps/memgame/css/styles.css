@@ -199,6 +199,11 @@ body {
   padding: 1rem;
 }
 
+.social {
+  width: 50%;
+  flex-direction: row;
+}
+
 .good {
   color: #1ca674;
 }
