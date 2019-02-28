@@ -43,7 +43,7 @@ The code is full of relevant comments, it will help new developers.
 - ✅ Base CSS
 - ✅ Base JS Functions
 - ✅ Responsiveness
-- 🔲 Social Media Sharing
+- ✅ Social Media Sharing
 
 ***
 
@@ -52,7 +52,8 @@ The code is full of relevant comments, it will help new developers.
 - ✅ Chrome for Android
 - ✅ Firefox Quantum Developer Edition
 - ✅ Microsoft Edge
-- 🔲 Safari for iOS 👵
+- ✅ Microsoft Edge for Android
+- ✅ Safari for iOS 👵
 - 🔲 Safari for Mac 👴
 
 ***
