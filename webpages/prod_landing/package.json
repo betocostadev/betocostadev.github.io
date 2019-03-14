@@ -1,0 +1,26 @@
+{
+  "name": "product_landing_page",
+  "version": "1.0.0",
+  "description": "Product Landing Page based on FreeCodeCamp RWD Project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/betocostadev/betocostadev.github.io.git"
+  },
+  "keywords": [
+    "freeCodeCamp",
+    "responsive web design"
+  ],
+  "author": "Beto_Costa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/betocostadev/betocostadev.github.io/issues"
+  },
+  "homepage": "https://github.com/betocostadev/betocostadev.github.io#readme",
+  "devDependencies": {
+    "gulp": "^4.0.0"
+  }
+}
