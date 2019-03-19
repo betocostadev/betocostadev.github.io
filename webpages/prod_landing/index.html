@@ -4,11 +4,178 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Orange Book Landing Page">
+  <link href="https://fonts.googleapis.com/css?family=Reem+Kufi" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="dist/css/main.css">
   <title>Orange Book Website</title>
 </head>
 <body>
-  <h1 class="title">Orange Book</h1>
-  <h2>The Orange Book is Here!</h2>
+  <header id="header">
+    <div id="menu-icon">
+      <div id="hamb1"></div>
+      <div id="hamb2"></div>
+      <div id="hamb3"></div>
+    </div>
+
+    <h2>Orange Inc.</h2>
+    <img src="dist/img/orange_logo_small.png" id="header-img">
+    <nav id="nav-bar" class="menu-close">
+      <a href="#developers" class="nav-link">Developers</a>
+      <a href="#protographers" class="nav-link">Photographers</a>
+      <a href="#linux" class="nav-link">Open OS</a>
+      <a href="#buyIt" class="nav-link">Buy It Now!</a>
+    </nav>
+
+  </header>
+
+  <main>
+    <article>
+      <div class="transp"></div>
+
+      <section class="sec1">
+        <h1 class="title">Orange Book</h1>
+        <img class="hero" src="dist/img/hero_small.webp" alt="orange book view from above">
+        <div class="desc1">
+          <h3>Lightweight and fast</h3>
+          <h3>Powerfull and OPEN</h3>
+        </div>
+      </section>
+
+      <section class="sec2">
+        <h2>Achieve the impossible</h2>
+        <p>The fastest new generation Intel 6-core processor.</p>
+        <p>Up to 64 GB of RAM for maxium performance and multi-tasking.</p>
+        <p>Long lasting battery life for uninterrupted production.</p>
+        <p>A price that fits your budget.</p>
+      </section>
+
+      <section class="sec3" id="developers">
+        <img src="dist/img/devs_small.webp" alt="HTML and CSS book and the Orange Book with a notebook on a table">
+        <h3>The Developer's choice</h3>
+        <ul>
+          <li><i class="material-icons">gavel</i>Resistant</li>
+          <li><i class="material-icons">weekend</i>Lightweight</li>
+          <li><i class="material-icons">flight</i>High Performance</li>
+          <li><i class="material-icons">adb</i>Beautiful and open</li>
+        </ul>
+      </section>
+
+      <section class="sec4" id="protographers">
+        <img src="dist/img/photo_small.webp" alt="A notebook, a tablet, a phone, a camera, a laptop computer and many other items.">
+        <h3>The Photographer's choice</h3>
+        <ul>
+          <li><i class="material-icons">battery_full</i>Long battery life</li>
+          <li><i class="material-icons">sd_card</i>SD Card compatible</li>
+          <li><i class="material-icons">favorite</i>Lots of open softwares</li>
+        </ul>
+      </section>
+
+      <section class="sec5">
+        <img src="dist/img/blueprints_small.webp" alt="A Laptop running Linux Mint, some blueprints and a notebook on a table.">
+        <h3>The best for High-Performance needs</h3>
+        <ul>
+          <li><i class="material-icons">games</i>High performace Game Engines</li>
+          <li><i class="material-icons">3d_rotation</i>High performance 3D Applications</li>
+          <li><i class="material-icons">business</i>High performance architecture applications</li>
+          <li><i class="material-icons">4k</i>High performance video editing</li>
+        </ul>
+      </section>
+
+      <section class="sec6" id="linux">
+        <h3>Enjoy the power of Linux Mint</h3>
+        <div id="video">
+          <iframe src="https://www.youtube.com/embed/pzbNN0FnB78" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <p>Your incredible computer needs an incredible O.S.</p>
+        <p><a href="https://linuxmint.com/" target="_blank">Linux Mint</a> is fast, reliable, safe and <strong>open!</strong></p>
+      </section>
+
+      <section class="sec7">
+        <div class="slideshow-container">
+          <div class="mySlides fade">
+            <img src="dist/img/linux_small.webp" alt="Linux Mint Desktop screen">
+            <p class="slide-caption">Enjoy the freedom with Linux Mint</p>
+          </div>
+          <div class="mySlides fade">
+            <img src="dist/img/angry_small.webp" alt="Person angry with his laptop computer">
+            <p class="slide-caption">Stop worring about low performance and battery life</p>
+          </div>
+          <div class="mySlides fade">
+            <img src="dist/img/happy_small.webp" alt="Three people in a meeting">
+            <p class="slide-caption">Enjoy working with no problems</p>
+          </div>
+          <a class="previous" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <div class="dot-btn">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+
+        <p>The ONE MACHINE to rule them all</p>
+        <p>Orange Book gives you the best machine for the best price!</p>
+
+      </section>
+
+      <section class="sec8" id="buyIt">
+        <h3>Choose your future</h3>
+        <div class="small-card">
+          <ul>
+            <li>Six-core Intel</li>
+            <li>64GB RAM</li>
+            <li>Linux Mint</li>
+          </ul>
+          <a href="#buyIt">juice now</a>
+        </div>
+        <div class="small-card">
+          <ul>
+            <li>Six-core Intel</li>
+            <li>32GB RAM</li>
+            <li>Linux Mint</li>
+          </ul>
+          <a href="#buyIt">juice now</a>
+        </div>
+        <p>Sadly, the Orange Book is sold out.</p>
+        <p>Please enter your e-mail below to get notified when it arrives.</p>
+        <form id="form" action="" method="get" class="contactForm">
+          <div class="contactForm">
+            <label for="name">Your name</label>
+            <input type="text" name="name" id="name" required placeholder="Name">
+          </div>
+          <div class="contactForm">
+            <label for="email">Your e-mail</label>
+            <input type="email" name="email" id="email" required placeholder="you@somewhere.com">
+          </div>
+          <div class="contactForm">
+            <button><i class="material-icons submit" title="submit!">mail_outline</i></button>
+          </div>
+
+        </form>
+      </section>
+
+    </article>
+  </main>
+
+  <footer id="footer">
+    <section class="footer-head">
+      <h3>About Orange</h3>
+      <h3>Orange Products</h3>
+    </section>
+    <section class="footer-links">
+      <div class="footer-first">
+        <a href="#footer">Jobs</a>
+        <a href="#footer">Investors</a>
+        <a href="#footer">Contact Orange</a>
+      </div>
+      <div class="footer-second">
+        <a href="#footer">Orange Desktop</a>
+        <a href="#footer">Orange Book</a>
+        <a href="#footer">Orange Slice</a>
+      </div>
+    </section>
+  </footer>
+
 </body>
 </html>
