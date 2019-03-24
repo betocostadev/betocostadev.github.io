@@ -1,3 +1,35 @@
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+  font-family: 'Reem Kufi', sans-serif; }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit; }
+
 body {
-  background-color: #ebb834;
-  color: #fffcf3; }
+  margin: 0; }
+
+/* MEDIA CATCH ALL */
+img, embed, object, video {
+  max-width: 100%; }
+
+#header {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 52px;
+  left: 0;
+  top: 0;
+  color: #ebb834;
+  background: rgba(0, 0, 0, 0.65); }
+  #header h2 {
+    flex: 1;
+    text-align: center;
+    align-self: center; }
+  #header img {
+    flex: 0.2;
+    max-width: 15%;
+    align-self: center;
+    margin: 0 5px 0 0; }

@@ -35,7 +35,14 @@
 
       <section class="sec1">
         <h1 class="title">Orange Book</h1>
-        <img class="hero" src="dist/img/hero_small.webp" alt="orange book view from above">
+        <picture class="hero">
+            <source media="(min-width: 1200px)" srcset="dist/img/hero_large.webp">
+            <source media="(min-width: 1200px)" srcset="dist/img/hero_large.jpg">
+            <source media="(min-width: 800px)" srcset="dist/img/hero_medium.webp">
+            <source media="(min-width: 800px)" srcset="dist/img/hero_medium.jpg">
+            <img src="dist/img/hero_small.jpg" srcset="dist/img/hero_small.webp" alt="orange book view from above">
+          </picture>
+        <!-- <img class="hero" src="dist/img/hero_small.webp" alt="orange book view from above"> -->
         <div class="desc1">
           <h3>Lightweight and fast</h3>
           <h3>Powerfull and OPEN</h3>
