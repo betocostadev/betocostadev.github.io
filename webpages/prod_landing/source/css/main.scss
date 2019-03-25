@@ -1,28 +1,10 @@
-// Variables
-$orangePrimary: #ebb834;
-$whiteFont: #fffcf3;
-
-html {
-  box-sizing: border-box;
-  font-size: 100%;
-  font-family: 'Reem Kufi', sans-serif;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
+// Partials
+@import '_variables';
+@import '_base';
 
 body {
   margin: 0;
 }
-
-/* MEDIA CATCH ALL */
-img, embed, object, video {
-  max-width: 100%;
-}
-
 #header {
   display: flex;
   position: fixed;
@@ -37,10 +19,22 @@ img, embed, object, video {
     text-align: center;
     align-self: center;
   }
-  img {
+  #header-img {
     flex: 0.2;
     max-width: 15%;
     align-self: center;
     margin: 0 5px 0 0;
   }
+  #nav-bar {
+    position: fixed;
+    top: 52px;
+    left: 0;
+  }
+}
+
+.menu-close {
+  display: none;
+}
+.menu-show {
+  display: block;
 }

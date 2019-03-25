@@ -47,9 +47,10 @@ function watch() {
     server: {
       baseDir: './',
     },
-    browser: 'firefox',
+    // browser: 'firefox',
   });
   gulp.watch('./source/css/*.scss', style);
+  gulp.watch('./dist/css/*.css', browserSync.reload);
   gulp.watch('./*.html').on('change', browserSync.reload);
   gulp.watch('./source/js/*.js').on('change', browserSync.reload);
 }

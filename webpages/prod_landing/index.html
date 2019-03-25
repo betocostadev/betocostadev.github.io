@@ -36,13 +36,14 @@
       <section class="sec1">
         <h1 class="title">Orange Book</h1>
         <picture class="hero">
-            <source media="(min-width: 1200px)" srcset="dist/img/hero_large.webp">
-            <source media="(min-width: 1200px)" srcset="dist/img/hero_large.jpg">
-            <source media="(min-width: 800px)" srcset="dist/img/hero_medium.webp">
-            <source media="(min-width: 800px)" srcset="dist/img/hero_medium.jpg">
-            <img src="dist/img/hero_small.jpg" srcset="dist/img/hero_small.webp" alt="orange book view from above">
-          </picture>
-        <!-- <img class="hero" src="dist/img/hero_small.webp" alt="orange book view from above"> -->
+          <source media="(min-width: 1200px)" srcset="dist/img/hero_large.webp" type="image/webp">
+          <source media="(min-width: 1200px)" srcset="dist/img/hero_large.jpg" type="image/jpeg">
+          <source media="(min-width: 800px)" srcset="dist/img/hero_medium.webp" type="image/webp">
+          <source media="(min-width: 800px)" srcset="dist/img/hero_medium.jpg" type="image/jpeg">
+          <source srcset="dist/img/hero_small.webp" type="image/webp">
+          <source srcset="dist/img/hero_small.jpg" type="image/jpeg">
+          <img src="dist/img/hero_small.jpg" alt="orange book view from above">
+        </picture>
         <div class="desc1">
           <h3>Lightweight and fast</h3>
           <h3>Powerfull and OPEN</h3>
@@ -58,7 +59,15 @@
       </section>
 
       <section class="sec3" id="developers">
-        <img src="dist/img/devs_small.webp" alt="HTML and CSS book and the Orange Book with a notebook on a table">
+        <picture class="sec-image">
+          <source media="(min-width: 1200px)" srcset="dist/img/devs_large.webp" type="image/webp">
+          <source media="(min-width: 1200px)" srcset="dist/img/devs_large.jpg" type="image/jpeg">
+          <source media="(min-width: 800px)" srcset="dist/img/devs_medium.webp" type="image/webp">
+          <source media="(min-width: 800px)" srcset="dist/img/devs_medium.jpg" type="image/jpeg">
+          <source srcset="dist/img/devs_small.webp" type="image/webp">
+          <source srcset="dist/img/devs_small.jpg" type="image/jpeg">
+          <img src="dist/img/devs_small.jpg" alt="HTML and CSS book and the Orange Book with a notebook on a table">
+        </picture>
         <h3>The Developer's choice</h3>
         <ul>
           <li><i class="material-icons">gavel</i>Resistant</li>
@@ -69,7 +78,15 @@
       </section>
 
       <section class="sec4" id="protographers">
-        <img src="dist/img/photo_small.webp" alt="A notebook, a tablet, a phone, a camera, a laptop computer and many other items.">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="dist/img/photo_large.webp" type="image/webp">
+          <source media="(min-width: 1200px)" srcset="dist/img/photo_large.jpg" type="image/jpeg">
+          <source media="(min-width: 800px)" srcset="dist/img/photo_medium.webp" type="image/webp">
+          <source media="(min-width: 800px)" srcset="dist/img/photo_medium.jpg" type="image/jpeg">
+          <source srcset="dist/img/photo_small.webp" type="image/webp">
+          <source srcset="dist/img/photo_small.jpg" type="image/jpeg">
+          <img src="dist/img/photo_small.jpg" alt="A notebook, a tablet, a phone, a camera, a laptop computer and many other items.">
+        </picture>
         <h3>The Photographer's choice</h3>
         <ul>
           <li><i class="material-icons">battery_full</i>Long battery life</li>
@@ -79,7 +96,15 @@
       </section>
 
       <section class="sec5">
-        <img src="dist/img/blueprints_small.webp" alt="A Laptop running Linux Mint, some blueprints and a notebook on a table.">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="dist/img/blueprints_large.webp" type="image/webp">
+          <source media="(min-width: 1200px)" srcset="dist/img/blueprints_large.jpg" type="image/jpeg">
+          <source media="(min-width: 800px)" srcset="dist/img/blueprints_medium.webp" type="image/webp">
+          <source media="(min-width: 800px)" srcset="dist/img/blueprints_medium.jpg" type="image/jpeg">
+          <source srcset="dist/img/blueprints_small.webp" type="image/webp">
+          <source srcset="dist/img/blueprints_small.jpg" type="image/jpeg">
+          <img src="dist/img/blueprints_small.jpg" alt="A Laptop running Linux Mint, some blueprints and a notebook on a table.">
+        </picture>
         <h3>The best for High-Performance needs</h3>
         <ul>
           <li><i class="material-icons">games</i>High performace Game Engines</li>
@@ -101,15 +126,33 @@
       <section class="sec7">
         <div class="slideshow-container">
           <div class="mySlides fade">
-            <img src="dist/img/linux_small.webp" alt="Linux Mint Desktop screen">
+            <picture>
+              <source media="(min-width: 600px)" srcset="dist/img/linux_medium.webp" type="image/webp">
+              <source media="(min-width: 600px)" srcset="dist/img/linux_medium.jpg" type="image/jpeg">
+              <source srcset="dist/img/linux_small.webp" type="image/webp">
+              <source srcset="dist/img/linux_small.jpg" type="image/jpeg">
+              <img src="dist/img/linux_small.jpg" alt="Linux Mint Desktop screen">
+            </picture>
             <p class="slide-caption">Enjoy the freedom with Linux Mint</p>
           </div>
           <div class="mySlides fade">
-            <img src="dist/img/angry_small.webp" alt="Person angry with his laptop computer">
+            <picture>
+              <source media="(min-width: 600px)" srcset="dist/img/angry_medium.webp" type="image/webp">
+              <source media="(min-width: 600px)" srcset="dist/img/angry_medium.jpg" type="image/jpeg">
+              <source srcset="dist/img/angry_small.webp" type="image/webp">
+              <source srcset="dist/img/angry_small.jpg" type="image/jpeg">
+              <img src="dist/img/angry_small.webp" alt="Person angry with his laptop computer">
+            </picture>
             <p class="slide-caption">Stop worring about low performance and battery life</p>
           </div>
           <div class="mySlides fade">
-            <img src="dist/img/happy_small.webp" alt="Three people in a meeting">
+            <picture>
+              <source media="(min-width: 600px)" srcset="dist/img/happy_medium.webp" type="image/webp">
+              <source media="(min-width: 600px)" srcset="dist/img/happy_medium.jpg" type="image/jpeg">
+              <source srcset="dist/img/happy_small.webp" type="image/webp">
+              <source srcset="dist/img/happy_small.jpg" type="image/jpeg">
+              <img src="dist/img/happy_small.webp" alt="Three people in a meeting">
+            </picture>
             <p class="slide-caption">Enjoy working with no problems</p>
           </div>
           <a class="previous" onclick="plusSlides(-1)">&#10094;</a>

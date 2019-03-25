@@ -8,12 +8,12 @@ html {
 *:after {
   box-sizing: inherit; }
 
-body {
-  margin: 0; }
-
 /* MEDIA CATCH ALL */
 img, embed, object, video {
   max-width: 100%; }
+
+body {
+  margin: 0; }
 
 #header {
   display: flex;
@@ -28,8 +28,18 @@ img, embed, object, video {
     flex: 1;
     text-align: center;
     align-self: center; }
-  #header img {
+  #header #header-img {
     flex: 0.2;
     max-width: 15%;
     align-self: center;
     margin: 0 5px 0 0; }
+  #header #nav-bar {
+    position: fixed;
+    top: 52px;
+    left: 0; }
+
+.menu-close {
+  display: none; }
+
+.menu-show {
+  display: block; }
