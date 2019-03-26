@@ -1,5 +1,6 @@
 const gulp = require('gulp');
 const { series } = require('gulp'); // To use series functions
+const sourceMaps = require('gulp-sourcemaps');
 const sass = require('gulp-sass');
 const imagemin = require('gulp-imagemin');
 
@@ -38,7 +39,12 @@ function optImg() {
 // Compile SCSS
 function style() {
   return gulp.src('./source/css/*.scss')
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sourceMaps.init())
+  /* Output style: compressed = Oneline file with no comments
+  expanded = better to read, with comments. */
+    .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
+  /* Source Map Write, could be to a different folder (sourceMaps.write('./maps')) */
+    .pipe(sourceMaps.write('./maps'))
     .pipe(gulp.dest('./dist/css'));
 }
 
