@@ -54,7 +54,7 @@ function style() {
     .pipe(sourceMaps.init())
   /* Output style: compressed = Oneline file with no comments
   expanded = better to read, with comments. */
-    .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
+    .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
   /* Source Map Write, could be to a different folder (sourceMaps.write('./maps')) */
     .pipe(sourceMaps.write('./maps'))
     .pipe(gulp.dest('./dist/css'));
