@@ -17,16 +17,15 @@ function showSlides(num) {
   }
   slides[slideIndex - 1].style.display = 'block';
   btnDot[slideIndex - 1].className += ' active';
-  console.log(slideIndex);
 }
 
 showSlides(slideIndex);
 
+// Thumbnail image controls
 function plusSlides(num) {
   showSlides(slideIndex += num);
 }
 
-// Thumbnail image controls
 function currentSlide(num) {
   showSlides(slideIndex = num);
 }
