@@ -19,7 +19,7 @@
     </div>
 
     <h2>Orange Inc.</h2>
-    <img src="dist/img/orange_logo_small.png" id="header-img">
+    <img src="dist/img/orange_logo_small.png">
     <nav id="nav-bar" class="menu-close">
       <a href="#developers" class="nav-link">Developers</a>
       <a href="#protographers" class="nav-link">Photographers</a>
@@ -96,8 +96,9 @@
         <h3>The Photographer's choice</h3>
         <ul>
           <li><i class="material-icons">battery_full</i>Long battery life</li>
-          <li><i class="material-icons">sd_card</i>SD Card compatible</li>
+          <li><i class="material-icons">music_video</i>Incredible display quality</li>
           <li><i class="material-icons">favorite</i>Lots of open softwares</li>
+          <li><i class="material-icons">sd_card</i>SD Card compatible</li>
         </ul>
       </section>
 
@@ -122,8 +123,8 @@
 
       <section class="sec6" id="linux">
         <h3>Enjoy the power of Linux Mint</h3>
-        <div id="video">
-          <iframe src="https://www.youtube.com/embed/pzbNN0FnB78" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div>
+          <iframe id="video" src="https://www.youtube.com/embed/pzbNN0FnB78" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         <p>Your incredible computer needs an incredible O.S.</p>
         <p><a href="https://linuxmint.com/" target="_blank">Linux Mint</a> is fast, reliable, secure and <strong>open!</strong></p>
@@ -147,7 +148,7 @@
               <source media="(min-width: 600px)" srcset="dist/img/angry_medium.jpg" type="image/jpeg">
               <source srcset="dist/img/angry_small.webp" type="image/webp">
               <source srcset="dist/img/angry_small.jpg" type="image/jpeg">
-              <img src="dist/img/angry_small.webp" alt="Person angry with his laptop computer">
+              <img src="dist/img/angry_small.jpg" alt="Person angry with his laptop computer">
             </picture>
             <p class="slide-caption">Stop worring about low performance and battery life</p>
           </div>
@@ -157,17 +158,17 @@
               <source media="(min-width: 600px)" srcset="dist/img/happy_medium.jpg" type="image/jpeg">
               <source srcset="dist/img/happy_small.webp" type="image/webp">
               <source srcset="dist/img/happy_small.jpg" type="image/jpeg">
-              <img src="dist/img/happy_small.webp" alt="Three people in a meeting">
+              <img src="dist/img/happy_small.jpg" alt="Three people in a meeting">
             </picture>
             <p class="slide-caption">Enjoy working with no problems</p>
           </div>
-          <a class="previous" onclick="plusSlides(-1)">&#10094;</a>
-          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          <a class="previous">&#10094;</a>
+          <a class="next">&#10095;</a>
         </div>
         <div class="dot-btn">
-          <span class="dot" onclick="currentSlide(1)"></span>
-          <span class="dot" onclick="currentSlide(2)"></span>
-          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
         </div>
 
         <p>The ONE MACHINE to rule them all</p>
@@ -233,5 +234,6 @@
     </section>
   </footer>
 
+  <script src="dist/js/main.js"></script>
 </body>
 </html>
