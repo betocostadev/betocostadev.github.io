@@ -3,7 +3,10 @@
 const btnPrev = document.getElementsByClassName('previous')[0];
 const btnNext = document.getElementsByClassName('next')[0];
 const btnDot = document.getElementsByClassName('dot');
-const slides = document.getElementsByClassName('mySlides');
+const slides = Array.from(document.getElementsByClassName('mySlides'));
+const dotButtons = document.getElementsByClassName('dot-btn')[0];
+const slideContainer = document.getElementById('slideContainer');
+
 let slideIndex = 1;
 
 function showSlides(num) {
@@ -17,6 +20,9 @@ function showSlides(num) {
   }
   slides[slideIndex - 1].style.display = 'block';
   btnDot[slideIndex - 1].className += ' active';
+  // setTimeout(() => {
+  //   showSlides(slideIndex += 1);
+  // }, 5000);
 }
 
 showSlides(slideIndex);
@@ -30,9 +36,23 @@ function currentSlide(num) {
   showSlides(slideIndex = num);
 }
 
-btnDot[0].addEventListener('click', currentSlide(1));
-btnDot[1].addEventListener('click', currentSlide(2));
-btnDot[2].addEventListener('click', currentSlide(3));
+function checkDot(e) {
+  if (e.target === btnDot[0]) {
+    currentSlide(1);
+  } else if (e.target === btnDot[1]) {
+    currentSlide(2);
+  } else if (e.target === btnDot[2]) {
+    currentSlide(3);
+  }
+}
 
-btnPrev.addEventListener('click', plusSlides(-1));
-btnNext.addEventListener('click', plusSlides(1));
+function checkBtn(e) {
+  if (e.target === btnPrev) {
+    plusSlides(-1);
+  } else if (e.target === btnNext) {
+    plusSlides(1);
+  }
+}
+
+dotButtons.addEventListener('click', checkDot);
+slideContainer.addEventListener('click', checkBtn);

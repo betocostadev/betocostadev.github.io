@@ -7,6 +7,7 @@ body {
   margin: 0;
 }
 #header {
+  z-index: 2;
   display: flex;
   position: fixed;
   width: 100%;
@@ -233,11 +234,19 @@ body {
   grid-template-rows: 0.3fr 1.2fr 1.2fr;
   background: linear-gradient(180deg, rgba(234, 188, 71, 0.85) 0%, rgba(235, 184, 52, 0.9) 37.57%, #ebb834 51.38%, rgba(235, 184, 52, 0.9) 65.75%, rgba(234, 188, 71, 0.85) 100%);
   padding: 4rem 0 0 0;
+  @include break ($mq-small) {
+    grid-template-rows: 0.5fr 1fr 1fr;
+  }
   .title {
     font-size: 2.6rem;
     margin: 0 2rem 0.5rem 2rem;
     color: #fff;
     text-shadow: 2px 2px 4px rgba(92, 66, 27, 0.71);
+    @include break ($mq-small) {
+      text-align: center;
+      font-size: 3.6rem;
+      margin: 1.2rem 2rem 0.5rem 2rem;
+    }
   }
   // .hero {
 
@@ -283,6 +292,9 @@ body {
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   background: linear-gradient(180deg, #F1F1F1 0%, rgba(116, 116, 116, 0.08) 100%);
+  @include break ($mq-small) {
+    min-height: 85vh;
+  }
   h2 {
     align-self: center;
     justify-self: center;
@@ -300,14 +312,18 @@ body {
 .sec3 {
   @extend %section;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 0.2fr 0.5fr;
+  grid-template-rows: 1fr 0.2fr 0.8fr;
   align-items: center;
   justify-items: center;
   background: linear-gradient(180deg, rgba(234, 188, 71, 0.1) 0%, rgba(235, 184, 52, 0.9) 29.83%, #EBB834 50.83%, rgba(235, 184, 52, 0.9) 73.48%, rgba(234, 188, 71, 0.1) 100%);
+  @include break ($mq-small) {
+    min-height: 85vh;
+  }
   h3 {
     color: $clr-white;
-    margin: 0 0 2rem 0;
-    font-size: 1.3rem;
+    text-align: center;
+    margin: 1rem;
+    font-size: 1.2rem;
     letter-spacing: 0.15rem;
     align-self: start;
   }
@@ -316,10 +332,13 @@ body {
 .sec4 {
   @extend %section;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 0.2fr 0.5fr;
+  grid-template-rows: 1fr 0.2fr 0.8fr;
   align-items: center;
   justify-items: center;
   background: linear-gradient(180deg, rgba(234, 188, 71, 0.1) 0%, rgba(189, 189, 189, 0.7) 30.39%, rgba(116, 116, 116, 0.3) 70.17%, rgba(234, 188, 71, 0.1) 100%);
+  @include break ($mq-small) {
+    min-height: 85vh;
+  }
   h3 {
     text-align: center;
     margin: 1rem;
@@ -332,15 +351,18 @@ body {
 .sec5 {
   @extend %section;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 0.2fr 0.5fr;
+  grid-template-rows: 1fr 0.2fr 0.8fr;
   align-items: center;
   justify-items: center;
   background: linear-gradient(180deg, rgba(234, 188, 71, 0.1) 0%, rgba(235, 184, 52, 0.9) 29.83%, #EBB834 50.83%, rgba(235, 184, 52, 0.9) 73.48%, rgba(234, 188, 71, 0.1) 100%);
+  @include break ($mq-small) {
+    min-height: 80vh;
+  }
   h3 {
     color: $clr-white;
     text-align: center;
     margin: 1rem;
-    font-size: 1.15rem;
+    font-size: 1.2rem;
     letter-spacing: 0.15rem;
     align-self: start;
   }
@@ -362,9 +384,12 @@ body {
 }
 
 .sec6 {
-  min-height: 100vh;
+  min-height: 90vh;
   margin: 0;
   background: linear-gradient(180deg, rgba(234, 188, 71, 0.1) 0%, rgba(134, 134, 134, 0.5) 85.64%, rgba(234, 188, 71, 0.1) 100%);
+  @include break ($mq-small) {
+    min-height: 80vh;
+  }
   h3 {
     text-align: center;
     font-size: 1.6rem;
@@ -388,13 +413,17 @@ body {
 
 #video {
   width: 100%;
+  min-height: 40vh;
   margin: 0;
   padding: 0;
 }
 
 .sec7 {
-  min-height: 100vh;
+  min-height: 90vh;
   background: linear-gradient(180deg, rgba(234, 188, 71, 0.1) 0%, rgba(235, 184, 52, 0.9) 29.83%, #EBB834 50.83%, rgba(235, 184, 52, 0.9) 73.48%, rgba(234, 188, 71, 0.1) 100%);
+  @include break ($mq-small) {
+    min-height: 80vh;
+  }
   p {
     text-align: center;
     font-size: 1.5rem;
@@ -403,7 +432,10 @@ body {
 }
 
 .sec8 {
-  min-height: 100vh;
+  min-height: 90vh;
+  @include break ($mq-small) {
+    min-height: 80vh;
+  }
   h3 {
     text-align: center;
     font-size: 1.5rem;
@@ -416,13 +448,16 @@ body {
 
 .small-card {
   background: #ebb834;
-  margin: 2rem 25%;
-  padding: 0.5rem 0.1rem;
-  max-width: 50%;
+  margin: 1.2rem 30%;
+  padding: 0.5rem 0;
+  max-width: 40%;
   border-radius: 2rem;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   ul {
     list-style-type: none;
+    margin: 0 auto;
+    padding: 0.5rem;
+    text-align: center;
   }
   a {
     display: block;
@@ -430,8 +465,8 @@ body {
     text-transform: uppercase;
     max-width: 70%;
     height: 2.8rem;
-    margin: 1rem 15%;
-    padding: 0.65rem 0.1rem 0.3rem 0.1rem;
+    margin: 0.5rem 15%;
+    padding: 0.6rem 0.1rem 0.3rem 0.1rem;
     text-decoration: none;
     color: #fff;
     background: #60ff70;
@@ -484,6 +519,7 @@ body {
     }
     i {
       font-size: 3rem;
+      margin: 0 0.5rem 0 0.7rem;
     }
   }
 }
@@ -492,7 +528,7 @@ body {
   background: #ebb834;
   font-size: 1.125rem;
   color: #fff;
-  padding-bottom: 1rem;
+  padding: 0.2rem 0.5rem 1rem 0.5rem;
   .footer-head {
     display: flex;
     justify-content: space-evenly;
@@ -524,6 +560,7 @@ body {
 
 /* SLIDESHOW */
 .slideshow-container {
+  z-index: 1;
   max-width: 1000px;
   position: relative;
   top: 1rem;
@@ -537,11 +574,12 @@ body {
 .slide-caption {
   color: #fff;
   font-size: 1.5rem;
-  text-shadow: 1px 1px 4px #aaaaaa;
-  padding: 1rem;
+  text-shadow: 3px 3px 6px #000000;
+  padding: 0.8rem;
+  margin: 1rem auto;
   position: absolute;
   bottom: 3rem;
-  left: 10%;
+  left: 5%;
   width: 80%;
   text-align: center;
 }

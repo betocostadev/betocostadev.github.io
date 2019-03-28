@@ -1,4 +1,4 @@
-/* global document: true */
+/* global document: true */ /* global window: true */
 const hamburguer = document.getElementById('menu-icon');
 const hamb1 = document.getElementById('hamb1');
 const hamb2 = document.getElementById('hamb2');
@@ -37,3 +37,21 @@ function toggleMenu() {
 hamburguer.addEventListener('click', toggleMenu);
 hamburguer.addEventListener('blur', toggleMenu);
 menuLinks.forEach(el => el.addEventListener('click', toggleMenu));
+
+
+// Test to hide the lower frame
+const body = document.getElementsByTagName('body')[0];
+const bodyHeight = body.clientHeight;
+const transpDiv = document.getElementsByClassName('transp')[0];
+
+function offsetCheck() {
+  const small = bodyHeight - (bodyHeight * 0.2);
+  const windowOffset = window.pageYOffset;
+  if (windowOffset >= small) {
+    transpDiv.classList.add('menu-close');
+  } else {
+    transpDiv.classList.remove('menu-close');
+  }
+}
+
+document.addEventListener('scroll', offsetCheck);
