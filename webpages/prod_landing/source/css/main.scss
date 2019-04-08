@@ -312,11 +312,9 @@ body {
 .sec3 {
   @extend %section;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 0.2fr 0.3fr 0.4fr;
+  grid-template-rows: 1fr 0.25fr 0.35fr 0.5fr 0.7fr;
   align-items: center;
   justify-items: center;
-  font-family: $robot;
-  color: $clr-white;
   background: linear-gradient(180deg, rgba(234, 188, 71, 0.1) 0%, #E7AF1F 51.04%, rgba(234, 188, 71, 0.1) 100%);
   @include break ($mq-small) {
     min-height: 85vh;
@@ -324,19 +322,20 @@ body {
   h3 {
     text-align: center;
     margin: 1.5rem 1rem 0.5rem 1rem;
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     letter-spacing: 0.15rem;
     align-self: start;
   }
   p {
-    margin: 0.5rem 1rem 0.5rem 1rem;
+    margin: 0.5rem 1.5rem 0.5rem 1.5rem;
+    text-align: center;
   }
 }
 
 .sec4 {
   @extend %section;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 0.2fr 0.8fr;
+  grid-template-rows: 1fr 0.2fr 0.25fr 0.55fr 0.6fr;
   align-items: center;
   justify-items: center;
   background: linear-gradient(180deg, rgba(234, 188, 71, 0.1) 0%, #E7AF1F 50.52%, rgba(234, 188, 71, 0.1) 100%);
@@ -345,17 +344,21 @@ body {
   }
   h3 {
     text-align: center;
-    margin: 1rem;
-    font-size: 1.2rem;
+    margin: 1.5rem 1rem 0.5rem 1rem;
+    font-size: 1.25rem;
     letter-spacing: 0.15rem;
     align-self: start;
+  }
+  p {
+    margin: 0.5rem 1.5rem 0.5rem 1.5rem;
+    text-align: center;
   }
 }
 
 .sec5 {
   @extend %section;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 0.2fr 0.8fr;
+  grid-template-rows: 1fr 0.2fr 0.25fr 0.55fr 0.6fr;
   align-items: center;
   justify-items: center;
   background: linear-gradient(180deg, rgba(234, 188, 71, 0.1) 0%, rgba(235, 184, 52, 0.9) 29.83%, #EBB834 50.83%, rgba(235, 184, 52, 0.9) 73.48%, rgba(234, 188, 71, 0.1) 100%);
@@ -363,17 +366,21 @@ body {
     min-height: 80vh;
   }
   h3 {
-    color: $clr-white;
     text-align: center;
-    margin: 1rem;
-    font-size: 1.2rem;
+    margin: 1.5rem 0.25rem 0.5rem 0.25rem;
+    font-size: 1.25rem;
     letter-spacing: 0.15rem;
     align-self: start;
+  }
+  p {
+    margin: 0.5rem 1.5rem 0.5rem 1.5rem;
+    text-align: center;
   }
 }
 
 .sec3 ul, .sec4 ul, .sec5 ul {
   margin: 1rem;
+  padding: 0.1rem;
   align-self: start;
   list-style-type: none;
   justify-self: center;
@@ -389,15 +396,16 @@ body {
 }
 
 .sec6 {
-  min-height: 90vh;
+  min-height: 100vh;
   margin: 0;
+  padding-bottom: 1rem;
   background: linear-gradient(180deg, rgba(234, 188, 71, 0.1) 0%, rgba(235, 184, 52, 0.9) 29.83%, #EBB834 50.83%, rgba(235, 184, 52, 0.9) 73.48%, rgba(234, 188, 71, 0.1) 100%);
   @include break ($mq-small) {
     min-height: 80vh;
   }
   h3 {
     text-align: center;
-    font-size: 1.6rem;
+    font-size: 1.625rem;
     margin: 0;
     padding: 2.5rem 2rem;
   }
@@ -448,6 +456,47 @@ body {
   p {
     text-align: center;
     font-size: 1.125rem;
+  }
+}
+
+/* Cards and icons */
+.container__cards-dev {
+  @extend %icon-cards-grid;
+  span {
+    display: inline-block;
+    text-align: center;
+  }
+  .app_icon {
+    transition: transform 0.5s;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
+
+.container__cards-general {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 80px 40px 80px 40px 80px 40px 80px 40px;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  font-family: $robot;
+  font-weight: $font-bold;
+  color: $clr-darkGray;
+  margin: 1rem 1.5rem 1rem 1.5rem;
+  padding: 0.5rem;
+  align-items: center;
+  justify-items: center;
+  span {
+    display: inline-block;
+    text-align: center;
+  }
+  .app_icon {
+    transition: transform 0.5s;
+    &:hover {
+      transform: scale(1.2);
+    }
   }
 }
 
