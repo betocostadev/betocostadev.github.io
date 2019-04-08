@@ -11,7 +11,7 @@ body {
   display: flex;
   position: fixed;
   width: 100%;
-  height: 52px;
+  height: 54px;
   left: 0;
   top: 0;
   color: $clr-orangePrimary;
@@ -20,6 +20,7 @@ body {
     flex: 1;
     text-align: center;
     align-self: center;
+    font-size: 1.75rem;
   }
   img {
     flex: 0.2;
@@ -79,26 +80,26 @@ body {
 // MENU - Icon
 #menu-icon {
   min-width: 50px;
-  margin: 0.25rem;
+  margin: 1rem 0 0.3rem 0.3rem;
   cursor: pointer;
   #hamb1 {
     background-color: #ebb834;
     position: absolute;
-    top: 6px;
+    top: 8px;
     width: 48px;
     height: 6px;
   }
   #hamb2 {
     background-color: #ebb834;
     position: absolute;
-    top: 18px;
+    top: 20px;
     width: 48px;
     height: 6px;
   }
   #hamb3 {
     background-color: #ebb834;
     position: absolute;
-    top: 32px;
+    top: 33px;
     width: 48px;
     height: 6px;
   }
@@ -194,26 +195,21 @@ body {
 @keyframes menu-grow {
   0% {
     height: 0.2rem;
-    line-height: 0.4rem;
-    font-size: 0.2rem;
+    opacity: 0;
   }
   100% {
     height: 2.5rem;
-    line-height: 2.2rem;
-    font-size: 1.6rem;
+    opacity: 1;
   }
 }
 @keyframes menu-shrink {
   0% {
     height: 2.5rem;
-    line-height: 2.2rem;
+    opacity: 1;
   }
   100% {
     height: 0.2rem;
-    padding: 0;
-    margin: 0;
-    line-height: 0.2rem;
-    font-size: 0.2rem;
+    opacity: 0;
   }
 }
 
@@ -232,7 +228,7 @@ body {
   @extend %section;
   grid-template-columns: 1fr;
   grid-template-rows: 0.3fr 1.2fr 1.2fr;
-  background: linear-gradient(180deg, rgba(234, 188, 71, 0.85) 0%, rgba(235, 184, 52, 0.9) 37.57%, #ebb834 51.38%, rgba(235, 184, 52, 0.9) 65.75%, rgba(234, 188, 71, 0.85) 100%);
+  background: linear-gradient(180deg, rgba(250, 222, 150, 0.85) 0%, rgba(235, 184, 52, 0.9) 37.57%, #EBB834 51.38%, rgba(235, 184, 52, 0.9) 65.75%, rgba(250, 222, 150, 0.85) 100%);
   padding: 4rem 0 0 0;
   @include break ($mq-small) {
     grid-template-rows: 0.5fr 1fr 1fr;
@@ -291,11 +287,13 @@ body {
   @extend %section;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
-  background: linear-gradient(180deg, #F1F1F1 0%, rgba(116, 116, 116, 0.08) 100%);
+  background: linear-gradient(180deg, rgba(250, 222, 150, 0.85) 0%, rgba(235, 184, 52, 0.85) 48.6%, rgba(234, 188, 71, 0.1) 100%);
   @include break ($mq-small) {
     min-height: 85vh;
   }
   h2 {
+    font-family: $robot;
+    font-weight: $font-bold;
     align-self: center;
     justify-self: center;
   }
@@ -303,29 +301,35 @@ body {
     max-width: 90%;
     justify-self: center;
     text-align: center;
-    font-size: 1.125rem;
-    border-top: 3px solid rgba(134, 134, 134, 0.5);
-    padding: 1rem 0.5rem;
+    font-size: 1.25rem;
+    font-family: $robot;
+    color: $clr-darkGray;
+    border-top: 3px solid rgba(255, 255, 255, 0.4);
+    padding: 1.25rem 0.5rem;
   }
 }
 
 .sec3 {
   @extend %section;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 0.2fr 0.8fr;
+  grid-template-rows: 1fr 0.2fr 0.3fr 0.4fr;
   align-items: center;
   justify-items: center;
-  background: linear-gradient(180deg, rgba(234, 188, 71, 0.1) 0%, rgba(235, 184, 52, 0.9) 29.83%, #EBB834 50.83%, rgba(235, 184, 52, 0.9) 73.48%, rgba(234, 188, 71, 0.1) 100%);
+  font-family: $robot;
+  color: $clr-white;
+  background: linear-gradient(180deg, rgba(234, 188, 71, 0.1) 0%, #E7AF1F 51.04%, rgba(234, 188, 71, 0.1) 100%);
   @include break ($mq-small) {
     min-height: 85vh;
   }
   h3 {
-    color: $clr-white;
     text-align: center;
-    margin: 1rem;
+    margin: 1.5rem 1rem 0.5rem 1rem;
     font-size: 1.2rem;
     letter-spacing: 0.15rem;
     align-self: start;
+  }
+  p {
+    margin: 0.5rem 1rem 0.5rem 1rem;
   }
 }
 
@@ -335,7 +339,7 @@ body {
   grid-template-rows: 1fr 0.2fr 0.8fr;
   align-items: center;
   justify-items: center;
-  background: linear-gradient(180deg, rgba(234, 188, 71, 0.1) 0%, rgba(189, 189, 189, 0.7) 30.39%, rgba(116, 116, 116, 0.3) 70.17%, rgba(234, 188, 71, 0.1) 100%);
+  background: linear-gradient(180deg, rgba(234, 188, 71, 0.1) 0%, #E7AF1F 50.52%, rgba(234, 188, 71, 0.1) 100%);
   @include break ($mq-small) {
     min-height: 85vh;
   }
@@ -369,9 +373,10 @@ body {
 }
 
 .sec3 ul, .sec4 ul, .sec5 ul {
-  margin: 0 5rem 2rem 0;
+  margin: 1rem;
   align-self: start;
   list-style-type: none;
+  justify-self: center;
 }
 
 .sec3 ul li, .sec4 ul li, .sec5 ul li {
@@ -386,7 +391,7 @@ body {
 .sec6 {
   min-height: 90vh;
   margin: 0;
-  background: linear-gradient(180deg, rgba(234, 188, 71, 0.1) 0%, rgba(134, 134, 134, 0.5) 85.64%, rgba(234, 188, 71, 0.1) 100%);
+  background: linear-gradient(180deg, rgba(234, 188, 71, 0.1) 0%, rgba(235, 184, 52, 0.9) 29.83%, #EBB834 50.83%, rgba(235, 184, 52, 0.9) 73.48%, rgba(234, 188, 71, 0.1) 100%);
   @include break ($mq-small) {
     min-height: 80vh;
   }
