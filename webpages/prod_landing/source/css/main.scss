@@ -21,17 +21,21 @@ body {
     text-align: center;
     align-self: center;
     font-size: 1.75rem;
-  }
-  img {
-    flex: 0.2;
-    max-width: 12%;
-    align-self: center;
-    margin: 0 5px 0 0;
     @include break ($mq-small) {
-      max-width: 8.5%;
+      font-size: 2rem;
     }
-    @include break ($mq-med) {
-      max-width: 5%;
+  }
+  a {
+    flex: 0.2;
+    // max-width: 12%;
+    align-self: center;
+    margin: 0.1rem 0.2rem;
+    img {
+      margin: 0.6rem 0.5rem 0.2rem 0.2rem;
+      max-width: 77.5%;
+      @include break($mq-small) {
+        max-width: 50%;
+      }
     }
   }
 }
@@ -82,6 +86,9 @@ body {
   min-width: 50px;
   margin: 1rem 0 0.3rem 0.3rem;
   cursor: pointer;
+  @include break ($mq-small) {
+    margin: 1rem 0 0.3rem 1rem;
+  }
   #hamb1 {
     background-color: #ebb834;
     position: absolute;
@@ -218,7 +225,7 @@ body {
   position: fixed;
   bottom: 0;
   left: 0;
-  height: 6%;
+  height: 7%;
   width: 100%;
   margin: 0;
   background: linear-gradient(180deg, rgba(26, 19, 19, 0) 0%, rgba(26, 19, 19, 0.6) 100%);
@@ -231,7 +238,7 @@ body {
   background: linear-gradient(180deg, rgba(250, 222, 150, 0.85) 0%, rgba(235, 184, 52, 0.9) 37.57%, #EBB834 51.38%, rgba(235, 184, 52, 0.9) 65.75%, rgba(250, 222, 150, 0.85) 100%);
   padding: 4rem 0 0 0;
   @include break ($mq-small) {
-    grid-template-rows: 0.5fr 1fr 1fr;
+    grid-template-rows: 0.3fr 1fr 0.7fr;
   }
   .title {
     font-size: 2.6rem;
@@ -244,9 +251,6 @@ body {
       margin: 1.2rem 2rem 0.5rem 2rem;
     }
   }
-  // .hero {
-
-  // }
   .desc1 h3 {
     font-size: 1.6rem;
     margin: 0.8rem;
@@ -258,6 +262,12 @@ body {
     &:nth-of-type(2) {
       text-align: right;
       margin: 0.5rem 0.6rem 0.6rem 0;
+      @include break ($mq-small) {
+        margin: 0.5rem 4rem 0.6rem 0;
+      }
+    }
+    @include break ($mq-small) {
+      font-size: 1.75rem;
     }
   }
   a {
@@ -289,7 +299,7 @@ body {
   grid-template-rows: auto;
   background: linear-gradient(180deg, rgba(250, 222, 150, 0.85) 0%, rgba(235, 184, 52, 0.85) 48.6%, rgba(234, 188, 71, 0.1) 100%);
   @include break ($mq-small) {
-    min-height: 85vh;
+    min-height: 65vh;
   }
   h2 {
     font-family: $robot;
@@ -317,7 +327,8 @@ body {
   justify-items: center;
   background: linear-gradient(180deg, rgba(234, 188, 71, 0.1) 0%, #E7AF1F 51.04%, rgba(234, 188, 71, 0.1) 100%);
   @include break ($mq-small) {
-    min-height: 85vh;
+    min-height: 65vh;
+    grid-template-rows: 1fr 0.2fr 0.2fr 0.3fr 0.5fr;
   }
   h3 {
     text-align: center;
@@ -325,10 +336,16 @@ body {
     font-size: 1.25rem;
     letter-spacing: 0.15rem;
     align-self: start;
+    @include break ($mq-small) {
+      font-size: 1.5rem;
+    }
   }
   p {
     margin: 0.5rem 1.5rem 0.5rem 1.5rem;
     text-align: center;
+    @include break ($mq-small) {
+      font-size: 1.2rem;
+    }
   }
 }
 
@@ -340,7 +357,8 @@ body {
   justify-items: center;
   background: linear-gradient(180deg, rgba(234, 188, 71, 0.1) 0%, #E7AF1F 50.52%, rgba(234, 188, 71, 0.1) 100%);
   @include break ($mq-small) {
-    min-height: 85vh;
+    min-height: 65vh;
+    grid-template-rows: 1fr 0.1fr 0.2fr 0.3fr 0.4fr;
   }
   h3 {
     text-align: center;
@@ -348,10 +366,16 @@ body {
     font-size: 1.25rem;
     letter-spacing: 0.15rem;
     align-self: start;
+    @include break ($mq-small) {
+      font-size: 1.5rem;
+    }
   }
   p {
     margin: 0.5rem 1.5rem 0.5rem 1.5rem;
     text-align: center;
+    @include break ($mq-small) {
+      font-size: 1.2rem;
+    }
   }
 }
 
@@ -363,7 +387,8 @@ body {
   justify-items: center;
   background: linear-gradient(180deg, rgba(234, 188, 71, 0.1) 0%, rgba(235, 184, 52, 0.9) 29.83%, #EBB834 50.83%, rgba(235, 184, 52, 0.9) 73.48%, rgba(234, 188, 71, 0.1) 100%);
   @include break ($mq-small) {
-    min-height: 80vh;
+    min-height: 65vh;
+    grid-template-rows: 1fr 0.15fr 0.2fr 0.3fr 0.5fr;
   }
   h3 {
     text-align: center;
@@ -371,10 +396,16 @@ body {
     font-size: 1.25rem;
     letter-spacing: 0.15rem;
     align-self: start;
+    @include break ($mq-small) {
+      font-size: 1.5rem;
+    }
   }
   p {
     margin: 0.5rem 1.5rem 0.5rem 1.5rem;
     text-align: center;
+    @include break ($mq-small) {
+      font-size: 1.2rem;
+    }
   }
 }
 
@@ -389,6 +420,9 @@ body {
 .sec3 ul li, .sec4 ul li, .sec5 ul li {
   margin: 0.5rem;
   line-height: 1.6rem;
+  @include break ($mq-small) {
+    font-size: 1.2rem;
+  }
 }
 
 .material-icons {
@@ -396,22 +430,31 @@ body {
 }
 
 .sec6 {
-  min-height: 100vh;
+  font-family: $robot;
+  min-height: 80vh;
   margin: 0;
   padding-bottom: 1rem;
   background: linear-gradient(180deg, rgba(234, 188, 71, 0.1) 0%, rgba(235, 184, 52, 0.9) 29.83%, #EBB834 50.83%, rgba(235, 184, 52, 0.9) 73.48%, rgba(234, 188, 71, 0.1) 100%);
   @include break ($mq-small) {
-    min-height: 80vh;
+    min-height: 70vh;
   }
   h3 {
     text-align: center;
     font-size: 1.625rem;
     margin: 0;
     padding: 2.5rem 2rem;
+    @include break ($mq-small) {
+      font-size: 1.85rem;
+    }
   }
   p {
+    text-align: center;
     font-size: 1.2rem;
     margin: 1.5rem 1.5rem 0 1.5rem;
+    @include break ($mq-small) {
+      font-size: 1.3rem;
+      margin: 2rem;
+    }
   }
   a {
     color: $clr-white;
@@ -432,22 +475,27 @@ body {
 }
 
 .sec7 {
+  font-family: $robot;
   min-height: 90vh;
   background: linear-gradient(180deg, rgba(234, 188, 71, 0.1) 0%, rgba(235, 184, 52, 0.9) 29.83%, #EBB834 50.83%, rgba(235, 184, 52, 0.9) 73.48%, rgba(234, 188, 71, 0.1) 100%);
   @include break ($mq-small) {
-    min-height: 80vh;
+    padding-bottom: 1rem;
   }
   p {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.35rem;
     margin: 1rem;
+    @include break ($mq-small) {
+      font-size: 1.55rem;
+    }
   }
 }
 
 .sec8 {
-  min-height: 90vh;
+  min-height: 80vh;
+  font-family: $robot;
   @include break ($mq-small) {
-    min-height: 80vh;
+    min-height: 70vh;
   }
   h3 {
     text-align: center;
@@ -479,12 +527,12 @@ body {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 80px 40px 80px 40px 80px 40px 80px 40px;
   background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 5px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
   font-family: $robot;
   font-weight: $font-bold;
   color: $clr-darkGray;
-  margin: 1rem 1.5rem 1rem 1.5rem;
+  margin: 1rem 1rem 1rem 1rem;
   padding: 0.5rem;
   align-items: center;
   justify-items: center;
@@ -497,6 +545,9 @@ body {
     &:hover {
       transform: scale(1.2);
     }
+  }
+  @include break ($mq-small) {
+    margin: 1.5rem 3rem 2rem 3rem;
   }
 }
 
@@ -512,6 +563,9 @@ body {
     margin: 0 auto;
     padding: 0.5rem;
     text-align: center;
+    li {
+      margin: 0.2rem;
+    }
   }
   a {
     display: block;
@@ -531,6 +585,10 @@ body {
       padding-top: 0.75rem;
     }
   }
+  @include break ($mq-small) {
+    max-width: 26%;
+    margin: 1rem 36%;
+  }
 }
 
 .contactForm label {
@@ -539,12 +597,21 @@ body {
   font-size: 1.125rem;
   width: 90%;
   margin: 0.4rem 0.8rem;
+  @include break ($mq-small) {
+    width: 100%;
+    margin: auto;
+  }
 }
 
 .contactForm input[type="text"] {
   @extend %contactForm;
   &:valid {
     border-color: #1de95a;
+  }
+  @include break ($mq-small) {
+    width: 70%;
+    margin: 1rem 15%;
+    padding: 0.3rem;
   }
 }
 .contactForm input[type="email"] {
@@ -554,6 +621,11 @@ body {
   }
   &:valid {
     border-color: #1de95a;
+  }
+  @include break ($mq-small) {
+    width: 70%;
+    margin: 1rem 15%;
+    padding: 0.3rem;
   }
 }
 
@@ -574,6 +646,9 @@ body {
     i {
       font-size: 3rem;
       margin: 0 0.5rem 0 0.7rem;
+      @include break ($mq-small) {
+        margin: 0.4rem 2rem;
+      }
     }
   }
 }
@@ -583,22 +658,39 @@ body {
   font-size: 1.125rem;
   color: #fff;
   padding: 0.2rem 0.5rem 1rem 0.5rem;
+  font-family: $robot;
   .footer-head {
     display: flex;
     justify-content: space-evenly;
-    margin: 0.3rem;
+    margin: 0.1rem;
     h3 {
       flex: 1;
+      margin: 0.2rem;
+    }
+    @include break ($mq-small) {
+      margin: 0.5rem 2rem 0.2rem 2rem;
+      font-size: 1.3rem;
     }
   }
-  .footer-first, .footer-second {
+}
+.footer-links {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  margin: 0.3rem;
+  .footer-first {
     flex: 1;
+    @include break ($mq-small) {
+      flex: 0.5;
+      margin: 0 0 0 2rem;
+    }
   }
-  .footer-links {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    margin: 0.3rem;
+  .footer-second {
+    flex: 1;
+    @include break ($mq-small) {
+      flex: 0.5;
+      margin: 0 2rem 0 0;
+    }
   }
   a {
     font-size: 1rem;
@@ -608,6 +700,9 @@ body {
     color: #fff;
     &:hover {
       color: #60ff70;
+    }
+    @include break ($mq-small) {
+      font-size: 1.2rem;
     }
   }
 }
@@ -623,20 +718,25 @@ body {
 
 .mySlides {
   display: none;
+  .slide-caption {
+    color: #fff;
+    font-size: 1.4rem;
+    text-shadow: 3px 3px 6px #000000;
+    padding: 0.6rem;
+    margin: 2rem auto;
+    position: absolute;
+    bottom: 3rem;
+    left: 5%;
+    width: 80%;
+    text-align: center;
+    @include break ($mq-small) {
+      font-size: 1.75rem;
+      margin: auto;
+      bottom: 10rem;
+    }
+  }
 }
 
-.slide-caption {
-  color: #fff;
-  font-size: 1.5rem;
-  text-shadow: 3px 3px 6px #000000;
-  padding: 0.8rem;
-  margin: 1rem auto;
-  position: absolute;
-  bottom: 3rem;
-  left: 5%;
-  width: 80%;
-  text-align: center;
-}
 
 .previous, .next {
   cursor: pointer;
@@ -664,6 +764,9 @@ body {
 
 .dot-btn {
   text-align: center;
+  @include break ($mq-small) {
+    margin: 0.6rem;
+  }
 }
 
 .dot {

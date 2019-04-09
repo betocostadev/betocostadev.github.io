@@ -1,7 +1,7 @@
 // MIXINS
 //Sections 3-5:
 %section {
-  min-height: 90vh;
+  min-height: 80vh;
   display: grid;
   font-family: $robot;
   color: $clr-white;
@@ -17,7 +17,7 @@
   font-family: $robot;
   font-weight: $font-bold;
   color: $clr-darkGray;
-  margin: 1rem 1.5rem 3rem 1.5rem;
+  margin: 1rem 1rem 3rem 1rem;
   padding: 0.5rem;
   align-items: center;
   justify-items: center;
