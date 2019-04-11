@@ -41,14 +41,38 @@ menuLinks.forEach(el => el.addEventListener('click', toggleMenu));
 
 const body = document.getElementsByTagName('body')[0];
 const bodyHeight = body.clientHeight;
+const bodyWidth = body.clientWidth;
 const transpDiv = document.getElementsByClassName('transp')[0];
 
+// Backup function
+// function offsetCheck() {
+//   const small = bodyHeight - (bodyHeight * 0.2);
+//   const windowOffset = window.pageYOffset;
+//   // console.log(windowOffset);
+//   if (windowOffset >= small) {
+//     transpDiv.classList.add('menu-close');
+//   } else {
+//     transpDiv.classList.remove('menu-close');
+//   }
+// }
 function offsetCheck() {
   const small = bodyHeight - (bodyHeight * 0.2);
   const windowOffset = window.pageYOffset;
-  // console.log(windowOffset);
-  // MAYBE I CAN USE THIS ONE TO HIDE THE TOP MENU!
-  /* If 0 hide the menu, when >= 1, show menu using menu and then, menu shrink to hide again. */
+  if (bodyWidth >= 768) {
+    if (windowOffset >= 100) {
+      nav.classList.add('menu-close');
+      for (let i = 0; i < menuLinks.length; i += 1) {
+        menuLinks[i].classList.add('shrink');
+      }
+      setTimeout(() => {
+        for (let i = 0; i < menuLinks.length; i += 1) {
+          menuLinks[i].classList.remove('shrink');
+          menuLinks[i].classList.add('hide-link');
+        }
+      }, 1000);
+    }
+  }
+  console.log(windowOffset);
   if (windowOffset >= small) {
     transpDiv.classList.add('menu-close');
   } else {
@@ -56,7 +80,15 @@ function offsetCheck() {
   }
 }
 
+// function checkWidth() {
+//   if (bodyWidth >= 768) {
+//     topMenu();
+//   }
+// }
+
+
 document.addEventListener('scroll', offsetCheck);
+// document.addEventListener('DOMContentLoaded', checkWidth);
 
 /* global document: true */
 // SLIDESHOW
