@@ -39,7 +39,6 @@ hamburguer.addEventListener('blur', toggleMenu);
 menuLinks.forEach(el => el.addEventListener('click', toggleMenu));
 
 
-// Test to hide the lower frame
 const body = document.getElementsByTagName('body')[0];
 const bodyHeight = body.clientHeight;
 const transpDiv = document.getElementsByClassName('transp')[0];
@@ -47,6 +46,9 @@ const transpDiv = document.getElementsByClassName('transp')[0];
 function offsetCheck() {
   const small = bodyHeight - (bodyHeight * 0.2);
   const windowOffset = window.pageYOffset;
+  // console.log(windowOffset);
+  // MAYBE I CAN USE THIS ONE TO HIDE THE TOP MENU!
+  /* If 0 hide the menu, when >= 1, show menu using menu and then, menu shrink to hide again. */
   if (windowOffset >= small) {
     transpDiv.classList.add('menu-close');
   } else {
