@@ -44,22 +44,24 @@ const bodyHeight = body.clientHeight;
 const bodyWidth = body.clientWidth;
 const transpDiv = document.getElementsByClassName('transp')[0];
 
-// Backup function
-// function offsetCheck() {
-//   const small = bodyHeight - (bodyHeight * 0.2);
-//   const windowOffset = window.pageYOffset;
-//   // console.log(windowOffset);
-//   if (windowOffset >= small) {
-//     transpDiv.classList.add('menu-close');
-//   } else {
-//     transpDiv.classList.remove('menu-close');
-//   }
-// }
 function offsetCheck() {
   const small = bodyHeight - (bodyHeight * 0.2);
   const windowOffset = window.pageYOffset;
-  if (bodyWidth >= 768) {
-    if (windowOffset >= 100) {
+  if (windowOffset >= small) {
+    transpDiv.classList.add('menu-close');
+  } else {
+    transpDiv.classList.remove('menu-close');
+  }
+}
+
+let isShowing = true;
+let lastScroll = 0;
+function toggleBigMenu() {
+  const newScroll = window.pageYOffset;
+  if (newScroll > lastScroll && isShowing) {
+    // console.log('Going down');
+    isShowing = false;
+    setTimeout(() => {
       nav.classList.add('menu-close');
       for (let i = 0; i < menuLinks.length; i += 1) {
         menuLinks[i].classList.add('shrink');
@@ -70,25 +72,35 @@ function offsetCheck() {
           menuLinks[i].classList.add('hide-link');
         }
       }, 1000);
-    }
+    }, 500);
+  } else if (newScroll < lastScroll && !isShowing) {
+    // console.log('Going up!');
+    isShowing = true;
+    setTimeout(() => {
+      for (let i = 0; i < menuLinks.length; i += 1) {
+        menuLinks[i].classList.remove('hide-link');
+        menuLinks[i].classList.remove('shrink');
+        menuLinks[i].classList.add('grow');
+      }
+      setTimeout(() => {
+        for (let i = 0; i < menuLinks.length; i += 1) {
+          menuLinks[i].classList.remove('grow');
+        }
+      }, 1000);
+    }, 500);
   }
-  console.log(windowOffset);
-  if (windowOffset >= small) {
-    transpDiv.classList.add('menu-close');
-  } else {
-    transpDiv.classList.remove('menu-close');
+  // Reset the scroll
+  lastScroll = newScroll <= 0 ? 0 : newScroll;
+}
+
+function fire() {
+  offsetCheck();
+  if (bodyWidth >= 768) {
+    toggleBigMenu();
   }
 }
 
-// function checkWidth() {
-//   if (bodyWidth >= 768) {
-//     topMenu();
-//   }
-// }
-
-
-document.addEventListener('scroll', offsetCheck);
-// document.addEventListener('DOMContentLoaded', checkWidth);
+document.addEventListener('scroll', fire);
 
 /* global document: true */
 // SLIDESHOW

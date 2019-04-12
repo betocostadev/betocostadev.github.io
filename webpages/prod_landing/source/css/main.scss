@@ -100,11 +100,11 @@ body {
 // Menu Links animation
 .grow {
   height: 2.5rem;
-  animation: menu-grow 1.8s;
+  animation: menu-grow 1.3s;
 }
 .shrink {
   min-height: 0.5rem;
-  animation: menu-shrink 1.5s;
+  animation: menu-shrink 1.25s;
 }
 
 // Display \ hide menu
@@ -277,6 +277,9 @@ body {
   @include break ($mq-small) {
     grid-template-rows: 0.3fr 1fr 0.7fr;
   }
+  @include break ($mq-med) {
+    grid-template-rows: 0.2fr 0.9fr 0.6fr;
+  }
   .title {
     font-size: 2.6rem;
     margin: 0 2rem 0.5rem 2rem;
@@ -288,7 +291,7 @@ body {
       margin: 1.2rem 2rem 0.5rem 2rem;
     }
     @include break ($mq-med) {
-      margin: 1.8rem 2rem 0.5rem 2rem;
+      margin: 3rem 2rem 1rem 2rem;
     }
   }
   .desc1 h3 {
@@ -309,6 +312,9 @@ body {
     @include break ($mq-small) {
       font-size: 1.75rem;
     }
+    @include break ($mq-small) {
+      font-size: 2rem;
+    }
   }
   a {
     text-align: center;
@@ -319,6 +325,9 @@ body {
     text-shadow: 0px 1px 1px rgba(40, 70, 34, 0.25);
     text-decoration: none;
     transition: all 0.6s;
+    @include break ($mq-small) {
+      font-size: 1.75rem;
+    }
     p {
       margin: 0.5rem 0 0.5rem 0;
     }
@@ -340,6 +349,9 @@ body {
   background: linear-gradient(180deg, rgba(250, 222, 150, 0.85) 0%, rgba(235, 184, 52, 0.85) 48.6%, rgba(234, 188, 71, 0.1) 100%);
   @include break ($mq-small) {
     min-height: 65vh;
+  }
+  @include break ($mq-med) {
+    min-height: 45vh;
   }
   h2 {
     font-family: $robot;
@@ -369,6 +381,10 @@ body {
   @include break ($mq-small) {
     min-height: 65vh;
     grid-template-rows: 1fr 0.2fr 0.2fr 0.3fr 0.5fr;
+  }
+  @include break ($mq-med) {
+    min-height: 45vh;
+    grid-template-rows: 0.9fr 0.1fr 0.2fr 0.3fr 0.3fr;
   }
   h3 {
     text-align: center;
@@ -400,6 +416,10 @@ body {
     min-height: 65vh;
     grid-template-rows: 1fr 0.1fr 0.2fr 0.3fr 0.4fr;
   }
+  @include break ($mq-med) {
+    min-height: 45vh;
+    grid-template-rows: 0.8fr 0.1fr 0.1fr 0.2fr 0.2fr;
+  }
   h3 {
     text-align: center;
     margin: 1.5rem 1rem 0.5rem 1rem;
@@ -429,6 +449,10 @@ body {
   @include break ($mq-small) {
     min-height: 65vh;
     grid-template-rows: 1fr 0.15fr 0.2fr 0.3fr 0.5fr;
+  }
+  @include break ($mq-med) {
+    min-height: 45vh;
+    grid-template-rows: 1fr 0.1fr 0.2fr 0.2fr 0.3fr;
   }
   h3 {
     text-align: center;
