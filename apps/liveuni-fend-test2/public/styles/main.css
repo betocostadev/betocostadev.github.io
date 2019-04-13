@@ -8,6 +8,7 @@
 html {
   box-sizing: border-box;
   font-size: 100%;
+  color: whitesmoke;
 }
 
 *,
@@ -36,7 +37,14 @@ main {
   background: var(--clr-secondary);
   margin: 0;
 }
+
+#option:hover {
+  cursor: pointer;
+  color: #cddc39;
+}
+
 #submenu {
+  border: 1px solid var(--clr-secondary);
   align-items: center;
   z-index: 2;
   grid-column: 1 / 1;
@@ -46,10 +54,51 @@ main {
 }
 #items {
   z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.1fr 0.2fr 0.2fr 0.2fr 0.5fr;
   grid-column: 2 / -1;
   grid-row: 1 / 1;
+}
+
+#items div {
+  background: var(--clr-tertiary);
+  margin: 1rem 0;
+  display: grid;
+  grid-template-columns: 0.2fr 1fr 0.2fr;
+}
+
+#items .first-par {
+  display: inline-block;
+  border: 1px solid white;
+  border-radius: 50px;
+  background: var(--clr-secondary);
   align-self: center;
   justify-self: center;
+  grid-column: 1 / 1;
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+
+#items .second-par {
+  display: inline-block;
+  text-align: center;
+  grid-column: 2 / 2;
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+
+#items div:nth-of-type(1) {
+  grid-row: 2 / 2;
+  padding: 5%;
+}
+#items div:nth-of-type(2) {
+  grid-row: 3 / 3;
+  padding: 5%;
+}
+#items div:nth-of-type(3) {
+  grid-row: 4 / 4;
+  padding: 5%;
 }
 
 #sideMenu div {
