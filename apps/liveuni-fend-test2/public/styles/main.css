@@ -1,0 +1,82 @@
+/* VARIABLES */
+:root {
+  --clr-main: #c5cae9;
+  --clr-secondary: #5c6bc0;
+  --clr-tertiary: #303f9f;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background: var(--clr-main);
+  margin: 0;
+}
+
+main {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  grid-template-rows: 1fr;
+}
+
+#sideMenu {
+  z-index: 3;
+  grid-column: 1 / 1;
+  grid-row: 1 / 1;
+  background: var(--clr-secondary);
+  margin: 0;
+}
+#submenu {
+  align-items: center;
+  z-index: 2;
+  grid-column: 1 / 1;
+  grid-row: 1 / 1;
+  background: var(--clr-tertiary);
+  transition: all 1s;
+}
+#items {
+  z-index: 1;
+  grid-column: 2 / -1;
+  grid-row: 1 / 1;
+  align-self: center;
+  justify-self: center;
+}
+
+#sideMenu div {
+  text-align: center;
+  font-size: 2rem;
+  margin: 3rem 0;
+  padding: 1rem;
+  background: var(--clr-tertiary);
+}
+
+.qty input[type="text"] {
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.select-items {
+  margin: 25%;
+  font-size: 1.4rem;
+  padding: 1rem;
+  align-self: center;
+  justify-self: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}
