@@ -16,29 +16,17 @@
       <div class="qty">
         <p><%= qtd %></p>
         <input type="text" placeholder="type here">
-        <!-- <input type="number" name="qtd" id="qtd"> -->
       </div>
     </section>
     <section id="submenu" data-slide="off">
       <select class="select-items">
+        <option value="none">Please select</option>
         <% for(let item of items) { %>
-        <option value="item"><%=item.value%></option>
+        <option value="<%=item.value%>"><%=item.text%></option>
         <% } %>
       </select>
     </section>
     <section id="items">
-      <div class="item-display">
-        <p class="first-par">1</p>
-        <p class="second-par">Item A1</p>
-      </div>
-      <div class="item-display">
-        <p class="first-par">2</p>
-        <p class="second-par">Item A2</p>
-      </div>
-      <div class="item-display">
-        <p class="first-par">3</p>
-        <p class="second-par">Item A3</p>
-      </div>
     </section>
   </main>
   <script src="scripts/main.js"></script>

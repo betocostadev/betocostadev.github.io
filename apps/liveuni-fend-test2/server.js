@@ -20,8 +20,8 @@ app.get('/', (request, response) => {
     opt: 'Option',
     qtd: 'Quantity',
     items: [
-      { value: 'Item A' },
-      { value: 'Item B' },
+      { value: 'itemA', text: 'Item A' },
+      { value: 'itemB', text: 'Item B' },
     ],
   });
 //   response.render('index', { alias: 'beto' });
