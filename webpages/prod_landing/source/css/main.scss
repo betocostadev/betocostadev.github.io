@@ -16,6 +16,12 @@ body {
   top: 0;
   color: $clr-orangePrimary;
   background: rgba(0, 0, 0, 0.65);
+  @include break ($mq-large) {
+    padding: 0 6%;
+  }
+  @include break ($mq-huge) {
+    padding: 0 18%;
+  }
   .comp-name {
     color: $clr-orangePrimary;
     text-decoration: none;
@@ -32,6 +38,9 @@ body {
       text-align: left;
       margin: 1rem;
     }
+    @include break ($mq-huge) {
+      font-size: 2.35rem;
+    }
   }
   .comp-logo {
     flex: 0.2;
@@ -42,6 +51,9 @@ body {
       max-width: 77.5%;
       @include break($mq-small) {
         max-width: 50%;
+      }
+      @include break ($mq-large) {
+        max-width: 46%;
       }
     }
   }
@@ -63,7 +75,7 @@ body {
     text-decoration: none;
     color: #ebb834;
     border: 1px solid rgba(220, 188, 106, 0.8);
-    background: rgba(89, 89, 89, 0.90);
+    background: rgba(0,0,0,0.65);
     transition: all 1s;
     &:hover {
       padding-left: 1.5rem;
@@ -95,6 +107,13 @@ body {
   @include break ($mq-med) {
     display: flex;
     width: 100vw;
+  }
+  @include break ($mq-large) {
+    padding: 0.1rem 6%;
+    text-align: center;
+  }
+  @include break ($mq-huge) {
+    padding: 0.1rem 20%;
   }
   .hide-link {
     display: none;
@@ -277,6 +296,12 @@ body {
   @include break ($mq-desk) {
     margin: 0 10%;
   }
+  @include break ($mq-large) {
+    margin: 0 14%;
+  }
+  @include break ($mq-huge) {
+    margin: 0 10%;
+  }
   img {
     @include break ($mq-desk) {
       border: 12px solid rgba(255, 255, 255, 0.63);
@@ -299,9 +324,12 @@ body {
   @include break ($mq-med) {
     grid-template-rows: 0.2fr 0.9fr 0.6fr;
   }
-  @include break ($mq-med) {
+  @include break ($mq-desk) {
     grid-template-rows: 0.2fr 0.8fr 0.5fr;
     padding: 4rem 1rem 1rem;
+  }
+  @include break ($mq-huge) {
+    padding: 3rem 8% 1rem;
   }
   .title {
     font-size: 2.6rem;
@@ -316,7 +344,7 @@ body {
     @include break ($mq-med) {
       margin: 3rem 2rem 1rem 2rem;
     }
-    @include break ($mq-med) {
+    @include break ($mq-desk) {
       font-size: 4rem;
     }
   }
@@ -346,8 +374,11 @@ body {
     @include break ($mq-small) {
       font-size: 1.75rem;
     }
-    @include break ($mq-small) {
+    @include break ($mq-med) {
       font-size: 2rem;
+    }
+    @include break ($mq-huge) {
+      font-size: 2.5rem;
     }
   }
   a {
@@ -365,6 +396,9 @@ body {
     @include break ($mq-desk) {
       text-align: right;
       margin: 1.5rem 12% 1rem 0;
+    }
+    @include break ($mq-huge) {
+      font-size: 2rem;
     }
     p {
       margin: 0.5rem 0 0.5rem 0;
@@ -397,6 +431,9 @@ body {
     grid-template-rows: 0.1fr 0.9fr;
     padding: 1rem;
   }
+  @include break ($mq-huge) {
+    padding: 1rem 8%;
+  }
   h2 {
     font-family: $robot;
     font-weight: $font-bold;
@@ -405,6 +442,9 @@ body {
     @include break ($mq-desk) {
       font-size: 2rem;
       grid-column: 1 / -1;
+    }
+    @include break ($mq-huge) {
+      font-size: 2.25rem;
     }
   }
   p {
@@ -416,6 +456,9 @@ body {
     color: $clr-darkGray;
     border-top: 3px solid rgba(255, 255, 255, 0.4);
     padding: 1.25rem 0.5rem;
+    @include break ($mq-huge) {
+      font-size: 1.35rem;
+    }
   }
 }
 
@@ -440,11 +483,18 @@ body {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 0.2fr 0.2fr 0.5fr 0.2fr;
   }
+  @include break ($mq-huge) {
+    padding: 2% 6%;
+    grid-template-rows: 0.3fr 0.3fr 0.6fr 0.4fr;
+  }
   picture {
     @include break ($mq-desk) {
       margin: 1rem;
       grid-column: 1 / 4;
       grid-row: 1 / 4;
+    }
+    @include break ($mq-huge) {
+      padding: 1rem;
     }
     img {
       @include break ($mq-desk) {
@@ -467,6 +517,9 @@ body {
       grid-row: 1 / 1;
       color: #2D2D2D;
     }
+    @include break ($mq-huge) {
+      font-size: 1.75rem;
+    }
   }
   p {
     margin: 0.5rem 1.5rem 0.5rem 1.5rem;
@@ -480,6 +533,11 @@ body {
       font-size: 1.25rem;
       grid-column: 4 / 6;
       grid-row: 2 / 2;
+    }
+    @include break ($mq-huge) {
+      font-size: 1.35rem;
+      align-self: start;
+      margin: 1rem 0.5rem 1rem;
     }
   }
   ul {
@@ -518,6 +576,10 @@ body {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 0.2fr 0.2fr 0.5fr 0.3fr;
   }
+  @include break ($mq-huge) {
+    padding: 2% 6%;
+    grid-template-rows: 0.3fr 0.3fr 0.6fr 0.4fr;
+  }
   h3 {
     text-align: center;
     margin: 1.5rem 1rem 0.5rem 1rem;
@@ -533,6 +595,9 @@ body {
       color: #2D2D2D;
       justify-self: center;
     }
+    @include break ($mq-huge) {
+      font-size: 1.75rem;
+    }
   }
   p {
     margin: 0.5rem 1.5rem 0.5rem 1.5rem;
@@ -546,12 +611,19 @@ body {
       grid-column: 3 / 5;
       grid-row: 2 / 2;
     }
+    @include break ($mq-huge) {
+      font-size: 1.35rem;
+    }
   }
   picture {
     @include break ($mq-desk) {
       margin: 1rem;
       grid-column: 5 / -1;
       grid-row: 1 / 4;
+    }
+    @include break ($mq-huge) {
+      padding: 1rem;
+      grid-row: 1 / 5;
     }
     img {
       @include break ($mq-desk) {
@@ -596,12 +668,19 @@ body {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 0.2fr 0.2fr 0.5fr 0.3fr;
   }
+  @include break ($mq-huge) {
+    padding: 2% 6%;
+    grid-template-rows: 0.3fr 0.3fr 0.6fr 0.4fr;
+  }
   picture {
     @include break ($mq-desk) {
       align-self: start;
       margin: 3rem 1rem;
       grid-column: 1 / 4;
       grid-row: 1 / 4;
+    }
+    @include break ($mq-huge) {
+      padding: 1rem;
     }
     img {
       @include break ($mq-desk) {
@@ -624,6 +703,9 @@ body {
       grid-row: 1 / 1;
       color: #2D2D2D;
     }
+    @include break ($mq-huge) {
+      font-size: 1.75rem;
+    }
   }
   p {
     margin: 0.5rem 1.5rem 0.5rem 1.5rem;
@@ -636,6 +718,9 @@ body {
       font-size: 1.25rem;
       grid-column: 4 / 6;
       grid-row: 2 / 2;
+    }
+    @include break ($mq-huge) {
+      font-size: 1.35rem;
     }
   }
   ul {
@@ -668,6 +753,9 @@ body {
   @include break ($mq-small) {
     font-size: 1.2rem;
   }
+  @include break ($mq-huge) {
+    font-size: 1.3rem;
+  }
 }
 
 .material-icons {
@@ -687,6 +775,9 @@ body {
     min-height: 50vh;
     padding: 1rem 1rem 2rem;
   }
+  @include break ($mq-huge) {
+    padding: 1% 8%;
+  }
   h3 {
     text-align: center;
     font-size: 1.625rem;
@@ -697,6 +788,9 @@ body {
     }
     @include break ($mq-desk) {
       font-size: 2rem;
+    }
+    @include break ($mq-huge) {
+      font-size: 2.25rem;
     }
   }
   p {
@@ -709,6 +803,10 @@ body {
     }
     @include break ($mq-desk) {
       margin: 2rem 8%;
+    }
+    @include break ($mq-desk) {
+      margin: 2rem 10%;
+      font-size: 1.45rem;
     }
   }
   a {
@@ -727,6 +825,12 @@ body {
   min-height: 40vh;
   margin: 0;
   padding: 0;
+  @include break ($mq-large) {
+    display: block;
+    width: 90%;
+    min-height: 45vh;
+    margin: 2rem auto;
+  }
 }
 
 .sec7 {
@@ -740,12 +844,18 @@ body {
     min-height: 80vh;
     padding: 3rem 2rem;
   }
+  @include break ($mq-huge) {
+    padding: 1% 8%;
+  }
   p {
     text-align: center;
     font-size: 1.35rem;
     margin: 1rem;
     @include break ($mq-small) {
       font-size: 1.55rem;
+    }
+    @include break ($mq-huge) {
+      font-size: 1.75rem;
     }
   }
 }
@@ -756,11 +866,17 @@ body {
   @include break ($mq-small) {
     min-height: 70vh;
   }
+  @include break ($mq-huge) {
+    padding: 1% 8%;
+  }
   h3 {
     text-align: center;
     font-size: 1.5rem;
     @include break ($mq-desk) {
       font-size: 2rem;
+    }
+    @include break ($mq-huge) {
+      font-size: 2.25rem;
     }
   }
   p {
@@ -768,6 +884,9 @@ body {
     font-size: 1.125rem;
     @include break ($mq-desk) {
       font-size: 1.5rem;
+    }
+    @include break ($mq-huge) {
+      font-size: 1.75rem;
     }
   }
 }
@@ -780,6 +899,10 @@ body {
     text-align: center;
     @include break ($mq-desk) {
       font-size: 1.05rem;
+      margin: 0.2rem 0.1rem;
+    }
+    @include break ($mq-huge) {
+      font-size: 1.15rem;
       margin: 0.2rem 0.1rem;
     }
   }
@@ -812,6 +935,9 @@ body {
       font-size: 1.25rem;
       margin: 0.6rem 0.5rem;
     }
+    @include break ($mq-huge) {
+      font-size: 1.3rem;
+    }
   }
   .app_icon {
     transition: transform 0.5s;
@@ -824,6 +950,9 @@ body {
   }
   @include break ($mq-desk) {
     margin: 2.5rem 12%;
+  }
+  @include break ($mq-large) {
+    margin: 2.5rem 15%;
   }
 }
 
@@ -867,8 +996,13 @@ body {
   }
   @include break ($mq-desk) {
     max-width: 18%;
-    margin: 1rem 40%;
+    margin: 2rem 40%;
     font-size: 1.25rem;
+  }
+  @include break ($mq-huge) {
+    max-width: 16%;
+    margin: 3.5rem 42%;
+    font-size: 1.35rem;
   }
 }
 
@@ -886,6 +1020,10 @@ body {
     font-size: 1.35rem;
     margin: 1rem auto;
   }
+  @include break ($mq-huge) {
+    font-size: 1.5rem;
+    margin: 1.5rem auto;
+  }
 }
 
 .contactForm input[type="text"] {
@@ -900,6 +1038,9 @@ body {
   }
   @include break ($mq-desk) {
     font-size: 1.25rem;
+  }
+  @include break ($mq-huge) {
+    font-size: 1.5rem;
   }
 }
 .contactForm input[type="email"] {
@@ -917,6 +1058,9 @@ body {
   }
   @include break ($mq-desk) {
     font-size: 1.25rem;
+  }
+  @include break ($mq-huge) {
+    font-size: 1.5rem;
   }
 }
 
@@ -946,6 +1090,9 @@ body {
       }
       @include break ($mq-med) {
         margin: 0.4rem 3rem;
+      }
+      @include break ($mq-huge) {
+        font-size: 4rem;
       }
     }
   }
@@ -1020,12 +1167,23 @@ body {
   top: 1rem;
   margin: auto;
   @include break ($mq-desk) {
-    margin: 0 12%;
+    margin: 0.5rem 12%;
+  }
+  @include break ($mq-large) {
+    margin: 1rem 15%;
+  }
+  @include break ($mq-huge) {
+    margin: 2rem 15%;
   }
 }
 
 .mySlides {
   display: none;
+  img {
+    @include break ($mq-desk) {
+      border-radius: 20px;
+    }
+  }
   .slide-caption {
     color: #fff;
     font-size: 1.4rem;
