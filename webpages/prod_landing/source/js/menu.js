@@ -77,6 +77,7 @@ function toggleBigMenu() {
     // console.log('Going up!');
     isShowing = true;
     setTimeout(() => {
+      nav.classList.remove('menu-close');
       for (let i = 0; i < menuLinks.length; i += 1) {
         menuLinks[i].classList.remove('hide-link');
         menuLinks[i].classList.remove('shrink');
