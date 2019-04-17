@@ -1,5 +1,5 @@
 # Orange Book | Product Landing Page
-![alt text](source/img/cover)"Material Icon Memory Game"
+![alt text](./source/img/cover.jpg)"Orange Book Landing Page"
 
 
 ## About this project
