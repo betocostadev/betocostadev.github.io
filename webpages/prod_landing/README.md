@@ -65,12 +65,13 @@ Tested from **320px** to **1920px**.
 - [Google Fonts](https://fonts.google.com/) - Reem Kufi and Roboto fonts ⭐️⭐️
 - [Material Icons](https://material.io/tools/icons/?style=baseline) - Icons ⭐️⭐️
 - [Pop OS! Icons](https://github.com/pop-os/icon-theme) - Software Icons ❤️
+- [Pexels](https://www.pexels.com/search/angry/) - Images ⭐️
 - [eslint](https://eslint.org/) - Way better JS programming ⭐️⭐️
 - [Dillinger](https://dillinger.io/) - To write the Readme ❤️
 
 
 ##### Learning Resources
-- freeCodeCamp - [Responsive Web Design](https://learn.freecodecamp.org/)
+- [freeCodeCamp](https://learn.freecodecamp.org/) - Responsive Web Design
 - [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Element)- DOM Elements
 - [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Document) - DOM Selectors
 
@@ -80,6 +81,7 @@ Tested from **320px** to **1920px**.
 
 ### Creation
 Designed using [Figma](https://www.figma.com/).
+
 Developed on [Visual Studio Code](https://code.visualstudio.com/).
 
 
