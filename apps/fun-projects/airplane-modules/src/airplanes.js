@@ -1,32 +1,32 @@
 /* Airplanes Initial array */
 // let Airplane = '';
 const airplanes = [
-    {
-        name: 'B737',
-        fuelCapacity: 3000,
-        maxSpeed: 950,
-        minSpeed: 250,
-        crew: ['pilots', 'flightAttendants', 'engineers', 'medicalAssistance'],
-        get printCrew() {
-            return this.crew;
-        },
-        get range() {
-            return this.maxSpeed - this.minSpeed;
-        }
+  {
+    name: 'B737',
+    fuelCapacity: 3000,
+    maxSpeed: 950,
+    minSpeed: 250,
+    crew: ['pilots', 'flightAttendants', 'engineers', 'medicalAssistance'],
+    get printCrew() {
+      return this.crew;
     },
-    {
-        name: 'B787',
-        fuelCapacity: 4500,
-        maxSpeed: 1150,
-        minSpeed: 280,
-        crew: ['pilots', 'flightAttendants', 'engineers', 'medicalAssistance', 'sensorOperators'],
-        get printCrew() {
-            return this.crew;
-        },
-        get range() {
-            return this.maxSpeed - this.minSpeed;
-        }
-    }
+    get range() {
+      return this.maxSpeed - this.minSpeed;
+    },
+  },
+  {
+    name: 'B787',
+    fuelCapacity: 4500,
+    maxSpeed: 1150,
+    minSpeed: 280,
+    crew: ['pilots', 'flightAttendants', 'engineers', 'medicalAssistance', 'sensorOperators'],
+    get printCrew() {
+      return this.crew;
+    },
+    get range() {
+      return this.maxSpeed - this.minSpeed;
+    },
+  },
 ];
 
 // Add Airplane - TEST:
@@ -35,24 +35,24 @@ const airplanes = [
 
 // Check if airplane meets the range requirements
 const meetsRangeReq = (range) => {
-    airplanes.forEach(function(airplane) {
-        if(range <= airplane.range) {
-            console.log(airplane.name + ' range is:' + airplane.range + ' Requirement Met!');
-        } else {
-            console.log(airplane.name + ' range is:' + airplane.range + ' Requirement NOT Met!');
-        }
-    })
-}
+  airplanes.forEach((airplane) => {
+    if (range <= airplane.range) {
+      console.log(`${airplane.name} range is:${airplane.range} Requirement Met!`);
+    } else {
+      console.log(`${airplane.name} range is:${airplane.range} Requirement NOT Met!`);
+    }
+  });
+};
 
 // Check if the airplane meets the crew requirements
 const meetsCrewReq = (crew) => {
-    airplanes.forEach(function(airplane) {
-        if (crew <= airplane.crew.length) {
-            console.log(airplane.name + ' crew is: ' + airplane.printCrew + '. Requirement Met!');
-        } else {
-            console.log(airplane.name + ' crew is: ' + airplane.printCrew + '. Requirement NOT Met!');
-        }
-    })
+  airplanes.forEach((airplane) => {
+    if (crew <= airplane.crew.length) {
+      console.log(`${airplane.name} crew is: ${airplane.printCrew}. Requirement Met!`);
+    } else {
+      console.log(`${airplane.name} crew is: ${airplane.printCrew}. Requirement NOT Met!`);
+    }
+  });
 };
 
 // Requirements TEST:
@@ -61,4 +61,4 @@ const meetsCrewReq = (crew) => {
 
 // MODULE EXPORT:
 
-export {airplanes, meetsRangeReq, meetsCrewReq};
+export { airplanes, meetsRangeReq, meetsCrewReq };
