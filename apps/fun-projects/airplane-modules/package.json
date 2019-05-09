@@ -1,0 +1,21 @@
+{
+  "name": "airplaneschecker",
+  "version": "0.0.1",
+  "description": "Airplanes Requirements Checker, just a simple test for fun",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src -d lib"
+  },
+  "keywords": [
+    "airplanes",
+    "requirements",
+    "checker"
+  ],
+  "author": "Beto Costa",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
+  }
+}

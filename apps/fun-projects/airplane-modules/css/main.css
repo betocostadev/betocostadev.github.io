@@ -1,0 +1,27 @@
+/* BASE */
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+  font-family: 'Open Sans', sans-serif;
+}
+
+*,
+*:before,
+*:after {
+box-sizing: inherit;
+}
+
+/* VARIABLES */
+:root {
+  --red: #ff6f69;
+}
+
+/* MEDIA CATCH ALL */
+img, embed, object, video {
+  max-width: 100%;
+}
+
+.airplane__functions {
+  display: flex;
+  justify-content: space-around;
+}
