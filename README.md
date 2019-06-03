@@ -13,7 +13,6 @@ Portfolio is available [here](https://betocostadev.github.io/)
 [More about the project](https://github.com/betocostadev/betocostadev.github.io/tree/master/webpages/prod_landing)
 
 
-**Mad Max**: Not started... Learning more
 **Formula E**: Not started... Learning more
 ***
 
