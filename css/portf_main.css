@@ -647,11 +647,11 @@ footer {
     -o-transform: rotate(-30deg);
 }
 
-.materialize-img {
+.node-img {
     grid-column: 3 / 3;
     grid-row: 3 / 3;
 }
-.materialize-txt {
+.node-txt {
     grid-column: 3 / 3;
     grid-row: 3 / 3;
     font-size: 1.45rem;
@@ -732,15 +732,15 @@ footer {
     grid-gap: 20px;
     grid-template-columns: 1fr;
     /* grid-template-rows: repeat(2, 140px); */
-    grid-template-rows: repeat(1, 140px);
+    grid-template-rows: repeat(1, 150px);
 }
 
 /* PROJECT CARDS */
 
 .object-card__link {
     text-decoration: none;
-    margin: 0.5rem;
-    padding: 0;
+    margin: 1rem;
+    padding: 0.5rem;
     display: block;
     background: #f8f8f8;
     border-radius: 4px;
@@ -966,14 +966,14 @@ Following Bootstrap rules:
         grid-template-columns: 1fr 3fr;
         grid-template-rows: 1fr;
     }
-    /* .container-cards {
+    .container-cards:nth-last-of-type(1) {
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(2, minmax(100px, 150px));
-    } */
+        grid-template-rows: repeat(2, minmax(100px, 200px));
+    }
     .container-cards {
         grid-template-columns: 1fr;
         /* grid-template-rows: repeat(2, minmax(100px, 150px)); */
-        grid-template-rows: repeat(1, minmax(100px, 150px));
+        grid-template-rows: repeat(1, minmax(100px, 200px));
     }
     .more p {
         font-size: 1.6rem;

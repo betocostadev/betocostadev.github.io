@@ -25,6 +25,9 @@ Portfolio is available [here](https://betocostadev.github.io/)
 [More about the project](https://github.com/betocostadev/betocostadev.github.io/blob/master/apps/memgame/).
 Go play and Have Fun with it, or make it better 😁.
 
+**Weather App**: A Simple web application build using Node.js and Express.js. It fetches geolocation data from Mapbox API and weather data from Darksky API. Deployed on Heroku.
+[More about the project](https://github.com/betocostadev/node-udemy-weather).
+
 **PaintBrowser**: Under Construction...
 
 ## About Me
