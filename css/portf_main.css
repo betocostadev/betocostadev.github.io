@@ -3,7 +3,7 @@
 /* @import url(http://weloveiconfonts.com/api/?family=fontawesome); */
 @import url('https://fonts.googleapis.com/css?family=Rubik:400,700');
 
-/* VARIABLES */
+/* ============ VARIABLES ============ */
 :root {
     --cgrey050: #fafafa;
     --cgrey100: #f5f5f5;
@@ -34,12 +34,12 @@ html {
   box-sizing: inherit;
 }
 
-/* MEDIA CATCH ALL */
+/* ============ MEDIA CATCH ALL ============ */
 img, embed, object, video {
     max-width: 100%;
 }
 
-/* FORMATTING */
+/* ============ BASE FORMATTING ============ */
 
 h1, h2, h3, h4, h5, h6, p {
     margin: 1rem;
@@ -132,7 +132,7 @@ footer {
     padding: 1rem;
 }
 
-/* TEXT BASE */
+/* ============ TEXT BASE ============ */
 .text-right {
     text-align: right;
 }
@@ -145,7 +145,7 @@ footer {
     text-transform: uppercase;
 }
 
-/* TITLE */
+/* ============ TITLE ============ */
 
 .head-title {
   font-size: 2.8rem;
@@ -185,7 +185,7 @@ footer {
     text-decoration: none;
 }
 
-/* HAMBURGUER MENU */
+/* ============ HAMBURGUER MENU ============ */
 /*!
  * Hamburgers
  * @description Tasty CSS-animated hamburgers
@@ -278,7 +278,7 @@ footer {
       background-color: var(--cred400);
     }
 
-/* MENU CONTAINER */
+/* ============ MENU CONTAINER ============ */
 
 .menu-container {
     position: fixed;
@@ -325,7 +325,7 @@ footer {
     top: 0;
 }
 
-/* UP BUTTON */
+/* ============ UP BUTTON ============ */
 
 .button-up {
     background: rgba(235, 208, 208, 0.541);
@@ -366,7 +366,7 @@ footer {
     bottom: -50px;
     right: -50px;
 }
-/* ANIMATION */
+/* ============ ANIMATION ============ */
 
 .hello {
     position: absolute;
@@ -419,7 +419,7 @@ footer {
     display: none;
 }
 
-/* BUTTONS */
+/* ============ BUTTONS ============ */
 
 .down-btn {
     background: transparent;
@@ -536,12 +536,12 @@ footer {
     vertical-align: middle;
 }
 
-/* SKILLS GRID */
+/* ============ SKILLS GRID ============ */
 .skills {
     display: grid;
-    grid-gap: 0.4rem;
+    grid-gap: 0.3rem;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto repeat(3, minmax(40px, 100px));
+    grid-template-rows: auto repeat(4, minmax(30px, 80px));
     justify-items: center;
     align-items: center;
     margin: 1rem 0;
@@ -557,11 +557,11 @@ footer {
     max-height: 85%;
 }
 
-.html-img {
+.react-img {
     grid-column: 1 / 1;
     grid-row: 2 / 2;
 }
-.html-txt {
+.react-txt {
     grid-column: 1 / 1;
     grid-row: 2 / 2;
     font-size: 1.6rem;
@@ -575,86 +575,68 @@ footer {
     -o-transform: rotate(-30deg);
 }
 
-.js-img {
-    grid-column: 2 / 2;
-    grid-row: 2 / 2;
-}
-.js-txt {
-    grid-column: 2 / 2;
-    grid-row: 2 / 2;
-    font-size: 1.5rem;
-    margin: 0;
-    background-color: var(--skFontBGC);
-    color: var(--cgrey900);
-    transform: rotate(-30deg);
-    -webkit-transform: rotate(-30deg);
-    -moz-transform: rotate(-30deg);
-    -ms-transform: rotate(-30deg);
-    -o-transform: rotate(-30deg);
-}
-
-.css-img {
-    grid-column: 3 / 3;
-    grid-row: 2 / 2;
-}
-.css-txt {
-    grid-column: 3 / 3;
-    grid-row: 2 / 2;
-    font-size: 1.65rem;
-    margin: 0;
-    background-color: var(--skFontBGC);
-    color: var(--cgrey900);
-    transform: rotate(-30deg);
-    -webkit-transform: rotate(-30deg);
-    -moz-transform: rotate(-30deg);
-    -ms-transform: rotate(-30deg);
-    -o-transform: rotate(-30deg);
-}
-
-.jquery-img {
-    grid-column: 1 / 1;
-    grid-row: 3 / 3;
-}
-.jquery-txt {
-    grid-column: 1 / 1;
-    grid-row: 3 / 3;
-    font-size: 1.5rem;
-    margin: 0;
-    background-color: var(--skFontBGC);
-    color: var(--cgrey900);
-    transform: rotate(-30deg);
-    -webkit-transform: rotate(-30deg);
-    -moz-transform: rotate(-30deg);
-    -ms-transform: rotate(-30deg);
-    -o-transform: rotate(-30deg);
-}
-
-.bootstrap-img {
-    grid-column: 2 / 2;
-    grid-row: 3 / 3;
-}
-.bootstrap-txt {
-    grid-column: 2 / 2;
-    grid-row: 3 / 3;
-    font-size: 1.45rem;
-    margin: 0;
-    background-color: var(--skFontBGC);
-    color: var(--cgrey900);
-    transform: rotate(-30deg);
-    -webkit-transform: rotate(-30deg);
-    -moz-transform: rotate(-30deg);
-    -ms-transform: rotate(-30deg);
-    -o-transform: rotate(-30deg);
-}
-
 .node-img {
-    grid-column: 3 / 3;
-    grid-row: 3 / 3;
+    grid-column: 2 / 2;
+    grid-row: 2 / 2;
 }
 .node-txt {
-    grid-column: 3 / 3;
-    grid-row: 3 / 3;
+    grid-column: 2 / 2;
+    grid-row: 2 / 2;
     font-size: 1.45rem;
+    margin: 0;
+    background-color: var(--skFontBGC);
+    color: var(--cgrey900);
+    transform: rotate(-30deg);
+    -webkit-transform: rotate(-30deg);
+    -moz-transform: rotate(-30deg);
+    -ms-transform: rotate(-30deg);
+    -o-transform: rotate(-30deg);
+}
+
+.gatsby-img {
+    grid-column: 3 / 3;
+    grid-row: 2 / 2;
+}
+.gatsby-txt {
+    grid-column: 3 / 3;
+    grid-row: 2 / 2;
+    font-size: 1.45rem;
+    margin: 0;
+    background-color: var(--skFontBGC);
+    color: var(--cgrey900);
+    transform: rotate(-30deg);
+    -webkit-transform: rotate(-30deg);
+    -moz-transform: rotate(-30deg);
+    -ms-transform: rotate(-30deg);
+    -o-transform: rotate(-30deg);
+}
+
+.jest-img {
+    grid-column: 1 / 1;
+    grid-row: 3 / 3;
+}
+.jest-txt {
+    grid-column: 1 / 1;
+    grid-row: 3 / 3;
+    font-size: 1.6rem;
+    margin: 0;
+    background-color: var(--skFontBGC);
+    color: var(--cgrey900);
+    transform: rotate(-30deg);
+    -webkit-transform: rotate(-30deg);
+    -moz-transform: rotate(-30deg);
+    -ms-transform: rotate(-30deg);
+    -o-transform: rotate(-30deg);
+}
+
+.mongo-img {
+    grid-column: 2 / 2;
+    grid-row: 3 / 3;
+}
+.mongo-txt {
+    grid-column: 2 / 2;
+    grid-row: 3 / 3;
+    font-size: 1.6rem;
     margin: 0;
     background-color: var(--skFontBGC);
     color: var(--cgrey900);
@@ -666,10 +648,28 @@ footer {
 }
 
 .sass-img {
+    grid-column: 3 / 3;
+    grid-row: 3 / 3;
+}
+.sass-txt {
+    grid-column: 3 / 3;
+    grid-row: 3 / 3;
+    font-size: 1.6rem;
+    margin: 0;
+    background-color: var(--skFontBGC);
+    color: var(--cgrey900);
+    transform: rotate(-30deg);
+    -webkit-transform: rotate(-30deg);
+    -moz-transform: rotate(-30deg);
+    -ms-transform: rotate(-30deg);
+    -o-transform: rotate(-30deg);
+}
+
+.git-img {
     grid-column: 1 / 1;
     grid-row: 4 / 4;
 }
-.sass-txt {
+.git-txt {
     grid-column: 1 / 1;
     grid-row: 4 / 4;
     font-size: 1.6rem;
@@ -701,13 +701,67 @@ footer {
     -o-transform: rotate(-30deg);
 }
 
-.git-img {
+.bootstrap-img {
     grid-column: 3 / 3;
     grid-row: 4 / 4;
 }
-.git-txt {
+.bootstrap-txt {
     grid-column: 3 / 3;
     grid-row: 4 / 4;
+    font-size: 1.45rem;
+    margin: 0;
+    background-color: var(--skFontBGC);
+    color: var(--cgrey900);
+    transform: rotate(-30deg);
+    -webkit-transform: rotate(-30deg);
+    -moz-transform: rotate(-30deg);
+    -ms-transform: rotate(-30deg);
+    -o-transform: rotate(-30deg);
+}
+
+.js-img {
+    grid-column: 1 / 1;
+    grid-row: 5 / 5;
+}
+.js-txt {
+    grid-column: 1 / 1;
+    grid-row: 5 / 5;
+    font-size: 1.5rem;
+    margin: 0;
+    background-color: var(--skFontBGC);
+    color: var(--cgrey900);
+    transform: rotate(-30deg);
+    -webkit-transform: rotate(-30deg);
+    -moz-transform: rotate(-30deg);
+    -ms-transform: rotate(-30deg);
+    -o-transform: rotate(-30deg);
+}
+
+.css-img {
+    grid-column: 2 / 2;
+    grid-row: 5 / 5;
+}
+.css-txt {
+    grid-column: 2 / 2;
+    grid-row: 5 / 5;
+    font-size: 1.65rem;
+    margin: 0;
+    background-color: var(--skFontBGC);
+    color: var(--cgrey900);
+    transform: rotate(-30deg);
+    -webkit-transform: rotate(-30deg);
+    -moz-transform: rotate(-30deg);
+    -ms-transform: rotate(-30deg);
+    -o-transform: rotate(-30deg);
+}
+
+.html-img {
+    grid-column: 3 / 3;
+    grid-row: 5 / 5;
+}
+.html-txt {
+    grid-column: 3 / 3;
+    grid-row: 5 / 5;
     font-size: 1.6rem;
     margin: 0;
     background-color: var(--skFontBGC);
@@ -719,7 +773,7 @@ footer {
     -o-transform: rotate(-30deg);
 }
 
-/* PROJECTS GRID */
+/* ============ PROJECTS GRID ============ */
 
 .projects h3 {
     font-size: 2rem;
@@ -732,10 +786,10 @@ footer {
     grid-gap: 20px;
     grid-template-columns: 1fr;
     /* grid-template-rows: repeat(2, 140px); */
-    grid-template-rows: repeat(1, 150px);
+    grid-template-rows: repeat(1, minmax(100px, 200px));
 }
 
-/* PROJECT CARDS */
+/* ============ PROJECT CARDS ============ */
 
 .object-card__link {
     text-decoration: none;
@@ -798,7 +852,7 @@ footer {
     margin-left: 0.5rem;
 }
 
-/* CONTACT FORM */
+/* ============ CONTACT FORM ============ */
 
 .contact {
     color: var(--cgrey100);
@@ -887,18 +941,18 @@ footer {
     color: var(--cred400);
 }
 
-/* The Modal (background) */
+/* ============ The Modal (background) ============ */
 .modal {
     display: none;
     position: fixed;
     z-index: 1;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
 }
 
 /* Modal Content/Box */
@@ -930,7 +984,7 @@ footer {
     cursor: pointer;
 }
 
-/* MEDIA QUERIES
+/* MEDIA QUERIES ============ ============
 Following Bootstrap rules:
 // Extra small devices (portrait phones, less than 576px)
 // No media query since this is the default in Bootstrap
@@ -1030,6 +1084,10 @@ Following Bootstrap rules:
     }
     .projects h3 {
         margin: 2.5rem;
+    }
+
+    .skills {
+        grid-template-rows: auto repeat(4, minmax(50px, 100px));
     }
     .skills p {
         font-size: 1.7rem;
@@ -1144,6 +1202,12 @@ Following Bootstrap rules:
     }
     .about-me {
         padding: 1rem 15%;
+    }
+    .skills {
+        grid-template-rows: auto repeat(4, minmax(65px, 130px));
+    }
+    .skills p {
+        font-size: 1.85rem;
     }
     .projects {
         padding: 3rem 10%;
