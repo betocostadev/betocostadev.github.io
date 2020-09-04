@@ -28,6 +28,6 @@
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-webp": "^4.0.1",
-    "node-sass": "^4.13.0"
+    "node-sass": "^4.13.1"
   }
 }
